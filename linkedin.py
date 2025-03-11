@@ -1,4 +1,7 @@
+import configparser
+import json
 import os
+from configparser import SectionProxy
 from typing import List
 
 import pyperclip
@@ -11,19 +14,23 @@ from playwright.sync_api import (
     Playwright,
     sync_playwright,
 )
-from streak import Box, get_boxes
-
-base_url = "https://www.linkedin.com"
-message = "It worked! again again"
-boxes: List[Box] = [Box("Rachal")]
+from streak import Box, Streak
 
 
-def run(playwright: Playwright, file="states/default.json"):
+def run(
+    playwright: Playwright,
+    username: str,
+    password: str,
+    message: str,
+    boxes: List[Box],
+):
+    file = f"states/{username}.json"
+
     chrome: BrowserType = playwright.chromium
     browser: Browser = chrome.launch(headless=False)
 
     context: BrowserContext = browser.new_context(
-        base_url=base_url,
+        base_url="https://www.linkedin.com",
         storage_state=file if os.path.isfile(file) else None,
         permissions=["clipboard-read", "clipboard-write"],
     )
@@ -42,7 +49,7 @@ def run(playwright: Playwright, file="states/default.json"):
         page.goto("/messaging/thread/new/")
 
         # Get Message into clipboard
-        pyperclip.copy(message)
+        pyperclip.copy(message.format_map({"first": "Travis", "last": "Rotz"}))
 
         # Logged in
         page.get_by_placeholder("Type a name or multiple names").fill(box.name)
@@ -50,8 +57,11 @@ def run(playwright: Playwright, file="states/default.json"):
         page.locator(
             "div.msg-connections-typeahead__search-results ul > li button"
         ).locator("nth=0").click()
+        page.wait_for_timeout(2000)
         page.keyboard.press("Enter")
+        page.wait_for_timeout(2000)
         page.keyboard.press("Control+V")
+        page.wait_for_timeout(2000)
         page.get_by_role("button", name="Send", exact=True).click()
         page.pause()
 
@@ -59,7 +69,24 @@ def run(playwright: Playwright, file="states/default.json"):
 
 
 if __name__ == "__main__":
-    # get_boxes()
+    config: configparser.ConfigParser = configparser.ConfigParser()
+    config.read("config.ini")
+
     with sync_playwright() as p:
-        user = "travis"
-        run(p, f"states/{user}.json")
+        streak = Streak(config["Streak"]["api_key"])
+        json = streak.get_boxes(
+            config["Streak"]["pipeline_key"], config["Streak"]["stage_key"]
+        )
+        boxes: List[Box] = [Box("Rachal", "asdf", "asdf", {})]
+        for box in json:
+            boxes.append(
+                Box(box["name"], box["boxKey"], box["stageKey"], box["fields"])
+            )
+
+        run(
+            p,
+            config["LinkedIn"]["username"],
+            config["LinkedIn"]["password"],
+            config["LinkedIn"]["message"],
+            boxes,
+        )

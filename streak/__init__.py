@@ -1,37 +1,37 @@
-import base64 as _base64
+import base64
+from typing import List
 
-import requests as _requests
-
-_streak_url = "https://www.streak.com/api/v1"
-_pipelines_url = f"{_streak_url}/pipelines"
-
-_api_key = "4b6f91d153a24c71ae08079ac1d9b88f"
-_b64 = _base64.b64encode(f"{_api_key}:".encode())
-_authorization = f"Basic {_b64.decode()}"
-_headers = {
-    "accept": "application/json",
-    "Content-Type": "application/json",
-    "authorization": _authorization,
-}
-
-_production_key = "agxzfm1haWxmb29nYWVyOQsSDE9yZ2FuaXphdGlvbiISdGhlLWdyZWF0LWxpbmsuY29tDAsSCFdvcmtmbG93GICArJ2dj_wLDA"
-
-
-def get_boxes():
-    # response = requests.get(f"{pipelines_url}/{old_pl_key}", headers=headers)
-    response = _requests.get(
-        f"{_pipelines_url}/{_production_key}/boxes?stageKey=5003", headers=_headers
-    )
-
-    # print(response.status_code)
-    # print(response.reason)
-    print(response.text)
-    # for pipeline in response.json():
-    #     print(pipeline["name"])
+import requests
 
 
 class Box:
-    name: str
-
-    def __init__(self, name: str):
+    def __init__(self, name: str, boxKey: str, stageKey: str, fields: dict[str, str]):
         self.name = name
+        self.boxKey = boxKey
+        self.stageKey = stageKey
+        self.fields = fields
+
+
+class Streak:
+    _pipelines_url = "https://www.streak.com/api/v1/pipelines/{pipeline_key}/boxes?stageKey={stage_key}"
+
+    def __init__(self, api_key: str) -> None:
+        b64 = base64.b64encode(f"{api_key}:".encode())
+        self._headers = {
+            "accept": "application/json",
+            "Content-Type": "application/json",
+            "authorization": f"Basic {b64.decode()}",
+        }
+        pass
+
+    def get_boxes(self, pipeline_key: str, stage_key: str) -> List:
+        response: requests.Response = requests.get(
+            url=self._pipelines_url.format_map(
+                {"pipeline_key": pipeline_key, "stage_key": stage_key}
+            ),
+            headers=self._headers,
+        )
+
+        print(response.status_code)
+        print(response.reason)
+        return response.json()
