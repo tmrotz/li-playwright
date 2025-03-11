@@ -11,14 +11,7 @@ from playwright.sync_api import (
     Playwright,
     sync_playwright,
 )
-
-
-class Box:
-    name: str
-
-    def __init__(self, name: str):
-        self.name = name
-
+from streak import Box, get_boxes
 
 base_url = "https://www.linkedin.com"
 message = "It worked! again again"
@@ -36,35 +29,37 @@ def run(playwright: Playwright, file="states/default.json"):
     )
 
     page: Page = context.new_page()
-    page.goto("/messaging/thread/new/")
+    page.goto("/feed/")
 
-    if not page.url.endswith("/messaging/thread/new/"):
+    if not page.url.endswith("/feed/"):
         page.get_by_label("Email or phone").fill(username)
         page.get_by_label("Password").fill(password)
         page.get_by_label("Sign in", exact=True).click()
+        page.wait_for_url("/feed/")
         context.storage_state(path=file)
 
-    page.wait_for_url("/messaging/thread/new/")
-
     for box in boxes:
+        page.goto("/messaging/thread/new/")
+
         # Get Message into clipboard
         pyperclip.copy(message)
 
         # Logged in
         page.get_by_placeholder("Type a name or multiple names").fill(box.name)
-        page.wait_for_timeout(3000)
+        page.wait_for_timeout(2000)
         page.locator(
             "div.msg-connections-typeahead__search-results ul > li button"
         ).locator("nth=0").click()
-        page.wait_for_timeout(1000)
         page.keyboard.press("Enter")
-        page.wait_for_timeout(1000)
         page.keyboard.press("Control+V")
-        page.wait_for_timeout(1000)
         page.get_by_role("button", name="Send", exact=True).click()
         page.pause()
 
+    browser.close()
 
-with sync_playwright() as p:
-    user = "travis"
-    run(p, f"states/{user}.json")
+
+if __name__ == "__main__":
+    # get_boxes()
+    with sync_playwright() as p:
+        user = "travis"
+        run(p, f"states/{user}.json")
