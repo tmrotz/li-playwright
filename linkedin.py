@@ -1,7 +1,6 @@
-import configparser
 import json
 import os
-from configparser import SectionProxy
+from configparser import ConfigParser
 from typing import List
 
 import pyperclip
@@ -49,7 +48,8 @@ def run(
         page.goto("/messaging/thread/new/")
 
         # Get Message into clipboard
-        pyperclip.copy(message.format_map({"first": "Travis", "last": "Rotz"}))
+
+        pyperclip.copy(message.format(name=box.name))
 
         # Logged in
         page.get_by_placeholder("Type a name or multiple names").fill(box.name)
@@ -69,19 +69,20 @@ def run(
 
 
 if __name__ == "__main__":
-    config: configparser.ConfigParser = configparser.ConfigParser()
+    config: ConfigParser = ConfigParser()
     config.read("config.ini")
 
     with sync_playwright() as p:
         streak = Streak(config["Streak"]["api_key"])
-        json = streak.get_boxes(
+
+        # print(streak.get_pipeline(config["Streak"]["pipeline_key"]))
+
+        json = streak.get_boxes_by_stage(
             config["Streak"]["pipeline_key"], config["Streak"]["stage_key"]
         )
-        boxes: List[Box] = [Box("Rachal", "asdf", "asdf", {})]
+        boxes: List[Box] = [Box("Rachal", "boxKey", "stageKey")]
         for box in json:
-            boxes.append(
-                Box(box["name"], box["boxKey"], box["stageKey"], box["fields"])
-            )
+            boxes.append(Box(box["name"], box["boxKey"], box["stageKey"]))
 
         run(
             p,
