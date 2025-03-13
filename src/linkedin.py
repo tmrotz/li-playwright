@@ -4,7 +4,6 @@ from configparser import ConfigParser
 from typing import List
 
 import pyperclip
-
 from playwright.sync_api import (
     Browser,
     BrowserContext,
@@ -13,6 +12,7 @@ from playwright.sync_api import (
     Playwright,
     sync_playwright,
 )
+
 from streak import Box, Streak
 
 
