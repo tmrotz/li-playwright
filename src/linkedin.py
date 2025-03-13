@@ -73,12 +73,12 @@ if __name__ == "__main__":
     config.read("config.ini")
 
     with sync_playwright() as p:
-        streak = Streak(config["Streak"]["api_key"])
+        streak = Streak(config["streak.keys"]["api"])
 
-        # print(streak.get_pipeline(config["Streak"]["pipeline_key"]))
+        # print(streak.get_pipeline(config["streak.keys"]["pipeline"]))
 
         json = streak.get_boxes_by_stage(
-            config["Streak"]["pipeline_key"], config["Streak"]["stage_key"]
+            config["streak.keys"]["pipeline"], config["streak.keys"]["stage"]
         )
         boxes: List[Box] = [Box("Rachal", "boxKey", "stageKey")]
         for box in json:
@@ -86,8 +86,8 @@ if __name__ == "__main__":
 
         run(
             p,
-            config["LinkedIn"]["username"],
-            config["LinkedIn"]["password"],
-            config["LinkedIn"]["message"],
+            config["linkedin"]["username"],
+            config["linkedin"]["password"],
+            config["linkedin"]["message"],
             boxes,
         )
