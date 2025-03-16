@@ -1,6 +1,7 @@
 import json
 import os
 from configparser import ConfigParser
+from pathlib import Path, PosixPath
 from typing import List
 
 import pyperclip
@@ -69,7 +70,8 @@ def run(
 
 if __name__ == "__main__":
     config: ConfigParser = ConfigParser()
-    config.read(["config.ini", "../config.ini"])
+    project_dir: Path = Path(__file__).parent.parent
+    config.read(project_dir.joinpath("config.ini"))
 
     with sync_playwright() as p:
         streak = Streak(config["streak.keys"]["api"])
