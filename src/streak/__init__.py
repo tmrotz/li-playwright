@@ -28,7 +28,7 @@ class Streak:
         return requests.get(
             url=self._pipeline_url.format_map({"pipeline_key": pipeline_key}),
             headers=self._headers,
-        ).json()
+        ).text
 
     def get_boxes_by_stage(self, pipeline_key: str, stage_key: str) -> List:
         return requests.get(

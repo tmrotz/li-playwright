@@ -63,14 +63,13 @@ def run(
         page.keyboard.press("Control+V")
         page.wait_for_timeout(2000)
         page.get_by_role("button", name="Send", exact=True).click()
-        page.pause()
 
     browser.close()
 
 
 if __name__ == "__main__":
     config: ConfigParser = ConfigParser()
-    config.read("config.ini")
+    config.read(["config.ini", "../config.ini"])
 
     with sync_playwright() as p:
         streak = Streak(config["streak.keys"]["api"])
