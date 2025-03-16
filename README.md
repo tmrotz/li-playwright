@@ -9,7 +9,7 @@ to write your content.
 # Installation
 python3 -m venv venv
 . venv/bin/activate
-pip install -e .
+pip install -e .[dev]
 
 # Create Wheel
 python -m build
