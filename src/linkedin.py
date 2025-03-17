@@ -50,7 +50,7 @@ def run(
 
         # Get Message into clipboard
 
-        pyperclip.copy(message.format(name=box.name))
+        pyperclip.copy(message.format(name=box.get_first_name()))
 
         # Logged in
         page.get_by_placeholder("Type a name or multiple names").fill(box.name)
@@ -81,7 +81,7 @@ if __name__ == "__main__":
         json = streak.get_boxes_by_stage(
             config["streak.keys"]["pipeline"], config["streak.keys"]["stage"]
         )
-        boxes: List[Box] = [Box("Rachal", "boxKey", "stageKey")]
+        boxes: List[Box] = [Box("Brad Rachal", "boxKey", "stageKey")]
         for box in json:
             boxes.append(Box(box["name"], box["boxKey"], box["stageKey"]))
 

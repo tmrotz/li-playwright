@@ -10,6 +10,9 @@ class Box:
         self.boxKey = boxKey
         self.stageKey = stageKey
 
+    def get_first_name(self):
+        return self.name.split()[0]
+
 
 class Streak:
     _pipeline_url = "https://www.streak.com/api/v1/pipelines/{pipeline_key}"
