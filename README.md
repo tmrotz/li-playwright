@@ -14,3 +14,6 @@ pip install -e .[dev]
 # Create Wheel
 python -m build
 
+# Install/Upgrade Wheel
+pip install --upgrade <path/to/wheel>
+
