@@ -9,19 +9,10 @@ from playwright.sync_api import (
     sync_playwright,
 )
 
-import linkedin.messaging
-import linkedin.scraping
-from streak.Streak import Streak
 
-
-def run(config: ConfigParser, command: str):
-    streak = Streak(config["streak.keys"]["api"])
-    streak.pipeline_key = config["streak.keys"]["pipeline"]
-    streak.stage_key = config["streak.keys"]["stage"]
-
+def run(config: ConfigParser, func, *args, **kwargs):
     username = config["linkedin"]["username"]
     password = config["linkedin"]["password"]
-    message = config["linkedin"]["message"]
 
     with sync_playwright() as p:
 
@@ -46,9 +37,6 @@ def run(config: ConfigParser, command: str):
             page.wait_for_url("/feed/")
             context.storage_state(path=file)
 
-        if command == "message":
-            linkedin.messaging.run(page, streak, message)
-        if command == "scrape":
-            linkedin.scraping.run(page, streak)
+        func(page, *args, **kwargs)
 
         browser.close()
