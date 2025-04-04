@@ -5,7 +5,6 @@ This is a simple example package. You can use
 to write your content.
 
 
-
 # Installation
 python3 -m venv venv
 . venv/bin/activate
@@ -14,22 +13,20 @@ pip install -e .[dev]
 # Run
 python -m src.message -c message
 
-# Create Wheel
+# Wheel
+## Create
 python -m build
 
-# Wheel
 ## Install/Upgrade
-sudo apt install python3.12-venv
-python3 -m venv venv
-sudo apt install python3-pip
-. venv/bin/activate
-WHEEL_V=0.0.2
-wget https://github.com/tmrotz/li-playwright/releases/download/"$WHEEL_V"/li_playwright-"$WHEEL_V"-py3-none-any.whl
-pip install --upgrade li_playwright-0.0.2-py3-none-any.whl
-playwright install && playwright install-deps
-touch config.ini
-python -m message -c message
+1. sudo apt install python3.12-venv
+1. python3 -m venv venv
+1. sudo apt install python3-pip
+1. . venv/bin/activate
+1. WHEEL_V=0.0.2
+1. wget https://github.com/tmrotz/li-playwright/releases/download/"$WHEEL_V"/li_playwright-"$WHEEL_V"-py3-none-any.whl
+1. pip install --upgrade li_playwright-0.0.2-py3-none-any.whl
+1. playwright install && playwright install-deps
+1. touch config.ini
 
 ## Run
-asdf
-
+python -m message -c message
