@@ -3,8 +3,8 @@ from typing import List
 import pyperclip
 from playwright.sync_api import Locator, Page
 
-from streak.Box import Box
-from streak.Streak import Streak
+from message.streak.Box import Box
+from message.streak.Streak import Streak
 
 headline_selector = (
     "div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2)"

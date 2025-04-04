@@ -2,11 +2,12 @@ import argparse
 from configparser import ConfigParser
 from pathlib import Path
 
-import linkedin
-import pr
-from streak.Streak import Streak
+from message.streak.Streak import Streak
 
-if __name__ == "__main__":
+from . import linkedin, pr
+
+
+def main():
     parser = argparse.ArgumentParser(prog="")
     parser.add_argument("-c", "--command")
     args = parser.parse_args()
@@ -28,3 +29,7 @@ if __name__ == "__main__":
         pr.run(config, linkedin.scrape, streak)
     else:
         print("Invalid command. Use one of these:", "message", "scrape")
+
+
+if __name__ == "__main__":
+    main()
