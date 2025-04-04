@@ -16,7 +16,7 @@ def main():
         exit()
 
     config: ConfigParser = ConfigParser()
-    project_dir: Path = Path(__file__).parent.parent
+    project_dir: Path = Path(__file__).parent.parent.parent
     config.read(project_dir.joinpath("config.ini"))
 
     streak = Streak(config["streak.keys"]["api"])
