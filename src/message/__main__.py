@@ -17,6 +17,7 @@ def main():
 
     config: ConfigParser = ConfigParser()
     project_dir: Path = Path(__file__).parent.parent.parent
+    assert project_dir.is_file(), f"Can't find config.ini: {project_dir}"
     config.read(project_dir.joinpath("config.ini"))
 
     streak = Streak(config["streak.keys"]["api"])

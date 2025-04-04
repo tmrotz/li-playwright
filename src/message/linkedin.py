@@ -1,4 +1,4 @@
-from typing import List
+from typing import Dict, List
 
 import pyperclip
 from playwright.sync_api import Locator, Page
@@ -24,11 +24,15 @@ def message(
     box.stage_key = "stageKey"
     boxes: List[Box] = [box]
 
-    json = streak.get_boxes_by_stage(streak.pipeline_key, streak.stage_key)
-    for j in json:
-        box: Box = Box(j["name"])
-        box.box_key = j["boxKey"]
-        box.stage_key = j["stageKey"]
+    streak_boxes = streak.get_boxes_by_stage(streak.pipeline_key, streak.stage_key)
+    assert isinstance(streak_boxes, List), f"streak_boxes is a {type(streak_boxes)}"
+    print("# of boxes from Streak", len(streak_boxes))
+
+    for streak_box in streak_boxes:
+        assert isinstance(streak_box, Dict), f"streak_box is a {type(streak_box)}"
+        box: Box = Box(streak_box["name"])
+        box.box_key = streak_box["boxKey"]
+        box.stage_key = streak_box["stageKey"]
         boxes.append(box)
 
     for box in boxes:
