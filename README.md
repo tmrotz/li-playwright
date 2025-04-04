@@ -26,6 +26,7 @@ sudo apt install python3-pip
 WHEEL_V=0.0.2
 wget https://github.com/tmrotz/li-playwright/releases/download/"$WHEEL_V"/li_playwright-"$WHEEL_V"-py3-none-any.whl
 pip install --upgrade li_playwright-0.0.2-py3-none-any.whl
+playwright install && playwright install-deps
 touch config.ini
 python -m message -c message
 

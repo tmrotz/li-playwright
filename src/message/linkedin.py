@@ -25,10 +25,10 @@ def message(
     boxes: List[Box] = [box]
 
     json = streak.get_boxes_by_stage(streak.pipeline_key, streak.stage_key)
-    for _ in json:
-        box: Box = Box(_["name"])
-        box.box_key = _["boxKey"]
-        box.stage_key = _["stageKey"]
+    for j in json:
+        box: Box = Box(j["name"])
+        box.box_key = j["boxKey"]
+        box.stage_key = j["stageKey"]
         boxes.append(box)
 
     for box in boxes:
