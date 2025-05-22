@@ -5,6 +5,7 @@ import requests
 
 
 class Streak:
+    _pipelines_url = "https://www.streak.com/api/v1/pipelines"
     _pipeline_url = "https://www.streak.com/api/v1/pipelines/{pipeline_key}"
     _boxes_url = "https://www.streak.com/api/v1/pipelines/{pipeline_key}/boxes?stageKey={stage_key}"
 
@@ -33,6 +34,12 @@ class Streak:
     def stage_key(self, stage_key):
         self._stage_key = stage_key
 
+    def get_pipelines(self):
+        return requests.get(
+            url=self._pipelines_url,
+            headers=self._headers,
+        ).text
+
     def get_pipeline(self, pipeline_key: str):
         return requests.get(
             url=self._pipeline_url.format_map({"pipeline_key": pipeline_key}),
@@ -40,9 +47,12 @@ class Streak:
         ).text
 
     def get_boxes_by_stage(self, pipeline_key: str, stage_key: str) -> List:
-        return requests.get(
+        response: requests.Response = requests.get(
             url=self._boxes_url.format_map(
                 {"pipeline_key": pipeline_key, "stage_key": stage_key}
             ),
             headers=self._headers,
-        ).json()
+        )
+        if response.status_code != 200:
+            print("config.ini is wrong")
+        return response.json()

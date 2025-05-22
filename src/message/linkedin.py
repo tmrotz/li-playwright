@@ -17,14 +17,11 @@ def message(
     streak: Streak,
     message: str,
 ):
-    # print(streak.get_pipeline(config["streak.keys"]["pipeline"]))
+    boxes: List[Box] = []
 
-    box: Box = Box("Brad Rachal")
-    box.box_key = "boxKey"
-    box.stage_key = "stageKey"
-    boxes: List[Box] = [box]
-
-    streak_boxes = streak.get_boxes_by_stage(streak.pipeline_key, streak.stage_key)
+    streak_boxes: List = streak.get_boxes_by_stage(
+        streak.pipeline_key, streak.stage_key
+    )
     assert isinstance(streak_boxes, List), f"streak_boxes is a {type(streak_boxes)}"
     print("# of boxes from Streak", len(streak_boxes))
 
