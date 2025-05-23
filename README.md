@@ -18,7 +18,7 @@ python -m src.message -c message
 python -m build
 
 ## Install/Upgrade
-1. sudo apt install python3.12-venv
+1. sudo apt install python3.12-venv xclip
 1. python3 -m venv venv
 1. sudo apt install python3-pip
 1. . venv/bin/activate
@@ -27,6 +27,8 @@ python -m build
 1. pip install --upgrade li_playwright-"$WHEEL_V"-py3-none-any.whl
 1. playwright install && playwright install-deps
 1. touch config.ini
+1. mkdir states
+1. cp config.ini down down down
 
 ## Run
 python -m message -c message
