@@ -6,31 +6,40 @@ from message.streak.Streak import Streak
 
 from . import linkedin, pr
 
+MESSAGE = "message"
+SCRAPE = "scrape"
 
 def main():
-    parser = argparse.ArgumentParser(prog="")
+    parser = argparse.ArgumentParser()
     parser.add_argument("-c", "--command")
     args = parser.parse_args()
     if args.command is None:
-        print("Give one of these commands:", "message", "scrape")
+        print("Give one of these commands:", MESSAGE, SCRAPE)
         exit()
 
     config: ConfigParser = ConfigParser()
-    project_dir: Path = Path(__file__).parent.parent.parent
-    config_path: Path = project_dir.joinpath("config.ini")
-    assert config_path.is_file(), f"Can't find config.ini: {config_path}"
-    config.read(config_path)
+    files: list = config.read([
+        "config.ini",
+        Path.home().joinpath("config.ini").as_posix()
+    ])
+    if len(files) == 0:
+        print("Found 0 configs")
+        quit()
+    elif len(files) == 1:
+        print("Yay! Found a config!")
+    elif len(files) > 1:
+        print(f"Warning: Found {len(files)} configs")
 
     streak = Streak(config["streak.keys"]["api"])
     streak.pipeline_key = config["streak.keys"]["pipeline"]
     streak.stage_key = config["streak.keys"]["stage"]
 
-    if args.command == "message":
+    if args.command == MESSAGE:
         pr.run(config, linkedin.message, streak, config["linkedin"]["message"])
-    elif args.command == "scrape":
+    elif args.command == SCRAPE:
         pr.run(config, linkedin.scrape, streak)
     else:
-        print("Invalid command. Use one of these:", "message", "scrape")
+        print("Invalid command. Use one of these:", MESSAGE, SCRAPE)
 
 
 if __name__ == "__main__":

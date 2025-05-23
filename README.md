@@ -9,9 +9,10 @@ to write your content.
 python3 -m venv venv
 . venv/bin/activate
 pip install -e .[dev]
+playwright install && playwright install-deps
 
 # Run
-python -m src.message -c message
+python -m message -c message
 
 # Wheel
 ## Create
