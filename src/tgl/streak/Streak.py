@@ -1,5 +1,4 @@
 import base64
-from typing import List
 
 import requests
 
@@ -46,7 +45,7 @@ class Streak:
             headers=self._headers,
         ).text
 
-    def get_boxes_by_stage(self, pipeline_key: str, stage_key: str) -> List:
+    def get_boxes_by_stage(self, pipeline_key: str, stage_key: str) -> list:
         response: requests.Response = requests.get(
             url=self._boxes_url.format_map(
                 {"pipeline_key": pipeline_key, "stage_key": stage_key}

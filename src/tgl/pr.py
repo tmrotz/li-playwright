@@ -1,5 +1,6 @@
 import os
 from configparser import ConfigParser
+from pathlib import Path
 
 from playwright.sync_api import (
     Browser,
@@ -16,10 +17,10 @@ def run(config: ConfigParser, func, *args, **kwargs):
 
     with sync_playwright() as p:
 
-        file = f"states/{username}.json"
-
         chrome: BrowserType = p.chromium
         browser: Browser = chrome.launch(headless=False)
+
+        file: Path = Path.home().joinpath(f"{username}.json")
 
         context: BrowserContext = browser.new_context(
             base_url="https://www.linkedin.com",
