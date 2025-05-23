@@ -2,12 +2,12 @@ import argparse
 from configparser import ConfigParser
 from pathlib import Path
 
-from message.streak.Streak import Streak
-
 from . import linkedin, pr
+from .streak.Streak import Streak
 
 MESSAGE = "message"
 SCRAPE = "scrape"
+
 
 def main():
     parser = argparse.ArgumentParser()
@@ -18,10 +18,9 @@ def main():
         exit()
 
     config: ConfigParser = ConfigParser()
-    files: list = config.read([
-        "config.ini",
-        Path.home().joinpath("config.ini").as_posix()
-    ])
+    files: list = config.read(
+        ["config.ini", Path.home().joinpath("config.ini").as_posix()]
+    )
     if len(files) == 0:
         print("Found 0 configs")
         quit()
