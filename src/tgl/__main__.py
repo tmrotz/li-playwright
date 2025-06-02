@@ -2,8 +2,10 @@ import argparse
 from configparser import ConfigParser
 from pathlib import Path
 
-from . import linkedin, pr
-from .streak.Streak import Streak
+from tgl.linkedin.message import send_messages
+from tgl.linkedin.scrape import scrape
+from tgl.playwright import playwright
+from tgl.streak.streak import Streak
 
 MESSAGE = "message"
 SCRAPE = "scrape"
@@ -35,9 +37,14 @@ def main():
     streak.stage_key = config["streak.keys"]["stage"]
 
     if args.command == MESSAGE:
-        pr.run(config, linkedin.send_messages, streak, config["linkedin"]["message"])
+        playwright.run(
+            config,
+            send_messages,
+            streak,
+            config["linkedin"]["message"],
+        )
     elif args.command == SCRAPE:
-        pr.run(config, linkedin.scrape, streak)
+        playwright.run(config, scrape, streak)
     elif args.command == PIPELINES:
         print(streak.get_pipelines())
     else:
