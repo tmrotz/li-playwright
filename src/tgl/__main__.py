@@ -1,5 +1,6 @@
 import argparse
 from configparser import ConfigParser
+from enum import Enum
 from pathlib import Path
 
 from tgl.linkedin.message import send_messages
@@ -7,9 +8,11 @@ from tgl.linkedin.scrape import scrape
 from tgl.playwright import playwright
 from tgl.streak.streak import Streak
 
-MESSAGE = "message"
-SCRAPE = "scrape"
-PIPELINES = "pipelines"
+
+class Command(Enum):
+    MESSAGE = "message"
+    SCRAPE = "scrape"
+    PIPELINES = "pipelines"
 
 
 def main():
@@ -17,7 +20,12 @@ def main():
     parser.add_argument("-c", "--command")
     args = parser.parse_args()
     if args.command is None:
-        print("Give one of these commands:", MESSAGE, SCRAPE, PIPELINES)
+        print(
+            "Give one of these commands:",
+            Command.MESSAGE,
+            Command.SCRAPE,
+            Command.PIPELINES,
+        )
         exit()
 
     config: ConfigParser = ConfigParser()
@@ -36,19 +44,25 @@ def main():
     streak.pipeline_key = config["streak.keys"]["pipeline"]
     streak.stage_key = config["streak.keys"]["stage"]
 
-    if args.command == MESSAGE:
-        playwright.run(
-            config,
-            send_messages,
-            streak,
-            config["linkedin"]["message"],
-        )
-    elif args.command == SCRAPE:
-        playwright.run(config, scrape, streak)
-    elif args.command == PIPELINES:
-        print(streak.get_pipelines())
-    else:
-        print("Invalid command. Use one of these:", MESSAGE, SCRAPE, PIPELINES)
+    match args.command:
+        case Command.MESSAGE:
+            playwright.run(
+                config,
+                send_messages,
+                streak,
+                config["linkedin"]["message"],
+            )
+        case Command.SCRAPE:
+            playwright.run(config, scrape, streak)
+        case Command.PIPELINES:
+            print(streak.get_pipelines())
+        case _:
+            print(
+                "Invalid command. Use one of these:",
+                Command.MESSAGE,
+                Command.SCRAPE,
+                Command.PIPELINES,
+            )
 
 
 if __name__ == "__main__":
