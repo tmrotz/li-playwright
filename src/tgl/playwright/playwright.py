@@ -1,4 +1,5 @@
 import os
+from collections.abc import Callable
 from configparser import ConfigParser
 from pathlib import Path
 
@@ -11,7 +12,7 @@ from playwright.sync_api import (
 )
 
 
-def run(config: ConfigParser, func, *args, **kwargs):
+def run(config: ConfigParser, func: Callable, *args, **kwargs):
     username = config["linkedin"]["username"]
     password = config["linkedin"]["password"]
 
