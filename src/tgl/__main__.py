@@ -7,6 +7,7 @@ from .streak.Streak import Streak
 
 MESSAGE = "message"
 SCRAPE = "scrape"
+PIPELINES = "pipelines"
 
 
 def main():
@@ -14,7 +15,7 @@ def main():
     parser.add_argument("-c", "--command")
     args = parser.parse_args()
     if args.command is None:
-        print("Give one of these commands:", MESSAGE, SCRAPE)
+        print("Give one of these commands:", MESSAGE, SCRAPE, PIPELINES)
         exit()
 
     config: ConfigParser = ConfigParser()
@@ -34,11 +35,13 @@ def main():
     streak.stage_key = config["streak.keys"]["stage"]
 
     if args.command == MESSAGE:
-        pr.run(config, linkedin.message, streak, config["linkedin"]["message"])
+        pr.run(config, linkedin.send_messages, streak, config["linkedin"]["message"])
     elif args.command == SCRAPE:
         pr.run(config, linkedin.scrape, streak)
+    elif args.command == PIPELINES:
+        print(streak.get_pipelines())
     else:
-        print("Invalid command. Use one of these:", MESSAGE, SCRAPE)
+        print("Invalid command. Use one of these:", MESSAGE, SCRAPE, PIPELINES)
 
 
 if __name__ == "__main__":

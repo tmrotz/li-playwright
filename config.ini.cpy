@@ -1,10 +1,10 @@
 [linkedin]
 username = 
 password = 
-message =
+message = 
 
 [streak.keys]
 api = 
-pipeline =
-stage =
+pipeline = 
+stage = 
 
