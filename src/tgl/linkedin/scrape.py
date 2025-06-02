@@ -1,7 +1,7 @@
 from playwright.sync_api import Locator, Page
 
-from tgl.streak.Box import Box
-from tgl.streak.Streak import Streak
+from tgl.streak.box import Box
+from tgl.streak.streak import Streak
 
 headline_selector = (
     "div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2)"

@@ -14,6 +14,9 @@ class Command(Enum):
     SCRAPE = "scrape"
     PIPELINES = "pipelines"
 
+    def __str__(self) -> str:
+        return self.value
+
 
 def main():
     parser = argparse.ArgumentParser()
@@ -44,7 +47,18 @@ def main():
     streak.pipeline_key = config["streak.keys"]["pipeline"]
     streak.stage_key = config["streak.keys"]["stage"]
 
-    match args.command:
+    try:
+        command: Command = Command(args.command)
+    except ValueError:
+        print(
+            "Invalid command. Use one of these:",
+            Command.MESSAGE,
+            Command.SCRAPE,
+            Command.PIPELINES,
+        )
+        quit()
+
+    match command:
         case Command.MESSAGE:
             playwright.run(
                 config,
@@ -56,13 +70,6 @@ def main():
             playwright.run(config, scrape, streak)
         case Command.PIPELINES:
             print(streak.get_pipelines())
-        case _:
-            print(
-                "Invalid command. Use one of these:",
-                Command.MESSAGE,
-                Command.SCRAPE,
-                Command.PIPELINES,
-            )
 
 
 if __name__ == "__main__":
