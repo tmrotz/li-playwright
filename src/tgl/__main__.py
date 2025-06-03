@@ -4,8 +4,8 @@ from configparser import ConfigParser
 from enum import Enum
 from pathlib import Path
 
-from tgl.linkedin.message import send_messages
-from tgl.linkedin.scrape import scrape
+from tgl.linkedin.message import Message
+from tgl.linkedin.scrape import Scrape
 from tgl.playwright import playwright
 from tgl.streak.streak import Streak
 
@@ -71,12 +71,12 @@ def main():
         case Command.MESSAGE:
             playwright.run(
                 config,
-                send_messages,
+                Message(),
                 streak,
                 config["linkedin"]["message"],
             )
         case Command.SCRAPE:
-            playwright.run(config, scrape, streak)
+            playwright.run(config, Scrape(), streak)
         case Command.PIPELINES:
             print(streak.get_pipelines())
 

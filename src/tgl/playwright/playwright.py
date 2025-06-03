@@ -1,5 +1,4 @@
 import os
-from collections.abc import Callable
 from configparser import ConfigParser
 from pathlib import Path
 
@@ -12,7 +11,7 @@ from playwright.sync_api import (
 )
 
 
-def run(config: ConfigParser, func: Callable, *args, **kwargs):
+def run(config: ConfigParser, klass, *args, **kwargs):
     username = config["linkedin"]["username"]
     password = config["linkedin"]["password"]
 
@@ -39,6 +38,6 @@ def run(config: ConfigParser, func: Callable, *args, **kwargs):
             page.wait_for_url("/feed/")
             context.storage_state(path=file)
 
-        func(page, *args, **kwargs)
+        klass.run(page, *args, **kwargs)
 
         browser.close()
