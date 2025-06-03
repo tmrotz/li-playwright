@@ -20,18 +20,8 @@ class Command(Enum):
 
 
 def main():
-    home: Path = Path.home()
-    logging.basicConfig(
-        filename=home.joinpath("log.log"),
-        encoding="utf-8",
-        level=logging.DEBUG,
-        format="%(asctime)s - %(levelname)s - %(module)s - %(message)s",
-    )
-    logger: logging.Logger = logging.getLogger(__name__)
-    logger.debug("hi!")
-
     config: ConfigParser = ConfigParser()
-    files: list = config.read(["config.ini", home.joinpath("config.ini")])
+    files: list = config.read(["config.ini", Path.home().joinpath("config.ini")])
     if len(files) == 0:
         print("Found 0 configs")
         return
@@ -82,10 +72,18 @@ def main():
 
 
 if __name__ == "__main__":
-    logger = logging.getLogger("root")
+    logging.basicConfig(
+        filename=Path.home().joinpath("log.log"),
+        encoding="utf-8",
+        level=logging.DEBUG,
+        format="%(asctime)s - %(levelname)s - %(module)s - %(message)s",
+    )
+    logger: logging.Logger = logging.getLogger()
     logger.debug("start")
+
     try:
         main()
     except Exception as err:
         logger.error(err, exc_info=True)
+
     logger.debug("stop")
