@@ -23,13 +23,13 @@ def send_messages(
     for streak_box in streak_boxes:
         assert isinstance(streak_box, dict), f"streak_box is a {type(streak_box)}"
         try:
-            send_message(page, streak_box, message)
+            _send_message(page, streak_box, message)
         except TimeoutError as e:
             print("Timeout reached. Skipping", e)
         page.wait_for_timeout(random.randint(10, 15) * 1000)
 
 
-def send_message(page: Page, streak_box: dict, message: str):
+def _send_message(page: Page, streak_box: dict, message: str):
     box: Box = Box(streak_box["name"])
     box.box_key = streak_box["boxKey"]
     box.stage_key = streak_box["stageKey"]

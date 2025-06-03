@@ -1,4 +1,5 @@
 import argparse
+import logging
 from configparser import ConfigParser
 from enum import Enum
 from pathlib import Path
@@ -19,6 +20,26 @@ class Command(Enum):
 
 
 def main():
+    home: Path = Path.home()
+    logging.basicConfig(
+        filename=home.joinpath("log.log"),
+        encoding="utf-8",
+        level=logging.DEBUG,
+        format="%(asctime)s - %(levelname)s - %(module)s - %(message)s",
+    )
+    logger: logging.Logger = logging.getLogger(__name__)
+    logger.debug("hi!")
+
+    config: ConfigParser = ConfigParser()
+    files: list = config.read(["config.ini", home.joinpath("config.ini")])
+    if len(files) == 0:
+        print("Found 0 configs")
+        return
+    elif len(files) == 1:
+        print("Yay! Found a config!")
+    elif len(files) > 1:
+        print(f"Warning: Found {len(files)} configs")
+
     parser = argparse.ArgumentParser()
     parser.add_argument("-c", "--command")
     args = parser.parse_args()
@@ -29,19 +50,7 @@ def main():
             Command.SCRAPE,
             Command.PIPELINES,
         )
-        exit()
-
-    config: ConfigParser = ConfigParser()
-    files: list = config.read(
-        ["config.ini", Path.home().joinpath("config.ini").as_posix()]
-    )
-    if len(files) == 0:
-        print("Found 0 configs")
-        quit()
-    elif len(files) == 1:
-        print("Yay! Found a config!")
-    elif len(files) > 1:
-        print(f"Warning: Found {len(files)} configs")
+        return
 
     streak = Streak(config["streak.keys"]["api"])
     streak.pipeline_key = config["streak.keys"]["pipeline"]
@@ -56,7 +65,7 @@ def main():
             Command.SCRAPE,
             Command.PIPELINES,
         )
-        quit()
+        return
 
     match command:
         case Command.MESSAGE:
@@ -73,4 +82,10 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    logger = logging.getLogger("root")
+    logger.debug("start")
+    try:
+        main()
+    except Exception as err:
+        logger.error(err, exc_info=True)
+    logger.debug("stop")
