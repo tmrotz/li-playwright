@@ -28,7 +28,8 @@ class Message:
                 self._send_message(page, streak_box, message)
             except TimeoutError as e:
                 print("Timeout reached. Skipping", e)
-            page.wait_for_timeout(random.randint(10, 15) * 1000)
+            # streak.update_box(streak_box["boxKey"], messaged_stage_key)
+            page.wait_for_timeout(random.randint(15, 22) * 1000)
 
     def _send_message(self, page: Page, streak_box: dict, message: str):
         box: Box = Box(streak_box["name"])
@@ -42,13 +43,13 @@ class Message:
 
         # Logged in
         page.get_by_placeholder("Type a name or multiple names").fill(box.name)
-        page.wait_for_timeout(random.randint(5, 7) * 1000)
+        page.wait_for_timeout(random.randint(5, 10) * 1000)
         page.locator(
             "div.msg-connections-typeahead__search-results ul > li button"
         ).locator("nth=0").click()
-        page.wait_for_timeout(random.randint(5, 7) * 1000)
+        page.wait_for_timeout(random.randint(5, 10) * 1000)
         page.keyboard.press("Enter")
-        page.wait_for_timeout(random.randint(5, 7) * 1000)
+        page.wait_for_timeout(random.randint(5, 10) * 1000)
         page.keyboard.press("Control+V")
-        page.wait_for_timeout(random.randint(5, 7) * 1000)
+        page.wait_for_timeout(random.randint(5, 12) * 1000)
         page.get_by_role("button", name="Send", exact=True).click()
