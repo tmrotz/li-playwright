@@ -26,78 +26,89 @@ class ScrapeStage:
         print("# of boxes to scrape", len(streak_boxes))
 
         for streak_box in streak_boxes:
-            url = streak_box["fields"][streak.get_linkedin_key()]
-            user = url.rsplit("/", 1)[-1]
-            page.goto("/in/" + user)
-            section: Locator = page.locator("section", has_text="Contact info")
-
-            name = section.get_by_role("heading").text_content()
-            if name is None:
-                print("name not available")
-                continue
-
-            box: Box = Box(name.strip())
-
-            headline = section.locator(headline_selector).text_content()
-            if headline is None:
-                print("headline not available", headline_selector)
-                continue
-            box.headline = headline.strip()
-
-            location = section.locator(location_selector).text_content()
-            if location is None:
-                print("location not available", location_selector)
-                continue
-            box.location = location.strip()
-
-            experience: Locator = page.get_by_text("Experience", exact=True).first
-            section: Locator = page.locator("section").filter(has=experience)
-            experiences: list[str] = (
-                section.get_by_role("list").first.inner_text().splitlines()
-            )
-
-            uniques = []
-            for e in experiences[:10]:
-                if e not in uniques:
-                    uniques.append(e)
-
-            box.position = uniques[0]
-            box.company = uniques[1].split(" · ")[0]
-
-            page.get_by_text("Contact info").click()
-
-            section: Locator = page.locator("section", has_text="Contact Info")
-            section.wait_for()
-
-            email = section.locator("section", has_text="Email").locator("a")
             try:
-                email.wait_for()
-            except PlaywrightTimeoutError:
-                print("No email, skipping")
+                box: Box = self._scrape(page, streak, streak_box, scraped_stage_key)
+            except Exception as e:
+                print("Something went wrong. Skipping", e)
             else:
-                box.email = email.inner_text().strip()
-
-            phone = page.locator("section", has_text="Phone").locator("span").first
-            try:
-                phone.wait_for()
-            except PlaywrightTimeoutError:
-                print("No phone, skipping")
-            else:
-                box.phone = phone.inner_text().strip()
-
-            # connected = page.locator("section", has_text="Connected").locator("span")
-            # connected.wait_for()
-            # connected = connected.inner_text().strip()
-            # box.connected = datetime.datetime.strptime(
-            #     connected, "%b %d, %Y"
-            # ).timestamp()
-
-            print(box)
-
-            streak.update_box(
-                streak_box["key"],
-                streak.create_fields_data(box),
-                stage_key=scraped_stage_key,
-            )
+                print(box)
+                streak.update_box(
+                    streak_box["key"],
+                    streak.create_fields_data(box),
+                    stage_key=scraped_stage_key,
+                )
 
             page.wait_for_timeout(random.randint(10, 15) * 1000)
+
+        print("Done scraping")
+
+    def _scrape(
+        self, page: Page, streak: Streak, streak_box: dict, scraped_stage_key: str
+    ):
+        url = streak_box["fields"][streak.get_linkedin_key()]
+        user = url.rsplit("/", 1)[-1]
+        page.goto("/in/" + user)
+        section: Locator = page.locator("section", has_text="Contact info")
+
+        name = section.locator("h1").text_content()
+        if name is None:
+            print("name not available")
+            raise Exception("name not available")
+
+        box: Box = Box(name.strip())
+
+        headline = section.locator(headline_selector).text_content()
+        if headline is None:
+            print("headline not available", headline_selector)
+            raise Exception("headline not available")
+        box.headline = headline.strip()
+
+        location = section.locator(location_selector).text_content()
+        if location is None:
+            print("location not available", location_selector)
+            raise Exception("location not available")
+        box.location = location.strip()
+
+        experience: Locator = page.get_by_text("Experience", exact=True).first
+        section: Locator = page.locator("section").filter(has=experience)
+        experiences: list[str] = (
+            section.get_by_role("list").first.inner_text().splitlines()
+        )
+
+        uniques = []
+        for e in experiences[:10]:
+            if e not in uniques:
+                uniques.append(e)
+
+        box.position = uniques[0]
+        box.company = uniques[1].split(" · ")[0]
+
+        page.get_by_text("Contact info").click()
+
+        section: Locator = page.locator("section", has_text="Contact Info")
+        section.wait_for()
+
+        email = section.locator("section", has_text="Email").locator("a")
+        try:
+            email.wait_for()
+        except PlaywrightTimeoutError:
+            print("No email, skipping")
+        else:
+            box.email = email.inner_text().strip()
+
+        phone = page.locator("section", has_text="Phone").locator("span").first
+        try:
+            phone.wait_for()
+        except PlaywrightTimeoutError:
+            print("No phone, skipping")
+        else:
+            box.phone = phone.inner_text().strip()
+
+        # connected = page.locator("section", has_text="Connected").locator("span")
+        # connected.wait_for()
+        # connected = connected.inner_text().strip()
+        # box.connected = datetime.datetime.strptime(
+        #     connected, "%b %d, %Y"
+        # ).timestamp()
+
+        return box
