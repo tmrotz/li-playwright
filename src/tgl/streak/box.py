@@ -14,8 +14,8 @@ class Box:
 
     def __str__(self):
         return (
-            f"Box: name={self.name}, Headline={self.headline}, "
-            f"Location={self.location}, Position={self.position}, "
-            f"Company={self.company}, Email={self.email}, Phone={self.phone}"
-            # f"Connected={self.connected}"
+            f"Box: name={self.name}, Headline={self.headline},"
+            f" Location={self.location}, Position={self.position},"
+            f" Company={self.company}, Email={self.email}, Phone={self.phone},"
+            # f" Connected={self.connected}"
         )

@@ -1,3 +1,6 @@
+import datetime
+import random
+
 from playwright.sync_api import Locator, Page
 from playwright.sync_api import TimeoutError as PlaywrightTimeoutError
 
@@ -23,8 +26,9 @@ class ScrapeStage:
         print("# of boxes to scrape", len(streak_boxes))
 
         for streak_box in streak_boxes:
-            url = streak_box["fields"][streak.get_linkedin_key()][12:]
-            page.goto(url)
+            url = streak_box["fields"][streak.get_linkedin_key()]
+            user = url.rsplit("/", 1)[-1]
+            page.goto("/in/" + user)
             section: Locator = page.locator("section", has_text="Contact info")
 
             name = section.get_by_role("heading").text_content()
@@ -84,8 +88,9 @@ class ScrapeStage:
             # connected = page.locator("section", has_text="Connected").locator("span")
             # connected.wait_for()
             # connected = connected.inner_text().strip()
-            # connected[0:2], connected[
-            # box.connected = ???
+            # box.connected = datetime.datetime.strptime(
+            #     connected, "%b %d, %Y"
+            # ).timestamp()
 
             print(box)
 
@@ -94,3 +99,5 @@ class ScrapeStage:
                 streak.create_fields_data(box),
                 stage_key=scraped_stage_key,
             )
+
+            page.wait_for_timeout(random.randint(10, 15) * 1000)
