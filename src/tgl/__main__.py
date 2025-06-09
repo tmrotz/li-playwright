@@ -5,7 +5,7 @@ from enum import Enum
 from pathlib import Path
 
 from tgl.linkedin.message import Message
-from tgl.linkedin.scrape import Scrape
+from tgl.linkedin.scrape_stage import ScrapeStage
 from tgl.playwright import playwright
 from tgl.streak.streak import Streak
 
@@ -42,9 +42,7 @@ def main():
         )
         return
 
-    streak = Streak(config["streak.keys"]["api"])
-    streak.pipeline_key = config["streak.keys"]["pipeline"]
-    streak.stage_key = config["streak.keys"]["stage"]
+    streak = Streak(config["streak.keys"]["api"], config["streak.keys"]["pipeline"])
 
     try:
         command: Command = Command(args.command)
@@ -55,7 +53,7 @@ def main():
             Command.SCRAPE,
             Command.PIPELINES,
         )
-        return
+        return None
 
     match command:
         case Command.MESSAGE:
@@ -64,9 +62,17 @@ def main():
                 Message(),
                 streak,
                 config["linkedin"]["message"],
+                config["stages"]["message"],
+                config["stages"]["messaged"],
             )
         case Command.SCRAPE:
-            playwright.run(config, Scrape(), streak)
+            playwright.run(
+                config,
+                ScrapeStage(),
+                streak,
+                config["stages"]["scrape"],
+                config["stages"]["scraped"],
+            )
         case Command.PIPELINES:
             print(streak.get_pipelines())
 
@@ -84,6 +90,7 @@ if __name__ == "__main__":
     try:
         main()
     except Exception as err:
+        print("Something went wrong. Check ~/log.log", err)
         logger.error(err, exc_info=True)
 
     logger.debug("stop")
