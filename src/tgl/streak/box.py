@@ -1,3 +1,6 @@
+from datetime import datetime
+
+
 class Box:
     def __init__(self, name: str):
         self.name = name
@@ -7,7 +10,18 @@ class Box:
         self.company = ""
         self.email = ""
         self.phone = ""
-        # self.connected = ""
+        self._connected = None
+
+    @property
+    def connected(self):
+        if self._connected is not None:
+            return int(self._connected.timestamp())
+        else:
+            return ""
+
+    @connected.setter
+    def connected(self, value: datetime):
+        self._connected = value
 
     def first_name(self):
         return self.name.split()[0]
@@ -17,5 +31,5 @@ class Box:
             f"Box: name={self.name}, Headline={self.headline},"
             f" Location={self.location}, Position={self.position},"
             f" Company={self.company}, Email={self.email}, Phone={self.phone},"
-            # f" Connected={self.connected}"
+            f" Connected={self.connected}"
         )

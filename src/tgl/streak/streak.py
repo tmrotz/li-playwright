@@ -80,15 +80,17 @@ class Streak:
         return response.json()
 
     def create_fields_data(self, box: Box) -> dict:
-        return {
+        fields = {
             self._fields_to_keys["Headline"]: box.headline,
             self._fields_to_keys["Location"]: box.location,
             self._fields_to_keys["Position"]: box.position,
             self._fields_to_keys["Company"]: box.company,
             self._fields_to_keys["Email"]: box.email,
             self._fields_to_keys["Phone"]: box.phone,
-            # self._fields_to_keys["Connected"]: box.connected,
         }
+        if box.connected:
+            fields[self._fields_to_keys["Connected"]] = box.connected.__str__()
+        return fields
 
     def create_box_with_data(self, box: Box, stage_key: str = "") -> None:
         new_box: dict = self.create_box(box.name, stage_key)

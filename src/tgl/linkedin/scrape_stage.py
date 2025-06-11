@@ -1,8 +1,8 @@
-import datetime
 import random
+from datetime import datetime
 
 from playwright.sync_api import Locator, Page
-from playwright.sync_api import TimeoutError as PlaywrightTimeoutError
+from playwright.sync_api import TimeoutError as PWTimeoutError
 
 from tgl.streak.box import Box
 from tgl.streak.streak import Streak
@@ -21,13 +21,14 @@ class ScrapeStage:
         scrape_stage_key: str,
         scraped_stage_key: str,
     ):
-        page.set_default_timeout(10000)
         streak_boxes: list = streak.get_boxes_by_stage(scrape_stage_key)
         print("# of boxes to scrape", len(streak_boxes))
 
+        linkedin_key = streak.get_linkedin_key()
+
         for streak_box in streak_boxes:
             try:
-                box: Box = self._scrape(page, streak, streak_box, scraped_stage_key)
+                box: Box = self._scrape(page, streak_box["fields"][linkedin_key])
             except Exception as e:
                 print("Something went wrong. Skipping", e)
             else:
@@ -42,10 +43,7 @@ class ScrapeStage:
 
         print("Done scraping")
 
-    def _scrape(
-        self, page: Page, streak: Streak, streak_box: dict, scraped_stage_key: str
-    ):
-        url = streak_box["fields"][streak.get_linkedin_key()]
+    def _scrape(self, page: Page, url: str):
         user = url.rsplit("/", 1)[-1]
         page.goto("/in/" + user)
         section: Locator = page.locator("section", has_text="Contact info")
@@ -83,32 +81,34 @@ class ScrapeStage:
         box.position = uniques[0]
         box.company = uniques[1].split(" · ")[0]
 
+        # Contact Info Section!
         page.get_by_text("Contact info").click()
 
         section: Locator = page.locator("section", has_text="Contact Info")
         section.wait_for()
 
+        connected = (
+            section.locator("section", has_text="Connected")
+            .locator("span")
+            .inner_text()
+            .strip()
+        )
+        box.connected = datetime.strptime(connected, "%b %d, %Y")
+
         email = section.locator("section", has_text="Email").locator("a")
         try:
-            email.wait_for()
-        except PlaywrightTimeoutError:
+            email.wait_for(timeout=1000)
+        except PWTimeoutError:
             print("No email, skipping")
         else:
             box.email = email.inner_text().strip()
 
-        phone = page.locator("section", has_text="Phone").locator("span").first
+        phone = section.locator("section", has_text="Phone").locator("span").first
         try:
-            phone.wait_for()
-        except PlaywrightTimeoutError:
+            phone.wait_for(timeout=1000)
+        except PWTimeoutError:
             print("No phone, skipping")
         else:
             box.phone = phone.inner_text().strip()
-
-        # connected = page.locator("section", has_text="Connected").locator("span")
-        # connected.wait_for()
-        # connected = connected.inner_text().strip()
-        # box.connected = datetime.datetime.strptime(
-        #     connected, "%b %d, %Y"
-        # ).timestamp()
 
         return box
