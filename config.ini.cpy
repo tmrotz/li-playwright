@@ -6,5 +6,9 @@ message =
 [streak.keys]
 api = 
 pipeline = 
-stage = 
 
+[stages]
+message = 
+messaged = 
+scrape = 
+scraped = 
