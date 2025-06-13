@@ -65,19 +65,20 @@ class Streak:
         return response.json()
 
     # fields = {"1007": "moooo", "1039": 42}
-    def update_box(self, box_key: str, fields: dict = {}, stage_key: str = "") -> dict:
+    def update_box(
+        self, box_key: str, fields: dict = {}, stage_key: str = ""
+    ) -> Response:
         payload = {}
         if fields:
             payload["fields"] = fields
         if stage_key:
             payload["stageKey"] = stage_key
 
-        response: Response = requests.post(
+        return requests.post(
             url=self._update_box_url.format_map({"boxKey": box_key}),
             json=payload,
             headers=self._headers,
         )
-        return response.json()
 
     def create_fields_data(self, box: Box) -> dict:
         fields = {

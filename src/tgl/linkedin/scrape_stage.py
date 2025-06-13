@@ -3,6 +3,7 @@ from datetime import datetime
 
 from playwright.sync_api import Locator, Page
 from playwright.sync_api import TimeoutError as PWTimeoutError
+from requests import Response
 
 from tgl.streak.box import Box
 from tgl.streak.streak import Streak
@@ -32,8 +33,8 @@ class ScrapeStage:
             except Exception as e:
                 print("Something went wrong. Skipping", e)
             else:
-                print(box)
-                streak.update_box(
+                print("Scraped data", box)
+                response: Response = streak.update_box(
                     streak_box["key"],
                     streak.create_fields_data(box),
                     stage_key=scraped_stage_key,
@@ -43,8 +44,12 @@ class ScrapeStage:
 
         print("Done scraping")
 
-    def _scrape(self, page: Page, url: str):
-        user = url.rsplit("/", 1)[-1]
+    def _scrape(self, page: Page, url: str) -> Box:
+        user = url.split("/")[-1]
+        if not user:
+            user = url.split("/")[-2]
+        if not user:
+            raise Exception("Bad Linkedin URL: " + url)
         page.goto("/in/" + user)
         section: Locator = page.locator("section", has_text="Contact info")
 
@@ -82,18 +87,22 @@ class ScrapeStage:
         box.company = uniques[1].split(" · ")[0]
 
         # Contact Info Section!
-        page.get_by_text("Contact info").click()
+        page.locator("a", has_text="Contact info").first.click()
 
-        section: Locator = page.locator("section", has_text="Contact Info")
+        section: Locator = page.locator("section").filter(
+            has=page.locator("h2", has_text="Contact Info")
+        )
         section.wait_for()
 
-        connected = (
-            section.locator("section", has_text="Connected")
-            .locator("span")
-            .inner_text()
-            .strip()
-        )
-        box.connected = datetime.strptime(connected, "%b %d, %Y")
+        # connected = section.locator("section", has_text="Connected").locator("span")
+        # try:
+        #     connected.wait_for(timeout=1000)
+        # except PWTimeoutError:
+        #     print("Not connected, skipping")
+        # else:
+        #     box.connected = datetime.strptime(
+        #         connected.inner_text().strip(), "%b %d, %Y"
+        #     )
 
         email = section.locator("section", has_text="Email").locator("a")
         try:
