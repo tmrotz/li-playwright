@@ -1,5 +1,4 @@
 import random
-from datetime import datetime
 
 from playwright.sync_api import Locator, Page
 from playwright.sync_api import TimeoutError as PWTimeoutError
@@ -45,11 +44,14 @@ class ScrapeStage:
         print("Done scraping")
 
     def _scrape(self, page: Page, url: str) -> Box:
-        user = url.split("/")[-1]
+        # URL may have ending slash: https://www.linkedin.com/in/brad-rachal/
+        splits: list[str] = url.split("/")
+        user = splits[-1]
         if not user:
-            user = url.split("/")[-2]
+            user = splits[-2]
         if not user:
             raise Exception("Bad Linkedin URL: " + url)
+
         page.goto("/in/" + user)
         section: Locator = page.locator("section", has_text="Contact info")
 

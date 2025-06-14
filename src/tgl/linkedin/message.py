@@ -1,7 +1,9 @@
+import errno
 import random
 
 import pyperclip
 from playwright.sync_api import Page
+from playwright.sync_api import TimeoutError as PWTimeoutError
 
 from tgl.streak.box import Box
 from tgl.streak.streak import Streak
@@ -43,9 +45,20 @@ class Message:
 
         page.get_by_placeholder("Type a name or multiple names").fill(box.name)
         page.wait_for_timeout(random.randint(5, 10) * 1000)
-        page.locator(
-            "div.msg-connections-typeahead__search-results ul > li button"
-        ).locator("nth=0").click()
+
+        button = page.locator(
+            "button",
+            has=page.locator("dt", has_text="• 1st"),
+        ).first
+        try:
+            button.wait_for(timeout=5000)
+        except PWTimeoutError:
+            raise TimeoutError(
+                errno.ETIMEDOUT, "Didn't find 1st connection with name: " + box.name
+            )
+        else:
+            button.click()
+
         page.wait_for_timeout(random.randint(5, 10) * 1000)
         page.keyboard.press("Enter")
         page.wait_for_timeout(random.randint(5, 10) * 1000)
