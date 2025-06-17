@@ -1,0 +1,4289 @@
+[
+  {
+    "teamKey": "agxzfm1haWxmb29nYWVyEQsSBFRlYW0YgIChyI3dswoM",
+    "creatorKey": "agxzfm1haWxmb29nYWVyNAsSDE9yZ2FuaXphdGlvbiIRY2FubmNlc3RyYW5vdy5jb20MCxIEVXNlchiAgKHouIP3CAw",
+    "icon": "label_important",
+    "name": "Production",
+    "sharingRestrictedToOrg": false,
+    "sharingRestrictedToTeam": false,
+    "fields": [
+      {
+        "name": "Linkedin",
+        "key": "1001",
+        "type": "TEXT_INPUT",
+        "lastUpdatedTimestamp": 1721680032241
+      },
+      {
+        "name": "Preferred Name",
+        "key": "1002",
+        "type": "TEXT_INPUT",
+        "lastUpdatedTimestamp": 1721680037278
+      },
+      {
+        "name": "Position",
+        "key": "1003",
+        "type": "TEXT_INPUT",
+        "lastUpdatedTimestamp": 1721680046744
+      },
+      {
+        "name": "Phone",
+        "key": "1004",
+        "type": "TEXT_INPUT",
+        "lastUpdatedTimestamp": 1721680080535
+      },
+      {
+        "name": "Email",
+        "key": "1005",
+        "type": "TEXT_INPUT",
+        "lastUpdatedTimestamp": 1721680089267
+      },
+      {
+        "name": "Company",
+        "key": "1006",
+        "type": "TEXT_INPUT",
+        "lastUpdatedTimestamp": 1721680125532
+      },
+      {
+        "name": "Location",
+        "key": "1007",
+        "type": "TEXT_INPUT",
+        "lastUpdatedTimestamp": 1721680136795
+      },
+      {
+        "name": "Facebook",
+        "key": "1008",
+        "type": "TEXT_INPUT",
+        "lastUpdatedTimestamp": 1721680160949
+      },
+      {
+        "name": "Text Date",
+        "key": "1009",
+        "type": "DATE",
+        "lastUpdatedTimestamp": 1721680205015
+      },
+      {
+        "name": "LMail",
+        "key": "1010",
+        "type": "DATE",
+        "lastUpdatedTimestamp": 1721680215600
+      },
+      {
+        "name": "Connected",
+        "key": "1011",
+        "type": "DATE",
+        "lastUpdatedTimestamp": 1721680226952
+      },
+      {
+        "name": "Headline",
+        "key": "1012",
+        "type": "TEXT_INPUT",
+        "lastUpdatedTimestamp": 1721680234552
+      },
+      {
+        "name": "Lmail2",
+        "key": "1013",
+        "type": "DATE",
+        "lastUpdatedTimestamp": 1736892367127
+      }
+    ],
+    "stages": {
+      "5020": {
+        "name": "Test",
+        "key": "5020",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#0088a9"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": true
+      },
+      "5010": {
+        "name": "6th Contacted",
+        "key": "5010",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#6e83e1"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": true
+      },
+      "5021": {
+        "name": "Post scrape",
+        "key": "5021",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#00A2B3"
+        },
+        "boxCount": 11,
+        "isColorFromTheme": true
+      },
+      "5011": {
+        "name": "Called",
+        "key": "5011",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#5F78DA"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": true
+      },
+      "5022": {
+        "name": "post message",
+        "key": "5022",
+        "color": {
+          "foregroundColor": "#000000",
+          "backgroundColor": "#00bdbe"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": true
+      },
+      "5001": {
+        "name": "LinkedIn Leads",
+        "key": "5001",
+        "color": {
+          "foregroundColor": "#000000",
+          "backgroundColor": "#FCC200"
+        },
+        "boxCount": 76,
+        "isColorFromTheme": true
+      },
+      "5012": {
+        "name": "Monthly Follow-up",
+        "key": "5012",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#5166cc"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": true
+      },
+      "5023": {
+        "name": "scrape from",
+        "key": "5023",
+        "color": {
+          "foregroundColor": "#000000",
+          "backgroundColor": "#00C8B6"
+        },
+        "boxCount": 1,
+        "isColorFromTheme": true
+      },
+      "5002": {
+        "name": "Interviewing",
+        "key": "5002",
+        "color": {
+          "foregroundColor": "#000000",
+          "backgroundColor": "#feb200"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": true
+      },
+      "5013": {
+        "name": "3 Month Follow-up",
+        "key": "5013",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#4455BD"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": true
+      },
+      "5003": {
+        "name": "Linkedin Talking",
+        "key": "5003",
+        "color": {
+          "foregroundColor": "#000000",
+          "backgroundColor": "#FFA100"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": true
+      },
+      "5014": {
+        "name": "6 Month Follow-up",
+        "key": "5014",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#3340a9"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": true
+      },
+      "5004": {
+        "name": "Non-Contacted",
+        "key": "5004",
+        "color": {
+          "foregroundColor": "#000000",
+          "backgroundColor": "#dc19fd"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": true
+      },
+      "5015": {
+        "name": "Other",
+        "key": "5015",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#252d94"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": true
+      },
+      "5005": {
+        "name": "1st Contacted",
+        "key": "5005",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#32ebfb"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": true
+      },
+      "5016": {
+        "name": "Rejected",
+        "key": "5016",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#191D80"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": true
+      },
+      "5006": {
+        "name": "2nd Contacted",
+        "key": "5006",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#F94A51"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": true
+      },
+      "5017": {
+        "name": "Finished",
+        "key": "5017",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#0d368a"
+        },
+        "boxCount": 1,
+        "isColorFromTheme": true
+      },
+      "5007": {
+        "name": "3rd Contacted",
+        "key": "5007",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#e86df4"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": true
+      },
+      "5018": {
+        "name": "grab",
+        "key": "5018",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#005B94"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": true
+      },
+      "5008": {
+        "name": "4th Contacted",
+        "key": "5008",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#8E9BEF"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": true
+      },
+      "5019": {
+        "name": "grab1",
+        "key": "5019",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#00719e"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": true
+      },
+      "5009": {
+        "name": "5th Contacted",
+        "key": "5009",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#7e8ee8"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": true
+      }
+    },
+    "stageOrder": [
+      "5001",
+      "5002",
+      "5003",
+      "5004",
+      "5005",
+      "5006",
+      "5007",
+      "5008",
+      "5009",
+      "5010",
+      "5011",
+      "5012",
+      "5013",
+      "5014",
+      "5015",
+      "5016",
+      "5017",
+      "5018",
+      "5019",
+      "5020",
+      "5021",
+      "5022",
+      "5023"
+    ],
+    "stageColorTheme": "STREAK",
+    "creationTimestamp": 1721679589813,
+    "lastUpdatedTimestamp": 1749674530664,
+    "customPermissionSets": {},
+    "defaultPermissionSetName": "__emptyPermissionSet__",
+    "aclEntries": [
+      {
+        "permissionSetName": "__adminPermissionSet__",
+        "displayName": "Jerry E",
+        "email": "jerry@canncestranow.com",
+        "fullName": "Jerry Eaton",
+        "givenName": "Jerry",
+        "image": "https://lh3.googleusercontent.com/a-/ALV-UjXhL1iY_ivtejWVu8Emx4oA3Nq5AMqtFFzwTdHWqRrIrnLHu4cWiXLOJNubHXpN_sDT75wwMZEiRufI0WGs9ReABb6K0rSq0LtR_SSYnUDKVA1BLlBfqAHWhCUHi5Gm0J3dvwXjjFquTHSZJWkcZwgkI7w8bAim9LEPpsnuhRTctOb3jrUXbfRsSLYKyFhyE12aUTibsCn_kM8-2CdDbtWhPbF_bFO2MgkSVA86SAfCJqJAlGIbYZIXXDa5npu4ZR6s7QLhvWZ8ldkxoMWAEcpUyvf1X5D9KsptiOFcBslSGKuZ6IMOPZ6o6rUua39yz_8_Qpn6ASl5TIgpPP_XOa-jF2TJolvgbVLlb1r_XNw1bg6am2wxu_P6edb2dOvbgSqmcfJFplOcxDFrwoGWyCN2t4SiinmAj6lv5oitp_RN7DldXEHxZRqbhr3gID76kPY8kpL5AtD7ShV_FSm5vicfVhpZhmiHnpwyFYrAOMp4Wnti6paFC5eZCJUWWJuamijqTkDo1fO-KXduImhNjBHXAZi1PFm3SVPLiVqw3f_w7GlLczxQkVxsO7xTRlCNrPlfuou5EwD--22cg0Tz4PmwMAXSljZiBIKavG3jReVnIwyZaweoy2qZ9mnLIotfej7tgEPut99tQPoLD1qZla1hEJckrtNIrfYOrjlxFL-PSpOnKgSb8VRCSpF_9n3IXXBn1DoiitipdyhpKBKfg_yrRUaieaDH7BXezLVhi7Vz-EnjGUcpslbGcnAf-6cf-ob5AEV_-kkOdM2XuPYtkDWKOQzCFEooF9NnLT6kPD3j1onj2rWA4Khj7FR5fQGjuWwsQasc9ByHIJSmtEnCuexbhnHsr3-52O7cATgZPELiSxR8Zp8yw0kW3bsN3xMRP_TvpPE2CAjko-ZWWEaXW__PXDGq5KhR37_fJU0YdV6PLi889hNqOsMp6aL95swSmze_6nNdri-8k2kgMB204GCfCeR1UA\u003ds96-c",
+        "userKey": "agxzfm1haWxmb29nYWVyNAsSDE9yZ2FuaXphdGlvbiIRY2FubmNlc3RyYW5vdy5jb20MCxIEVXNlchiAgKHouIP3CAw"
+      }
+    ],
+    "pipelineKey": "agxzfm1haWxmb29nYWVyOAsSDE9yZ2FuaXphdGlvbiIRY2FubmNlc3RyYW5vdy5jb20MCxIIV29ya2Zsb3cYgIDh6PrxlQkM",
+    "key": "agxzfm1haWxmb29nYWVyOAsSDE9yZ2FuaXphdGlvbiIRY2FubmNlc3RyYW5vdy5jb20MCxIIV29ya2Zsb3cYgIDh6PrxlQkM",
+    "creationSourceType": "HUMAN",
+    "boxCountHint": 89,
+    "boxCount": 89,
+    "lastSavedTimestamp": 1749674530668
+  },
+  {
+    "teamKey": "agxzfm1haWxmb29nYWVyEQsSBFRlYW0YgIChyI3dswoM",
+    "creatorKey": "agxzfm1haWxmb29nYWVyNAsSDE9yZ2FuaXphdGlvbiIRY2FubmNlc3RyYW5vdy5jb20MCxIEVXNlchiAgKHouIP3CAw",
+    "icon": "label_important",
+    "name": "Email 3",
+    "sharingRestrictedToOrg": false,
+    "sharingRestrictedToTeam": false,
+    "fields": [
+      {
+        "name": "Linkedin",
+        "key": "1001",
+        "type": "TEXT_INPUT",
+        "lastUpdatedTimestamp": 1727212951391
+      },
+      {
+        "name": "Preferred Name",
+        "key": "1002",
+        "type": "TEXT_INPUT",
+        "lastUpdatedTimestamp": 1727212951391
+      },
+      {
+        "name": "Position",
+        "key": "1003",
+        "type": "TEXT_INPUT",
+        "lastUpdatedTimestamp": 1727212951391
+      },
+      {
+        "name": "Phone",
+        "key": "1004",
+        "type": "TEXT_INPUT",
+        "lastUpdatedTimestamp": 1727212951391
+      },
+      {
+        "name": "Email",
+        "key": "1005",
+        "type": "TEXT_INPUT",
+        "lastUpdatedTimestamp": 1727212951391
+      },
+      {
+        "name": "Company",
+        "key": "1006",
+        "type": "TEXT_INPUT",
+        "lastUpdatedTimestamp": 1727212951391
+      },
+      {
+        "name": "Location",
+        "key": "1007",
+        "type": "TEXT_INPUT",
+        "lastUpdatedTimestamp": 1727212951391
+      },
+      {
+        "name": "Facebook",
+        "key": "1008",
+        "type": "TEXT_INPUT",
+        "lastUpdatedTimestamp": 1727212951391
+      },
+      {
+        "name": "Text Date",
+        "key": "1009",
+        "type": "DATE",
+        "lastUpdatedTimestamp": 1727212951391
+      },
+      {
+        "name": "LMail",
+        "key": "1010",
+        "type": "DATE",
+        "lastUpdatedTimestamp": 1727212951391
+      },
+      {
+        "name": "Connected",
+        "key": "1011",
+        "type": "DATE",
+        "lastUpdatedTimestamp": 1727212951391
+      },
+      {
+        "name": "Headline",
+        "key": "1012",
+        "type": "TEXT_INPUT",
+        "lastUpdatedTimestamp": 1727212951391
+      }
+    ],
+    "stages": {
+      "5020": {
+        "name": "Pre Message",
+        "key": "5020",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#6735BA"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": true
+      },
+      "5021": {
+        "name": "Post message",
+        "key": "5021",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#7d25b5"
+        },
+        "boxCount": 20,
+        "isColorFromTheme": true
+      },
+      "5022": {
+        "name": "Pre Scrape",
+        "key": "5022",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#9915AF"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": true
+      },
+      "5001": {
+        "name": "LinkedIn Leads",
+        "key": "5001",
+        "color": {
+          "foregroundColor": "#000000",
+          "backgroundColor": "#FCC200"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      },
+      "5023": {
+        "name": "Post Scrape",
+        "key": "5023",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#bd17aa"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": true
+      },
+      "5002": {
+        "name": "Interviewing",
+        "key": "5002",
+        "color": {
+          "foregroundColor": "#000000",
+          "backgroundColor": "#FEB200"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      },
+      "5024": {
+        "name": "Pre Pre scrape",
+        "key": "5024",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#ca1888"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": true
+      },
+      "5003": {
+        "name": "Linkedin Talking",
+        "key": "5003",
+        "color": {
+          "foregroundColor": "#000000",
+          "backgroundColor": "#FFA100"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      },
+      "5025": {
+        "name": "Hold",
+        "key": "5025",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#D81A60"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": true
+      },
+      "5004": {
+        "name": "Non-Contacted",
+        "key": "5004",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#252DFC"
+        },
+        "boxCount": 12848,
+        "isColorFromTheme": false
+      },
+      "5016": {
+        "name": "Rejected",
+        "key": "5016",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#007CA4"
+        },
+        "boxCount": 1,
+        "isColorFromTheme": false
+      },
+      "5017": {
+        "name": "Finished",
+        "key": "5017",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#00A2B3"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      },
+      "5018": {
+        "name": "grab",
+        "key": "5018",
+        "color": {
+          "foregroundColor": "#000000",
+          "backgroundColor": "#00BDBE"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      },
+      "5019": {
+        "name": "grab1",
+        "key": "5019",
+        "color": {
+          "foregroundColor": "#000000",
+          "backgroundColor": "#00C8B6"
+        },
+        "boxCount": 10,
+        "isColorFromTheme": false
+      },
+      "5010": {
+        "name": "6th Contacted",
+        "key": "5010",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#5166CC"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      },
+      "5011": {
+        "name": "Called",
+        "key": "5011",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#4455BD"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      },
+      "5012": {
+        "name": "Monthly Follow-up",
+        "key": "5012",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#2C369F"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      },
+      "5013": {
+        "name": "3 Month Follow-up",
+        "key": "5013",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#191D80"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      },
+      "5014": {
+        "name": "6 Month Follow-up",
+        "key": "5014",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#0D368A"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      },
+      "5015": {
+        "name": "Other",
+        "key": "5015",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#005B94"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      },
+      "5005": {
+        "name": "1st Contacted",
+        "key": "5005",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#F94A51"
+        },
+        "boxCount": 1878,
+        "isColorFromTheme": false
+      },
+      "5006": {
+        "name": "2nd Contacted",
+        "key": "5006",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#E86DF4"
+        },
+        "boxCount": 2431,
+        "isColorFromTheme": false
+      },
+      "5007": {
+        "name": "3rd Contacted",
+        "key": "5007",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#8E9BEF"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      },
+      "5008": {
+        "name": "4th Contacted",
+        "key": "5008",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#7688E5"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      },
+      "5009": {
+        "name": "5th Contacted",
+        "key": "5009",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#5F78DA"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      }
+    },
+    "stageOrder": [
+      "5001",
+      "5002",
+      "5003",
+      "5004",
+      "5005",
+      "5006",
+      "5007",
+      "5008",
+      "5009",
+      "5010",
+      "5011",
+      "5012",
+      "5013",
+      "5014",
+      "5015",
+      "5016",
+      "5017",
+      "5018",
+      "5019",
+      "5020",
+      "5021",
+      "5022",
+      "5023",
+      "5024",
+      "5025"
+    ],
+    "stageColorTheme": "RAINBOW_SATURATED",
+    "creationTimestamp": 1727212951391,
+    "lastUpdatedTimestamp": 1749575642607,
+    "customPermissionSets": {},
+    "defaultPermissionSetName": "__emptyPermissionSet__",
+    "aclEntries": [
+      {
+        "permissionSetName": "__adminPermissionSet__",
+        "displayName": "Jerry E",
+        "email": "jerry@canncestranow.com",
+        "fullName": "Jerry Eaton",
+        "givenName": "Jerry",
+        "image": "https://lh3.googleusercontent.com/a-/ALV-UjXhL1iY_ivtejWVu8Emx4oA3Nq5AMqtFFzwTdHWqRrIrnLHu4cWiXLOJNubHXpN_sDT75wwMZEiRufI0WGs9ReABb6K0rSq0LtR_SSYnUDKVA1BLlBfqAHWhCUHi5Gm0J3dvwXjjFquTHSZJWkcZwgkI7w8bAim9LEPpsnuhRTctOb3jrUXbfRsSLYKyFhyE12aUTibsCn_kM8-2CdDbtWhPbF_bFO2MgkSVA86SAfCJqJAlGIbYZIXXDa5npu4ZR6s7QLhvWZ8ldkxoMWAEcpUyvf1X5D9KsptiOFcBslSGKuZ6IMOPZ6o6rUua39yz_8_Qpn6ASl5TIgpPP_XOa-jF2TJolvgbVLlb1r_XNw1bg6am2wxu_P6edb2dOvbgSqmcfJFplOcxDFrwoGWyCN2t4SiinmAj6lv5oitp_RN7DldXEHxZRqbhr3gID76kPY8kpL5AtD7ShV_FSm5vicfVhpZhmiHnpwyFYrAOMp4Wnti6paFC5eZCJUWWJuamijqTkDo1fO-KXduImhNjBHXAZi1PFm3SVPLiVqw3f_w7GlLczxQkVxsO7xTRlCNrPlfuou5EwD--22cg0Tz4PmwMAXSljZiBIKavG3jReVnIwyZaweoy2qZ9mnLIotfej7tgEPut99tQPoLD1qZla1hEJckrtNIrfYOrjlxFL-PSpOnKgSb8VRCSpF_9n3IXXBn1DoiitipdyhpKBKfg_yrRUaieaDH7BXezLVhi7Vz-EnjGUcpslbGcnAf-6cf-ob5AEV_-kkOdM2XuPYtkDWKOQzCFEooF9NnLT6kPD3j1onj2rWA4Khj7FR5fQGjuWwsQasc9ByHIJSmtEnCuexbhnHsr3-52O7cATgZPELiSxR8Zp8yw0kW3bsN3xMRP_TvpPE2CAjko-ZWWEaXW__PXDGq5KhR37_fJU0YdV6PLi889hNqOsMp6aL95swSmze_6nNdri-8k2kgMB204GCfCeR1UA\u003ds96-c",
+        "userKey": "agxzfm1haWxmb29nYWVyNAsSDE9yZ2FuaXphdGlvbiIRY2FubmNlc3RyYW5vdy5jb20MCxIEVXNlchiAgKHouIP3CAw"
+      }
+    ],
+    "pipelineKey": "agxzfm1haWxmb29nYWVyOAsSDE9yZ2FuaXphdGlvbiIRY2FubmNlc3RyYW5vdy5jb20MCxIIV29ya2Zsb3cYgIDZqrH--QoM",
+    "key": "agxzfm1haWxmb29nYWVyOAsSDE9yZ2FuaXphdGlvbiIRY2FubmNlc3RyYW5vdy5jb20MCxIIV29ya2Zsb3cYgIDZqrH--QoM",
+    "creationSourceType": "HUMAN",
+    "boxCountHint": 17188,
+    "boxCount": 17188,
+    "lastSavedTimestamp": 1749578631928
+  },
+  {
+    "teamKey": "agxzfm1haWxmb29nYWVyEQsSBFRlYW0YgIChyI3dswoM",
+    "creatorKey": "agxzfm1haWxmb29nYWVyNAsSDE9yZ2FuaXphdGlvbiIRY2FubmNlc3RyYW5vdy5jb20MCxIEVXNlchiAgKHouIP3CAw",
+    "icon": "label_important",
+    "name": "Email Be",
+    "sharingRestrictedToOrg": false,
+    "sharingRestrictedToTeam": false,
+    "fields": [
+      {
+        "name": "Linkedin",
+        "key": "1001",
+        "type": "TEXT_INPUT",
+        "lastUpdatedTimestamp": 1722959417493
+      },
+      {
+        "name": "Preferred Name",
+        "key": "1002",
+        "type": "TEXT_INPUT",
+        "lastUpdatedTimestamp": 1722959417493
+      },
+      {
+        "name": "Position",
+        "key": "1003",
+        "type": "TEXT_INPUT",
+        "lastUpdatedTimestamp": 1722959417493
+      },
+      {
+        "name": "Phone",
+        "key": "1004",
+        "type": "TEXT_INPUT",
+        "lastUpdatedTimestamp": 1722959417493
+      },
+      {
+        "name": "Email",
+        "key": "1005",
+        "type": "TEXT_INPUT",
+        "lastUpdatedTimestamp": 1722959417493
+      },
+      {
+        "name": "Company",
+        "key": "1006",
+        "type": "TEXT_INPUT",
+        "lastUpdatedTimestamp": 1722959417493
+      },
+      {
+        "name": "Location",
+        "key": "1007",
+        "type": "TEXT_INPUT",
+        "lastUpdatedTimestamp": 1722959417493
+      },
+      {
+        "name": "Facebook",
+        "key": "1008",
+        "type": "TEXT_INPUT",
+        "lastUpdatedTimestamp": 1722959417493
+      },
+      {
+        "name": "Text Date",
+        "key": "1009",
+        "type": "DATE",
+        "lastUpdatedTimestamp": 1722959417493
+      },
+      {
+        "name": "LMail",
+        "key": "1010",
+        "type": "DATE",
+        "lastUpdatedTimestamp": 1722959417493
+      },
+      {
+        "name": "Connected",
+        "key": "1011",
+        "type": "DATE",
+        "lastUpdatedTimestamp": 1722959417493
+      },
+      {
+        "name": "Headline",
+        "key": "1012",
+        "type": "TEXT_INPUT",
+        "lastUpdatedTimestamp": 1722959417493
+      },
+      {
+        "name": "Ben Tag Know Contact",
+        "key": "1013",
+        "type": "TEXT_INPUT",
+        "lastUpdatedTimestamp": 1722960197505
+      },
+      {
+        "name": "2nd LMail",
+        "key": "1014",
+        "type": "DATE",
+        "lastUpdatedTimestamp": 1722960245434
+      },
+      {
+        "name": "3rd Lmail",
+        "key": "1016",
+        "type": "DATE",
+        "lastUpdatedTimestamp": 1722960272428
+      },
+      {
+        "name": "4th Linkedin",
+        "key": "1017",
+        "type": "DATE",
+        "lastUpdatedTimestamp": 1731450284603
+      },
+      {
+        "name": "5th lmail",
+        "key": "1018",
+        "type": "DATE",
+        "lastUpdatedTimestamp": 1744751283255
+      }
+    ],
+    "stages": {
+      "5020": {
+        "name": "Old connections",
+        "key": "5020",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#0099E8"
+        },
+        "boxCount": 376,
+        "isColorFromTheme": true
+      },
+      "5021": {
+        "name": "Old/current Client",
+        "key": "5021",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#1552d9"
+        },
+        "boxCount": 4,
+        "isColorFromTheme": true
+      },
+      "5022": {
+        "name": "Friends",
+        "key": "5022",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#2b26c9"
+        },
+        "boxCount": 3,
+        "isColorFromTheme": true
+      },
+      "5001": {
+        "name": "LinkedIn Leads",
+        "key": "5001",
+        "color": {
+          "foregroundColor": "#000000",
+          "backgroundColor": "#FCC200"
+        },
+        "boxCount": 9,
+        "isColorFromTheme": false
+      },
+      "5023": {
+        "name": "Info given",
+        "key": "5023",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#6735BA"
+        },
+        "boxCount": 10,
+        "isColorFromTheme": true
+      },
+      "5002": {
+        "name": "Interviewing",
+        "key": "5002",
+        "color": {
+          "foregroundColor": "#000000",
+          "backgroundColor": "#FEB200"
+        },
+        "boxCount": 10,
+        "isColorFromTheme": false
+      },
+      "5024": {
+        "name": "Pre Message",
+        "key": "5024",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#752ab6"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": true
+      },
+      "5003": {
+        "name": "Linkedin Talking",
+        "key": "5003",
+        "color": {
+          "foregroundColor": "#000000",
+          "backgroundColor": "#FFA100"
+        },
+        "boxCount": 21,
+        "isColorFromTheme": false
+      },
+      "5025": {
+        "name": "post message",
+        "key": "5025",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#861fb3"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": true
+      },
+      "5004": {
+        "name": "Non-Contacted",
+        "key": "5004",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#252DFC"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      },
+      "5026": {
+        "name": "Pre Scrape",
+        "key": "5026",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#9915AF"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": true
+      },
+      "5016": {
+        "name": "Rejected",
+        "key": "5016",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#007CA4"
+        },
+        "boxCount": 64,
+        "isColorFromTheme": false
+      },
+      "5017": {
+        "name": "Finished",
+        "key": "5017",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#00A2B3"
+        },
+        "boxCount": 10,
+        "isColorFromTheme": false
+      },
+      "5018": {
+        "name": "grab",
+        "key": "5018",
+        "color": {
+          "foregroundColor": "#000000",
+          "backgroundColor": "#00BDBE"
+        },
+        "boxCount": 677,
+        "isColorFromTheme": false
+      },
+      "5019": {
+        "name": "grab1",
+        "key": "5019",
+        "color": {
+          "foregroundColor": "#000000",
+          "backgroundColor": "#00C8B6"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      },
+      "5010": {
+        "name": "6th Contacted",
+        "key": "5010",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#5166CC"
+        },
+        "boxCount": 233,
+        "isColorFromTheme": false
+      },
+      "5011": {
+        "name": "Called",
+        "key": "5011",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#4455BD"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      },
+      "5012": {
+        "name": "Monthly Follow-up",
+        "key": "5012",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#2C369F"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      },
+      "5013": {
+        "name": "3 Month Follow-up",
+        "key": "5013",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#191D80"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      },
+      "5014": {
+        "name": "6 Month Follow-up",
+        "key": "5014",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#0D368A"
+        },
+        "boxCount": 3,
+        "isColorFromTheme": false
+      },
+      "5015": {
+        "name": "Other",
+        "key": "5015",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#005B94"
+        },
+        "boxCount": 6,
+        "isColorFromTheme": false
+      },
+      "5005": {
+        "name": "1st Contacted",
+        "key": "5005",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#F94A51"
+        },
+        "boxCount": 397,
+        "isColorFromTheme": false
+      },
+      "5027": {
+        "name": "Post Scrape",
+        "key": "5027",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#bd17aa"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": true
+      },
+      "5006": {
+        "name": "2nd Contacted",
+        "key": "5006",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#E86DF4"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      },
+      "5028": {
+        "name": "Pre Pre Scrape",
+        "key": "5028",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#ca1888"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": true
+      },
+      "5007": {
+        "name": "3rd Contacted",
+        "key": "5007",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#8E9BEF"
+        },
+        "boxCount": 124,
+        "isColorFromTheme": false
+      },
+      "5029": {
+        "name": "Hold",
+        "key": "5029",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#D81A60"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": true
+      },
+      "5008": {
+        "name": "4th Contacted",
+        "key": "5008",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#7688E5"
+        },
+        "boxCount": 173,
+        "isColorFromTheme": false
+      },
+      "5009": {
+        "name": "5th Contacted",
+        "key": "5009",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#5F78DA"
+        },
+        "boxCount": 435,
+        "isColorFromTheme": false
+      }
+    },
+    "stageOrder": [
+      "5001",
+      "5002",
+      "5003",
+      "5004",
+      "5005",
+      "5006",
+      "5007",
+      "5008",
+      "5009",
+      "5010",
+      "5011",
+      "5012",
+      "5013",
+      "5014",
+      "5015",
+      "5016",
+      "5017",
+      "5018",
+      "5019",
+      "5020",
+      "5021",
+      "5022",
+      "5023",
+      "5024",
+      "5025",
+      "5026",
+      "5027",
+      "5028",
+      "5029"
+    ],
+    "stageColorTheme": "RAINBOW_SATURATED",
+    "creationTimestamp": 1722959417493,
+    "lastUpdatedTimestamp": 1749575002353,
+    "customPermissionSets": {},
+    "defaultPermissionSetName": "__emptyPermissionSet__",
+    "aclEntries": [
+      {
+        "permissionSetName": "__adminPermissionSet__",
+        "displayName": "Jerry E",
+        "email": "jerry@canncestranow.com",
+        "fullName": "Jerry Eaton",
+        "givenName": "Jerry",
+        "image": "https://lh3.googleusercontent.com/a-/ALV-UjXhL1iY_ivtejWVu8Emx4oA3Nq5AMqtFFzwTdHWqRrIrnLHu4cWiXLOJNubHXpN_sDT75wwMZEiRufI0WGs9ReABb6K0rSq0LtR_SSYnUDKVA1BLlBfqAHWhCUHi5Gm0J3dvwXjjFquTHSZJWkcZwgkI7w8bAim9LEPpsnuhRTctOb3jrUXbfRsSLYKyFhyE12aUTibsCn_kM8-2CdDbtWhPbF_bFO2MgkSVA86SAfCJqJAlGIbYZIXXDa5npu4ZR6s7QLhvWZ8ldkxoMWAEcpUyvf1X5D9KsptiOFcBslSGKuZ6IMOPZ6o6rUua39yz_8_Qpn6ASl5TIgpPP_XOa-jF2TJolvgbVLlb1r_XNw1bg6am2wxu_P6edb2dOvbgSqmcfJFplOcxDFrwoGWyCN2t4SiinmAj6lv5oitp_RN7DldXEHxZRqbhr3gID76kPY8kpL5AtD7ShV_FSm5vicfVhpZhmiHnpwyFYrAOMp4Wnti6paFC5eZCJUWWJuamijqTkDo1fO-KXduImhNjBHXAZi1PFm3SVPLiVqw3f_w7GlLczxQkVxsO7xTRlCNrPlfuou5EwD--22cg0Tz4PmwMAXSljZiBIKavG3jReVnIwyZaweoy2qZ9mnLIotfej7tgEPut99tQPoLD1qZla1hEJckrtNIrfYOrjlxFL-PSpOnKgSb8VRCSpF_9n3IXXBn1DoiitipdyhpKBKfg_yrRUaieaDH7BXezLVhi7Vz-EnjGUcpslbGcnAf-6cf-ob5AEV_-kkOdM2XuPYtkDWKOQzCFEooF9NnLT6kPD3j1onj2rWA4Khj7FR5fQGjuWwsQasc9ByHIJSmtEnCuexbhnHsr3-52O7cATgZPELiSxR8Zp8yw0kW3bsN3xMRP_TvpPE2CAjko-ZWWEaXW__PXDGq5KhR37_fJU0YdV6PLi889hNqOsMp6aL95swSmze_6nNdri-8k2kgMB204GCfCeR1UA\u003ds96-c",
+        "userKey": "agxzfm1haWxmb29nYWVyNAsSDE9yZ2FuaXphdGlvbiIRY2FubmNlc3RyYW5vdy5jb20MCxIEVXNlchiAgKHouIP3CAw"
+      }
+    ],
+    "pipelineKey": "agxzfm1haWxmb29nYWVyOAsSDE9yZ2FuaXphdGlvbiIRY2FubmNlc3RyYW5vdy5jb20MCxIIV29ya2Zsb3cYgIDhvtqB0wsM",
+    "key": "agxzfm1haWxmb29nYWVyOAsSDE9yZ2FuaXphdGlvbiIRY2FubmNlc3RyYW5vdy5jb20MCxIIV29ya2Zsb3cYgIDhvtqB0wsM",
+    "creationSourceType": "HUMAN",
+    "boxCountHint": 2555,
+    "boxCount": 2555,
+    "lastSavedTimestamp": 1749577301420
+  },
+  {
+    "teamKey": "agxzfm1haWxmb29nYWVyEQsSBFRlYW0YgIChyI3dswoM",
+    "creatorKey": "agxzfm1haWxmb29nYWVyNAsSDE9yZ2FuaXphdGlvbiIRY2FubmNlc3RyYW5vdy5jb20MCxIEVXNlchiAgKHouIP3CAw",
+    "icon": "label_important",
+    "name": "Production new",
+    "sharingRestrictedToOrg": false,
+    "sharingRestrictedToTeam": false,
+    "fields": [
+      {
+        "name": "Linkedin",
+        "key": "1001",
+        "type": "TEXT_INPUT",
+        "lastUpdatedTimestamp": 1738011770369
+      },
+      {
+        "name": "Preferred Name",
+        "key": "1002",
+        "type": "TEXT_INPUT",
+        "lastUpdatedTimestamp": 1738011770369
+      },
+      {
+        "name": "Position",
+        "key": "1003",
+        "type": "TEXT_INPUT",
+        "lastUpdatedTimestamp": 1738011770369
+      },
+      {
+        "name": "Phone",
+        "key": "1004",
+        "type": "TEXT_INPUT",
+        "lastUpdatedTimestamp": 1738011770369
+      },
+      {
+        "name": "Email",
+        "key": "1005",
+        "type": "TEXT_INPUT",
+        "lastUpdatedTimestamp": 1738011770369
+      },
+      {
+        "name": "Company",
+        "key": "1006",
+        "type": "TEXT_INPUT",
+        "lastUpdatedTimestamp": 1738011770369
+      },
+      {
+        "name": "Location",
+        "key": "1007",
+        "type": "TEXT_INPUT",
+        "lastUpdatedTimestamp": 1738011770369
+      },
+      {
+        "name": "Facebook",
+        "key": "1008",
+        "type": "TEXT_INPUT",
+        "lastUpdatedTimestamp": 1738011770369
+      },
+      {
+        "name": "Text Date",
+        "key": "1009",
+        "type": "DATE",
+        "lastUpdatedTimestamp": 1738011770369
+      },
+      {
+        "name": "LMail",
+        "key": "1010",
+        "type": "DATE",
+        "lastUpdatedTimestamp": 1738011770369
+      },
+      {
+        "name": "Connected",
+        "key": "1011",
+        "type": "DATE",
+        "lastUpdatedTimestamp": 1738011770369
+      },
+      {
+        "name": "Headline",
+        "key": "1012",
+        "type": "TEXT_INPUT",
+        "lastUpdatedTimestamp": 1738011770369
+      },
+      {
+        "name": "Lmail2",
+        "key": "1013",
+        "type": "DATE",
+        "lastUpdatedTimestamp": 1738011770369
+      }
+    ],
+    "stages": {
+      "5020": {
+        "name": "Pre Message",
+        "key": "5020",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#6735BA"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": true
+      },
+      "5021": {
+        "name": "Post Message",
+        "key": "5021",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#7d25b5"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": true
+      },
+      "5022": {
+        "name": "Pre Scrape",
+        "key": "5022",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#9915AF"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": true
+      },
+      "5001": {
+        "name": "LinkedIn Leads",
+        "key": "5001",
+        "color": {
+          "foregroundColor": "#000000",
+          "backgroundColor": "#FCC200"
+        },
+        "boxCount": 1448,
+        "isColorFromTheme": false
+      },
+      "5023": {
+        "name": "Post Scrape",
+        "key": "5023",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#bd17aa"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": true
+      },
+      "5002": {
+        "name": "Interviewing",
+        "key": "5002",
+        "color": {
+          "foregroundColor": "#000000",
+          "backgroundColor": "#FEB200"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      },
+      "5024": {
+        "name": "Prescrape hold",
+        "key": "5024",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#ca1888"
+        },
+        "boxCount": 151,
+        "isColorFromTheme": true
+      },
+      "5003": {
+        "name": "Linkedin Talking",
+        "key": "5003",
+        "color": {
+          "foregroundColor": "#000000",
+          "backgroundColor": "#FFA100"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      },
+      "5025": {
+        "name": "Hold",
+        "key": "5025",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#D81A60"
+        },
+        "boxCount": 3,
+        "isColorFromTheme": true
+      },
+      "5004": {
+        "name": "Non-Contacted",
+        "key": "5004",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#252DFC"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      },
+      "5016": {
+        "name": "Rejected",
+        "key": "5016",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#007CA4"
+        },
+        "boxCount": 6,
+        "isColorFromTheme": false
+      },
+      "5017": {
+        "name": "Finished",
+        "key": "5017",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#00A2B3"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      },
+      "5018": {
+        "name": "grab",
+        "key": "5018",
+        "color": {
+          "foregroundColor": "#000000",
+          "backgroundColor": "#00BDBE"
+        },
+        "boxCount": 5822,
+        "isColorFromTheme": false
+      },
+      "5019": {
+        "name": "grab1",
+        "key": "5019",
+        "color": {
+          "foregroundColor": "#000000",
+          "backgroundColor": "#00C8B6"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      },
+      "5010": {
+        "name": "6th Contacted",
+        "key": "5010",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#5166CC"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      },
+      "5011": {
+        "name": "Called",
+        "key": "5011",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#4455BD"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      },
+      "5012": {
+        "name": "Monthly Follow-up",
+        "key": "5012",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#2C369F"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      },
+      "5013": {
+        "name": "3 Month Follow-up",
+        "key": "5013",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#191D80"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      },
+      "5014": {
+        "name": "6 Month Follow-up",
+        "key": "5014",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#0D368A"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      },
+      "5015": {
+        "name": "Other",
+        "key": "5015",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#005B94"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      },
+      "5005": {
+        "name": "1st Contacted",
+        "key": "5005",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#F94A51"
+        },
+        "boxCount": 1047,
+        "isColorFromTheme": false
+      },
+      "5006": {
+        "name": "2nd Contacted",
+        "key": "5006",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#E86DF4"
+        },
+        "boxCount": 69,
+        "isColorFromTheme": false
+      },
+      "5007": {
+        "name": "3rd Contacted",
+        "key": "5007",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#8E9BEF"
+        },
+        "boxCount": 20,
+        "isColorFromTheme": false
+      },
+      "5008": {
+        "name": "4th Contacted",
+        "key": "5008",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#7688E5"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      },
+      "5009": {
+        "name": "5th Contacted",
+        "key": "5009",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#5F78DA"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      }
+    },
+    "stageOrder": [
+      "5001",
+      "5002",
+      "5003",
+      "5004",
+      "5005",
+      "5006",
+      "5007",
+      "5008",
+      "5009",
+      "5010",
+      "5011",
+      "5012",
+      "5013",
+      "5014",
+      "5015",
+      "5016",
+      "5017",
+      "5018",
+      "5019",
+      "5020",
+      "5021",
+      "5022",
+      "5023",
+      "5024",
+      "5025"
+    ],
+    "stageColorTheme": "RAINBOW_SATURATED",
+    "creationTimestamp": 1738011770368,
+    "lastUpdatedTimestamp": 1749572897707,
+    "customPermissionSets": {},
+    "defaultPermissionSetName": "__emptyPermissionSet__",
+    "aclEntries": [
+      {
+        "permissionSetName": "__adminPermissionSet__",
+        "displayName": "Jerry E",
+        "email": "jerry@canncestranow.com",
+        "fullName": "Jerry Eaton",
+        "givenName": "Jerry",
+        "image": "https://lh3.googleusercontent.com/a-/ALV-UjXhL1iY_ivtejWVu8Emx4oA3Nq5AMqtFFzwTdHWqRrIrnLHu4cWiXLOJNubHXpN_sDT75wwMZEiRufI0WGs9ReABb6K0rSq0LtR_SSYnUDKVA1BLlBfqAHWhCUHi5Gm0J3dvwXjjFquTHSZJWkcZwgkI7w8bAim9LEPpsnuhRTctOb3jrUXbfRsSLYKyFhyE12aUTibsCn_kM8-2CdDbtWhPbF_bFO2MgkSVA86SAfCJqJAlGIbYZIXXDa5npu4ZR6s7QLhvWZ8ldkxoMWAEcpUyvf1X5D9KsptiOFcBslSGKuZ6IMOPZ6o6rUua39yz_8_Qpn6ASl5TIgpPP_XOa-jF2TJolvgbVLlb1r_XNw1bg6am2wxu_P6edb2dOvbgSqmcfJFplOcxDFrwoGWyCN2t4SiinmAj6lv5oitp_RN7DldXEHxZRqbhr3gID76kPY8kpL5AtD7ShV_FSm5vicfVhpZhmiHnpwyFYrAOMp4Wnti6paFC5eZCJUWWJuamijqTkDo1fO-KXduImhNjBHXAZi1PFm3SVPLiVqw3f_w7GlLczxQkVxsO7xTRlCNrPlfuou5EwD--22cg0Tz4PmwMAXSljZiBIKavG3jReVnIwyZaweoy2qZ9mnLIotfej7tgEPut99tQPoLD1qZla1hEJckrtNIrfYOrjlxFL-PSpOnKgSb8VRCSpF_9n3IXXBn1DoiitipdyhpKBKfg_yrRUaieaDH7BXezLVhi7Vz-EnjGUcpslbGcnAf-6cf-ob5AEV_-kkOdM2XuPYtkDWKOQzCFEooF9NnLT6kPD3j1onj2rWA4Khj7FR5fQGjuWwsQasc9ByHIJSmtEnCuexbhnHsr3-52O7cATgZPELiSxR8Zp8yw0kW3bsN3xMRP_TvpPE2CAjko-ZWWEaXW__PXDGq5KhR37_fJU0YdV6PLi889hNqOsMp6aL95swSmze_6nNdri-8k2kgMB204GCfCeR1UA\u003ds96-c",
+        "userKey": "agxzfm1haWxmb29nYWVyNAsSDE9yZ2FuaXphdGlvbiIRY2FubmNlc3RyYW5vdy5jb20MCxIEVXNlchiAgKHouIP3CAw"
+      }
+    ],
+    "pipelineKey": "agxzfm1haWxmb29nYWVyOAsSDE9yZ2FuaXphdGlvbiIRY2FubmNlc3RyYW5vdy5jb20MCxIIV29ya2Zsb3cYgICFofDbrgsM",
+    "key": "agxzfm1haWxmb29nYWVyOAsSDE9yZ2FuaXphdGlvbiIRY2FubmNlc3RyYW5vdy5jb20MCxIIV29ya2Zsb3cYgICFofDbrgsM",
+    "creationSourceType": "HUMAN",
+    "boxCountHint": 8566,
+    "boxCount": 8566,
+    "lastSavedTimestamp": 1749582358352
+  },
+  {
+    "teamKey": "agxzfm1haWxmb29nYWVyEQsSBFRlYW0YgIChyI3dswoM",
+    "creatorKey": "agxzfm1haWxmb29nYWVyNAsSDE9yZ2FuaXphdGlvbiIRY2FubmNlc3RyYW5vdy5jb20MCxIEVXNlchiAgKHouIP3CAw",
+    "icon": "label_important",
+    "name": "Email 2",
+    "sharingRestrictedToOrg": false,
+    "sharingRestrictedToTeam": false,
+    "fields": [
+      {
+        "name": "Linkedin",
+        "key": "1001",
+        "type": "TEXT_INPUT",
+        "lastUpdatedTimestamp": 1726162445036
+      },
+      {
+        "name": "Preferred Name",
+        "key": "1002",
+        "type": "TEXT_INPUT",
+        "lastUpdatedTimestamp": 1726162445036
+      },
+      {
+        "name": "Position",
+        "key": "1003",
+        "type": "TEXT_INPUT",
+        "lastUpdatedTimestamp": 1726162445036
+      },
+      {
+        "name": "Phone",
+        "key": "1004",
+        "type": "TEXT_INPUT",
+        "lastUpdatedTimestamp": 1726162445036
+      },
+      {
+        "name": "Email",
+        "key": "1005",
+        "type": "TEXT_INPUT",
+        "lastUpdatedTimestamp": 1726162445036
+      },
+      {
+        "name": "Company",
+        "key": "1006",
+        "type": "TEXT_INPUT",
+        "lastUpdatedTimestamp": 1726162445036
+      },
+      {
+        "name": "Location",
+        "key": "1007",
+        "type": "TEXT_INPUT",
+        "lastUpdatedTimestamp": 1726162445036
+      },
+      {
+        "name": "Facebook",
+        "key": "1008",
+        "type": "TEXT_INPUT",
+        "lastUpdatedTimestamp": 1726162445036
+      },
+      {
+        "name": "Text Date",
+        "key": "1009",
+        "type": "DATE",
+        "lastUpdatedTimestamp": 1726162445036
+      },
+      {
+        "name": "LMail",
+        "key": "1010",
+        "type": "DATE",
+        "lastUpdatedTimestamp": 1726162445036
+      },
+      {
+        "name": "Connected",
+        "key": "1011",
+        "type": "DATE",
+        "lastUpdatedTimestamp": 1726162445036
+      },
+      {
+        "name": "Headline",
+        "key": "1012",
+        "type": "TEXT_INPUT",
+        "lastUpdatedTimestamp": 1726162445036
+      },
+      {
+        "name": "Lmail 2",
+        "key": "1013",
+        "type": "DATE",
+        "lastUpdatedTimestamp": 1727894404609
+      }
+    ],
+    "stages": {
+      "5020": {
+        "name": "Lmail Send Pre",
+        "key": "5020",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#861fb3"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": true
+      },
+      "5010": {
+        "name": "6th Contacted",
+        "key": "5010",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#5166CC"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      },
+      "5021": {
+        "name": "Lmail Send Post",
+        "key": "5021",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#9915AF"
+        },
+        "boxCount": 32,
+        "isColorFromTheme": true
+      },
+      "5011": {
+        "name": "Called",
+        "key": "5011",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#4455BD"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      },
+      "5022": {
+        "name": "Pre Scrape",
+        "key": "5022",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#c41799"
+        },
+        "boxCount": 1,
+        "isColorFromTheme": true
+      },
+      "5001": {
+        "name": "LinkedIn Leads",
+        "key": "5001",
+        "color": {
+          "foregroundColor": "#000000",
+          "backgroundColor": "#FCC200"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      },
+      "5012": {
+        "name": "Monthly Follow-up",
+        "key": "5012",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#2C369F"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      },
+      "5023": {
+        "name": "Post scrape",
+        "key": "5023",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#D81A60"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": true
+      },
+      "5002": {
+        "name": "Interviewing",
+        "key": "5002",
+        "color": {
+          "foregroundColor": "#000000",
+          "backgroundColor": "#FEB200"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      },
+      "5013": {
+        "name": "3 Month Follow-up",
+        "key": "5013",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#191D80"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      },
+      "5003": {
+        "name": "Linkedin Talking",
+        "key": "5003",
+        "color": {
+          "foregroundColor": "#000000",
+          "backgroundColor": "#FFA100"
+        },
+        "boxCount": 43,
+        "isColorFromTheme": false
+      },
+      "5014": {
+        "name": "6 Month Follow-up",
+        "key": "5014",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#0D368A"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      },
+      "5004": {
+        "name": "Non-Contacted",
+        "key": "5004",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#252DFC"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      },
+      "5015": {
+        "name": "Other",
+        "key": "5015",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#005B94"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      },
+      "5005": {
+        "name": "1st Contacted",
+        "key": "5005",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#F94A51"
+        },
+        "boxCount": 4288,
+        "isColorFromTheme": false
+      },
+      "5016": {
+        "name": "Rejected",
+        "key": "5016",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#007CA4"
+        },
+        "boxCount": 36,
+        "isColorFromTheme": false
+      },
+      "5006": {
+        "name": "2nd Contacted",
+        "key": "5006",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#E86DF4"
+        },
+        "boxCount": 1821,
+        "isColorFromTheme": false
+      },
+      "5017": {
+        "name": "Finished",
+        "key": "5017",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#00A2B3"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      },
+      "5007": {
+        "name": "3rd Contacted",
+        "key": "5007",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#8E9BEF"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      },
+      "5018": {
+        "name": "grab",
+        "key": "5018",
+        "color": {
+          "foregroundColor": "#000000",
+          "backgroundColor": "#00BDBE"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      },
+      "5008": {
+        "name": "4th Contacted",
+        "key": "5008",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#7688E5"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      },
+      "5019": {
+        "name": "grab1",
+        "key": "5019",
+        "color": {
+          "foregroundColor": "#000000",
+          "backgroundColor": "#00C8B6"
+        },
+        "boxCount": 20,
+        "isColorFromTheme": false
+      },
+      "5009": {
+        "name": "5th Contacted",
+        "key": "5009",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#5F78DA"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      }
+    },
+    "stageOrder": [
+      "5001",
+      "5002",
+      "5003",
+      "5004",
+      "5005",
+      "5006",
+      "5007",
+      "5008",
+      "5009",
+      "5010",
+      "5011",
+      "5012",
+      "5013",
+      "5014",
+      "5015",
+      "5016",
+      "5017",
+      "5018",
+      "5019",
+      "5020",
+      "5021",
+      "5022",
+      "5023"
+    ],
+    "stageColorTheme": "RAINBOW_SATURATED",
+    "creationTimestamp": 1726162445036,
+    "lastUpdatedTimestamp": 1749498199583,
+    "customPermissionSets": {},
+    "defaultPermissionSetName": "__emptyPermissionSet__",
+    "aclEntries": [
+      {
+        "permissionSetName": "__adminPermissionSet__",
+        "displayName": "Jerry E",
+        "email": "jerry@canncestranow.com",
+        "fullName": "Jerry Eaton",
+        "givenName": "Jerry",
+        "image": "https://lh3.googleusercontent.com/a-/ALV-UjXhL1iY_ivtejWVu8Emx4oA3Nq5AMqtFFzwTdHWqRrIrnLHu4cWiXLOJNubHXpN_sDT75wwMZEiRufI0WGs9ReABb6K0rSq0LtR_SSYnUDKVA1BLlBfqAHWhCUHi5Gm0J3dvwXjjFquTHSZJWkcZwgkI7w8bAim9LEPpsnuhRTctOb3jrUXbfRsSLYKyFhyE12aUTibsCn_kM8-2CdDbtWhPbF_bFO2MgkSVA86SAfCJqJAlGIbYZIXXDa5npu4ZR6s7QLhvWZ8ldkxoMWAEcpUyvf1X5D9KsptiOFcBslSGKuZ6IMOPZ6o6rUua39yz_8_Qpn6ASl5TIgpPP_XOa-jF2TJolvgbVLlb1r_XNw1bg6am2wxu_P6edb2dOvbgSqmcfJFplOcxDFrwoGWyCN2t4SiinmAj6lv5oitp_RN7DldXEHxZRqbhr3gID76kPY8kpL5AtD7ShV_FSm5vicfVhpZhmiHnpwyFYrAOMp4Wnti6paFC5eZCJUWWJuamijqTkDo1fO-KXduImhNjBHXAZi1PFm3SVPLiVqw3f_w7GlLczxQkVxsO7xTRlCNrPlfuou5EwD--22cg0Tz4PmwMAXSljZiBIKavG3jReVnIwyZaweoy2qZ9mnLIotfej7tgEPut99tQPoLD1qZla1hEJckrtNIrfYOrjlxFL-PSpOnKgSb8VRCSpF_9n3IXXBn1DoiitipdyhpKBKfg_yrRUaieaDH7BXezLVhi7Vz-EnjGUcpslbGcnAf-6cf-ob5AEV_-kkOdM2XuPYtkDWKOQzCFEooF9NnLT6kPD3j1onj2rWA4Khj7FR5fQGjuWwsQasc9ByHIJSmtEnCuexbhnHsr3-52O7cATgZPELiSxR8Zp8yw0kW3bsN3xMRP_TvpPE2CAjko-ZWWEaXW__PXDGq5KhR37_fJU0YdV6PLi889hNqOsMp6aL95swSmze_6nNdri-8k2kgMB204GCfCeR1UA\u003ds96-c",
+        "userKey": "agxzfm1haWxmb29nYWVyNAsSDE9yZ2FuaXphdGlvbiIRY2FubmNlc3RyYW5vdy5jb20MCxIEVXNlchiAgKHouIP3CAw"
+      }
+    ],
+    "pipelineKey": "agxzfm1haWxmb29nYWVyOAsSDE9yZ2FuaXphdGlvbiIRY2FubmNlc3RyYW5vdy5jb20MCxIIV29ya2Zsb3cYgICZj5bN9wgM",
+    "key": "agxzfm1haWxmb29nYWVyOAsSDE9yZ2FuaXphdGlvbiIRY2FubmNlc3RyYW5vdy5jb20MCxIIV29ya2Zsb3cYgICZj5bN9wgM",
+    "creationSourceType": "HUMAN",
+    "boxCountHint": 6241,
+    "boxCount": 6241,
+    "lastSavedTimestamp": 1749583785522
+  },
+  {
+    "teamKey": "agxzfm1haWxmb29nYWVyEQsSBFRlYW0YgIChyI3dswoM",
+    "creatorKey": "agxzfm1haWxmb29nYWVyNAsSDE9yZ2FuaXphdGlvbiIRY2FubmNlc3RyYW5vdy5jb20MCxIEVXNlchiAgKHouIP3CAw",
+    "icon": "label_important",
+    "name": "Production*",
+    "sharingRestrictedToOrg": false,
+    "sharingRestrictedToTeam": false,
+    "fields": [
+      {
+        "name": "Linkedin",
+        "key": "1001",
+        "type": "TEXT_INPUT",
+        "lastUpdatedTimestamp": 1736969676928
+      },
+      {
+        "name": "Preferred Name",
+        "key": "1002",
+        "type": "TEXT_INPUT",
+        "lastUpdatedTimestamp": 1736969676928
+      },
+      {
+        "name": "Position",
+        "key": "1003",
+        "type": "TEXT_INPUT",
+        "lastUpdatedTimestamp": 1736969676928
+      },
+      {
+        "name": "Phone",
+        "key": "1004",
+        "type": "TEXT_INPUT",
+        "lastUpdatedTimestamp": 1736969676928
+      },
+      {
+        "name": "Email",
+        "key": "1005",
+        "type": "TEXT_INPUT",
+        "lastUpdatedTimestamp": 1736969676928
+      },
+      {
+        "name": "Company",
+        "key": "1006",
+        "type": "TEXT_INPUT",
+        "lastUpdatedTimestamp": 1736969676928
+      },
+      {
+        "name": "Location",
+        "key": "1007",
+        "type": "TEXT_INPUT",
+        "lastUpdatedTimestamp": 1736969676928
+      },
+      {
+        "name": "Facebook",
+        "key": "1008",
+        "type": "TEXT_INPUT",
+        "lastUpdatedTimestamp": 1736969676928
+      },
+      {
+        "name": "Text Date",
+        "key": "1009",
+        "type": "DATE",
+        "lastUpdatedTimestamp": 1736969676928
+      },
+      {
+        "name": "LMail",
+        "key": "1010",
+        "type": "DATE",
+        "lastUpdatedTimestamp": 1736969676928
+      },
+      {
+        "name": "Connected",
+        "key": "1011",
+        "type": "DATE",
+        "lastUpdatedTimestamp": 1736969676928
+      },
+      {
+        "name": "Headline",
+        "key": "1012",
+        "type": "TEXT_INPUT",
+        "lastUpdatedTimestamp": 1736969676928
+      },
+      {
+        "name": "Lmail2",
+        "key": "1013",
+        "type": "DATE",
+        "lastUpdatedTimestamp": 1736969676928
+      }
+    ],
+    "stages": {
+      "5010": {
+        "name": "6th Contacted",
+        "key": "5010",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#5166CC"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      },
+      "5011": {
+        "name": "Called",
+        "key": "5011",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#4455BD"
+        },
+        "boxCount": 1,
+        "isColorFromTheme": false
+      },
+      "5001": {
+        "name": "LinkedIn Leads",
+        "key": "5001",
+        "color": {
+          "foregroundColor": "#000000",
+          "backgroundColor": "#FCC200"
+        },
+        "boxCount": 1,
+        "isColorFromTheme": false
+      },
+      "5012": {
+        "name": "Monthly Follow-up",
+        "key": "5012",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#2C369F"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      },
+      "5002": {
+        "name": "Interviewing",
+        "key": "5002",
+        "color": {
+          "foregroundColor": "#000000",
+          "backgroundColor": "#FEB200"
+        },
+        "boxCount": 2,
+        "isColorFromTheme": false
+      },
+      "5013": {
+        "name": "3 Month Follow-up",
+        "key": "5013",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#191D80"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      },
+      "5003": {
+        "name": "Linkedin Talking",
+        "key": "5003",
+        "color": {
+          "foregroundColor": "#000000",
+          "backgroundColor": "#FFA100"
+        },
+        "boxCount": 3,
+        "isColorFromTheme": false
+      },
+      "5014": {
+        "name": "6 Month Follow-up",
+        "key": "5014",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#0D368A"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      },
+      "5004": {
+        "name": "Non-Contacted",
+        "key": "5004",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#252DFC"
+        },
+        "boxCount": 38,
+        "isColorFromTheme": false
+      },
+      "5015": {
+        "name": "Other",
+        "key": "5015",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#005B94"
+        },
+        "boxCount": 1,
+        "isColorFromTheme": false
+      },
+      "5005": {
+        "name": "1st Contacted",
+        "key": "5005",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#F94A51"
+        },
+        "boxCount": 998,
+        "isColorFromTheme": false
+      },
+      "5016": {
+        "name": "Rejected",
+        "key": "5016",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#007CA4"
+        },
+        "boxCount": 40,
+        "isColorFromTheme": false
+      },
+      "5006": {
+        "name": "2nd Contacted",
+        "key": "5006",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#E86DF4"
+        },
+        "boxCount": 337,
+        "isColorFromTheme": false
+      },
+      "5017": {
+        "name": "Finished",
+        "key": "5017",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#00A2B3"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      },
+      "5007": {
+        "name": "3rd Contacted",
+        "key": "5007",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#8E9BEF"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      },
+      "5018": {
+        "name": "grab",
+        "key": "5018",
+        "color": {
+          "foregroundColor": "#000000",
+          "backgroundColor": "#00BDBE"
+        },
+        "boxCount": 2529,
+        "isColorFromTheme": false
+      },
+      "5008": {
+        "name": "4th Contacted",
+        "key": "5008",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#7688E5"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      },
+      "5019": {
+        "name": "grab1",
+        "key": "5019",
+        "color": {
+          "foregroundColor": "#000000",
+          "backgroundColor": "#00C8B6"
+        },
+        "boxCount": 3647,
+        "isColorFromTheme": false
+      },
+      "5009": {
+        "name": "5th Contacted",
+        "key": "5009",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#5F78DA"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      }
+    },
+    "stageOrder": [
+      "5001",
+      "5002",
+      "5003",
+      "5004",
+      "5005",
+      "5006",
+      "5007",
+      "5008",
+      "5009",
+      "5010",
+      "5011",
+      "5012",
+      "5013",
+      "5014",
+      "5015",
+      "5016",
+      "5017",
+      "5018",
+      "5019"
+    ],
+    "stageColorTheme": "RAINBOW_SATURATED",
+    "creationTimestamp": 1736969676927,
+    "lastUpdatedTimestamp": 1747685379935,
+    "customPermissionSets": {},
+    "defaultPermissionSetName": "__emptyPermissionSet__",
+    "aclEntries": [
+      {
+        "permissionSetName": "__adminPermissionSet__",
+        "displayName": "Jerry E",
+        "email": "jerry@canncestranow.com",
+        "fullName": "Jerry Eaton",
+        "givenName": "Jerry",
+        "image": "https://lh3.googleusercontent.com/a-/ALV-UjXhL1iY_ivtejWVu8Emx4oA3Nq5AMqtFFzwTdHWqRrIrnLHu4cWiXLOJNubHXpN_sDT75wwMZEiRufI0WGs9ReABb6K0rSq0LtR_SSYnUDKVA1BLlBfqAHWhCUHi5Gm0J3dvwXjjFquTHSZJWkcZwgkI7w8bAim9LEPpsnuhRTctOb3jrUXbfRsSLYKyFhyE12aUTibsCn_kM8-2CdDbtWhPbF_bFO2MgkSVA86SAfCJqJAlGIbYZIXXDa5npu4ZR6s7QLhvWZ8ldkxoMWAEcpUyvf1X5D9KsptiOFcBslSGKuZ6IMOPZ6o6rUua39yz_8_Qpn6ASl5TIgpPP_XOa-jF2TJolvgbVLlb1r_XNw1bg6am2wxu_P6edb2dOvbgSqmcfJFplOcxDFrwoGWyCN2t4SiinmAj6lv5oitp_RN7DldXEHxZRqbhr3gID76kPY8kpL5AtD7ShV_FSm5vicfVhpZhmiHnpwyFYrAOMp4Wnti6paFC5eZCJUWWJuamijqTkDo1fO-KXduImhNjBHXAZi1PFm3SVPLiVqw3f_w7GlLczxQkVxsO7xTRlCNrPlfuou5EwD--22cg0Tz4PmwMAXSljZiBIKavG3jReVnIwyZaweoy2qZ9mnLIotfej7tgEPut99tQPoLD1qZla1hEJckrtNIrfYOrjlxFL-PSpOnKgSb8VRCSpF_9n3IXXBn1DoiitipdyhpKBKfg_yrRUaieaDH7BXezLVhi7Vz-EnjGUcpslbGcnAf-6cf-ob5AEV_-kkOdM2XuPYtkDWKOQzCFEooF9NnLT6kPD3j1onj2rWA4Khj7FR5fQGjuWwsQasc9ByHIJSmtEnCuexbhnHsr3-52O7cATgZPELiSxR8Zp8yw0kW3bsN3xMRP_TvpPE2CAjko-ZWWEaXW__PXDGq5KhR37_fJU0YdV6PLi889hNqOsMp6aL95swSmze_6nNdri-8k2kgMB204GCfCeR1UA\u003ds96-c",
+        "userKey": "agxzfm1haWxmb29nYWVyNAsSDE9yZ2FuaXphdGlvbiIRY2FubmNlc3RyYW5vdy5jb20MCxIEVXNlchiAgKHouIP3CAw"
+      }
+    ],
+    "pipelineKey": "agxzfm1haWxmb29nYWVyOAsSDE9yZ2FuaXphdGlvbiIRY2FubmNlc3RyYW5vdy5jb20MCxIIV29ya2Zsb3cYgICF5o6w0AsM",
+    "key": "agxzfm1haWxmb29nYWVyOAsSDE9yZ2FuaXphdGlvbiIRY2FubmNlc3RyYW5vdy5jb20MCxIIV29ya2Zsb3cYgICF5o6w0AsM",
+    "creationSourceType": "HUMAN",
+    "boxCountHint": 7597,
+    "boxCount": 7597,
+    "lastSavedTimestamp": 1747685379941
+  },
+  {
+    "teamKey": "agxzfm1haWxmb29nYWVyEQsSBFRlYW0YgIChyI3dswoM",
+    "creatorKey": "agxzfm1haWxmb29nYWVyNAsSDE9yZ2FuaXphdGlvbiIRY2FubmNlc3RyYW5vdy5jb20MCxIEVXNlchiAgKHouIP3CAw",
+    "icon": "label_important",
+    "name": "Email W",
+    "sharingRestrictedToOrg": false,
+    "sharingRestrictedToTeam": false,
+    "fields": [
+      {
+        "name": "Linkedin",
+        "key": "1001",
+        "type": "TEXT_INPUT",
+        "lastUpdatedTimestamp": 1737492360619
+      },
+      {
+        "name": "Preferred Name",
+        "key": "1002",
+        "type": "TEXT_INPUT",
+        "lastUpdatedTimestamp": 1737492360619
+      },
+      {
+        "name": "Position",
+        "key": "1003",
+        "type": "TEXT_INPUT",
+        "lastUpdatedTimestamp": 1737492360619
+      },
+      {
+        "name": "Phone",
+        "key": "1004",
+        "type": "TEXT_INPUT",
+        "lastUpdatedTimestamp": 1737492360619
+      },
+      {
+        "name": "Email",
+        "key": "1005",
+        "type": "TEXT_INPUT",
+        "lastUpdatedTimestamp": 1737492360619
+      },
+      {
+        "name": "Company",
+        "key": "1006",
+        "type": "TEXT_INPUT",
+        "lastUpdatedTimestamp": 1737492360619
+      },
+      {
+        "name": "Location",
+        "key": "1007",
+        "type": "TEXT_INPUT",
+        "lastUpdatedTimestamp": 1737492360619
+      },
+      {
+        "name": "Facebook",
+        "key": "1008",
+        "type": "TEXT_INPUT",
+        "lastUpdatedTimestamp": 1737492360619
+      },
+      {
+        "name": "Text Date",
+        "key": "1009",
+        "type": "DATE",
+        "lastUpdatedTimestamp": 1737492360619
+      },
+      {
+        "name": "LMail",
+        "key": "1010",
+        "type": "DATE",
+        "lastUpdatedTimestamp": 1737492360619
+      },
+      {
+        "name": "Connected",
+        "key": "1011",
+        "type": "DATE",
+        "lastUpdatedTimestamp": 1737492360619
+      },
+      {
+        "name": "Headline",
+        "key": "1012",
+        "type": "TEXT_INPUT",
+        "lastUpdatedTimestamp": 1737492360619
+      },
+      {
+        "name": "Lmail2",
+        "key": "1013",
+        "type": "DATE",
+        "lastUpdatedTimestamp": 1737492360619
+      }
+    ],
+    "stages": {
+      "5010": {
+        "name": "6th Contacted",
+        "key": "5010",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#5166CC"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      },
+      "5011": {
+        "name": "Called",
+        "key": "5011",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#4455BD"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      },
+      "5001": {
+        "name": "LinkedIn Leads",
+        "key": "5001",
+        "color": {
+          "foregroundColor": "#000000",
+          "backgroundColor": "#FCC200"
+        },
+        "boxCount": 144,
+        "isColorFromTheme": false
+      },
+      "5012": {
+        "name": "Monthly Follow-up",
+        "key": "5012",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#2C369F"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      },
+      "5002": {
+        "name": "Interviewing",
+        "key": "5002",
+        "color": {
+          "foregroundColor": "#000000",
+          "backgroundColor": "#FEB200"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      },
+      "5013": {
+        "name": "3 Month Follow-up",
+        "key": "5013",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#191D80"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      },
+      "5003": {
+        "name": "Linkedin Talking",
+        "key": "5003",
+        "color": {
+          "foregroundColor": "#000000",
+          "backgroundColor": "#FFA100"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      },
+      "5014": {
+        "name": "6 Month Follow-up",
+        "key": "5014",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#0D368A"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      },
+      "5004": {
+        "name": "Non-Contacted",
+        "key": "5004",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#252DFC"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      },
+      "5015": {
+        "name": "Other",
+        "key": "5015",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#005B94"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      },
+      "5005": {
+        "name": "1st Contacted",
+        "key": "5005",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#F94A51"
+        },
+        "boxCount": 68,
+        "isColorFromTheme": false
+      },
+      "5016": {
+        "name": "Rejected",
+        "key": "5016",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#007CA4"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      },
+      "5006": {
+        "name": "2nd Contacted",
+        "key": "5006",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#E86DF4"
+        },
+        "boxCount": 56,
+        "isColorFromTheme": false
+      },
+      "5017": {
+        "name": "Finished",
+        "key": "5017",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#00A2B3"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      },
+      "5007": {
+        "name": "3rd Contacted",
+        "key": "5007",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#8E9BEF"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      },
+      "5018": {
+        "name": "grab",
+        "key": "5018",
+        "color": {
+          "foregroundColor": "#000000",
+          "backgroundColor": "#00BDBE"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      },
+      "5008": {
+        "name": "4th Contacted",
+        "key": "5008",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#7688E5"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      },
+      "5019": {
+        "name": "grab1",
+        "key": "5019",
+        "color": {
+          "foregroundColor": "#000000",
+          "backgroundColor": "#00C8B6"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      },
+      "5009": {
+        "name": "5th Contacted",
+        "key": "5009",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#5F78DA"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      }
+    },
+    "stageOrder": [
+      "5001",
+      "5002",
+      "5003",
+      "5004",
+      "5005",
+      "5006",
+      "5007",
+      "5008",
+      "5009",
+      "5010",
+      "5011",
+      "5012",
+      "5013",
+      "5014",
+      "5015",
+      "5016",
+      "5017",
+      "5018",
+      "5019"
+    ],
+    "stageColorTheme": "RAINBOW_SATURATED",
+    "creationTimestamp": 1737492360618,
+    "lastUpdatedTimestamp": 1745351600798,
+    "customPermissionSets": {},
+    "defaultPermissionSetName": "__emptyPermissionSet__",
+    "aclEntries": [
+      {
+        "permissionSetName": "__adminPermissionSet__",
+        "displayName": "Jerry E",
+        "email": "jerry@canncestranow.com",
+        "fullName": "Jerry Eaton",
+        "givenName": "Jerry",
+        "image": "https://lh3.googleusercontent.com/a-/ALV-UjXhL1iY_ivtejWVu8Emx4oA3Nq5AMqtFFzwTdHWqRrIrnLHu4cWiXLOJNubHXpN_sDT75wwMZEiRufI0WGs9ReABb6K0rSq0LtR_SSYnUDKVA1BLlBfqAHWhCUHi5Gm0J3dvwXjjFquTHSZJWkcZwgkI7w8bAim9LEPpsnuhRTctOb3jrUXbfRsSLYKyFhyE12aUTibsCn_kM8-2CdDbtWhPbF_bFO2MgkSVA86SAfCJqJAlGIbYZIXXDa5npu4ZR6s7QLhvWZ8ldkxoMWAEcpUyvf1X5D9KsptiOFcBslSGKuZ6IMOPZ6o6rUua39yz_8_Qpn6ASl5TIgpPP_XOa-jF2TJolvgbVLlb1r_XNw1bg6am2wxu_P6edb2dOvbgSqmcfJFplOcxDFrwoGWyCN2t4SiinmAj6lv5oitp_RN7DldXEHxZRqbhr3gID76kPY8kpL5AtD7ShV_FSm5vicfVhpZhmiHnpwyFYrAOMp4Wnti6paFC5eZCJUWWJuamijqTkDo1fO-KXduImhNjBHXAZi1PFm3SVPLiVqw3f_w7GlLczxQkVxsO7xTRlCNrPlfuou5EwD--22cg0Tz4PmwMAXSljZiBIKavG3jReVnIwyZaweoy2qZ9mnLIotfej7tgEPut99tQPoLD1qZla1hEJckrtNIrfYOrjlxFL-PSpOnKgSb8VRCSpF_9n3IXXBn1DoiitipdyhpKBKfg_yrRUaieaDH7BXezLVhi7Vz-EnjGUcpslbGcnAf-6cf-ob5AEV_-kkOdM2XuPYtkDWKOQzCFEooF9NnLT6kPD3j1onj2rWA4Khj7FR5fQGjuWwsQasc9ByHIJSmtEnCuexbhnHsr3-52O7cATgZPELiSxR8Zp8yw0kW3bsN3xMRP_TvpPE2CAjko-ZWWEaXW__PXDGq5KhR37_fJU0YdV6PLi889hNqOsMp6aL95swSmze_6nNdri-8k2kgMB204GCfCeR1UA\u003ds96-c",
+        "userKey": "agxzfm1haWxmb29nYWVyNAsSDE9yZ2FuaXphdGlvbiIRY2FubmNlc3RyYW5vdy5jb20MCxIEVXNlchiAgKHouIP3CAw"
+      }
+    ],
+    "pipelineKey": "agxzfm1haWxmb29nYWVyOAsSDE9yZ2FuaXphdGlvbiIRY2FubmNlc3RyYW5vdy5jb20MCxIIV29ya2Zsb3cYgICFrouSwQoM",
+    "key": "agxzfm1haWxmb29nYWVyOAsSDE9yZ2FuaXphdGlvbiIRY2FubmNlc3RyYW5vdy5jb20MCxIIV29ya2Zsb3cYgICFrouSwQoM",
+    "creationSourceType": "HUMAN",
+    "boxCountHint": 268,
+    "boxCount": 268,
+    "lastSavedTimestamp": 1745351600805
+  },
+  {
+    "teamKey": "agxzfm1haWxmb29nYWVyEQsSBFRlYW0YgIChyI3dswoM",
+    "creatorKey": "agxzfm1haWxmb29nYWVyNAsSDE9yZ2FuaXphdGlvbiIRY2FubmNlc3RyYW5vdy5jb20MCxIEVXNlchiAgKHouIP3CAw",
+    "icon": "label_important",
+    "name": "email",
+    "sharingRestrictedToOrg": false,
+    "sharingRestrictedToTeam": false,
+    "fields": [
+      {
+        "name": "Linkedin",
+        "key": "1001",
+        "type": "TEXT_INPUT",
+        "lastUpdatedTimestamp": 1722960946177
+      },
+      {
+        "name": "Preferred Name",
+        "key": "1002",
+        "type": "TEXT_INPUT",
+        "lastUpdatedTimestamp": 1722960946177
+      },
+      {
+        "name": "Position",
+        "key": "1003",
+        "type": "TEXT_INPUT",
+        "lastUpdatedTimestamp": 1722960946177
+      },
+      {
+        "name": "Phone",
+        "key": "1004",
+        "type": "TEXT_INPUT",
+        "lastUpdatedTimestamp": 1722960946177
+      },
+      {
+        "name": "Email",
+        "key": "1005",
+        "type": "TEXT_INPUT",
+        "lastUpdatedTimestamp": 1722960946177
+      },
+      {
+        "name": "Company",
+        "key": "1006",
+        "type": "TEXT_INPUT",
+        "lastUpdatedTimestamp": 1722960946177
+      },
+      {
+        "name": "Location",
+        "key": "1007",
+        "type": "TEXT_INPUT",
+        "lastUpdatedTimestamp": 1722960946177
+      },
+      {
+        "name": "Facebook",
+        "key": "1008",
+        "type": "TEXT_INPUT",
+        "lastUpdatedTimestamp": 1722960946177
+      },
+      {
+        "name": "Text Date",
+        "key": "1009",
+        "type": "DATE",
+        "lastUpdatedTimestamp": 1722960946177
+      },
+      {
+        "name": "LMail",
+        "key": "1010",
+        "type": "DATE",
+        "lastUpdatedTimestamp": 1722960946177
+      },
+      {
+        "name": "Connected",
+        "key": "1011",
+        "type": "DATE",
+        "lastUpdatedTimestamp": 1722960946177
+      },
+      {
+        "name": "Headline",
+        "key": "1012",
+        "type": "TEXT_INPUT",
+        "lastUpdatedTimestamp": 1722960946177
+      },
+      {
+        "name": "Ben Tag Know Contact",
+        "key": "1013",
+        "type": "TEXT_INPUT",
+        "lastUpdatedTimestamp": 1722960946177
+      },
+      {
+        "name": "2nd LMail",
+        "key": "1014",
+        "type": "DATE",
+        "lastUpdatedTimestamp": 1722960946177
+      },
+      {
+        "name": "3rd Lmail",
+        "key": "1015",
+        "type": "DATE",
+        "lastUpdatedTimestamp": 1722960946177
+      }
+    ],
+    "stages": {
+      "5020": {
+        "name": "Old connections",
+        "key": "5020",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#861fb3"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": true
+      },
+      "5010": {
+        "name": "6th Contacted",
+        "key": "5010",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#12a550"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": true
+      },
+      "5021": {
+        "name": "Old/current Client",
+        "key": "5021",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#9915AF"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": true
+      },
+      "5011": {
+        "name": "Called",
+        "key": "5011",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#009588"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": true
+      },
+      "5022": {
+        "name": "Friends",
+        "key": "5022",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#c41799"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": true
+      },
+      "5001": {
+        "name": "LinkedIn Leads",
+        "key": "5001",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#E53935"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": true
+      },
+      "5012": {
+        "name": "Monthly Follow-up",
+        "key": "5012",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#00b1b6"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": true
+      },
+      "5023": {
+        "name": "Info given",
+        "key": "5023",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#D81A60"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": true
+      },
+      "5002": {
+        "name": "Interviewing",
+        "key": "5002",
+        "color": {
+          "foregroundColor": "#000000",
+          "backgroundColor": "#f25338"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": true
+      },
+      "5013": {
+        "name": "3 Month Follow-up",
+        "key": "5013",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#00b8d6"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": true
+      },
+      "5003": {
+        "name": "Linkedin Talking",
+        "key": "5003",
+        "color": {
+          "foregroundColor": "#000000",
+          "backgroundColor": "#FF703A"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": true
+      },
+      "5014": {
+        "name": "6 Month Follow-up",
+        "key": "5014",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#00aedc"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": true
+      },
+      "5004": {
+        "name": "Non-Contacted",
+        "key": "5004",
+        "color": {
+          "foregroundColor": "#000000",
+          "backgroundColor": "#ff8127"
+        },
+        "boxCount": 9250,
+        "isColorFromTheme": true
+      },
+      "5015": {
+        "name": "Other",
+        "key": "5015",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#00a4e2"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": true
+      },
+      "5005": {
+        "name": "1st Contacted",
+        "key": "5005",
+        "color": {
+          "foregroundColor": "#000000",
+          "backgroundColor": "#ff9715"
+        },
+        "boxCount": 10813,
+        "isColorFromTheme": true
+      },
+      "5016": {
+        "name": "Rejected",
+        "key": "5016",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#0099E8"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": true
+      },
+      "5006": {
+        "name": "2nd Contacted",
+        "key": "5006",
+        "color": {
+          "foregroundColor": "#000000",
+          "backgroundColor": "#FFB302"
+        },
+        "boxCount": 302,
+        "isColorFromTheme": true
+      },
+      "5017": {
+        "name": "Finished",
+        "key": "5017",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#1e37d1"
+        },
+        "boxCount": 1,
+        "isColorFromTheme": true
+      },
+      "5007": {
+        "name": "3rd Contacted",
+        "key": "5007",
+        "color": {
+          "foregroundColor": "#000000",
+          "backgroundColor": "#d4e226"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": true
+      },
+      "5018": {
+        "name": "grab",
+        "key": "5018",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#6735BA"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": true
+      },
+      "5008": {
+        "name": "4th Contacted",
+        "key": "5008",
+        "color": {
+          "foregroundColor": "#000000",
+          "backgroundColor": "#89C540"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": true
+      },
+      "5019": {
+        "name": "grab1",
+        "key": "5019",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#752ab6"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": true
+      },
+      "5009": {
+        "name": "5th Contacted",
+        "key": "5009",
+        "color": {
+          "foregroundColor": "#000000",
+          "backgroundColor": "#30b527"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": true
+      }
+    },
+    "stageOrder": [
+      "5001",
+      "5002",
+      "5003",
+      "5004",
+      "5005",
+      "5006",
+      "5007",
+      "5008",
+      "5009",
+      "5010",
+      "5011",
+      "5012",
+      "5013",
+      "5014",
+      "5015",
+      "5016",
+      "5017",
+      "5018",
+      "5019",
+      "5020",
+      "5021",
+      "5022",
+      "5023"
+    ],
+    "stageColorTheme": "RAINBOW_SATURATED",
+    "creationTimestamp": 1722960946177,
+    "lastUpdatedTimestamp": 1741034511035,
+    "customPermissionSets": {},
+    "defaultPermissionSetName": "__editAllPermissionSet__",
+    "aclEntries": [
+      {
+        "permissionSetName": "__adminPermissionSet__",
+        "displayName": "Jerry E",
+        "email": "jerry@canncestranow.com",
+        "fullName": "Jerry Eaton",
+        "givenName": "Jerry",
+        "image": "https://lh3.googleusercontent.com/a-/ALV-UjXhL1iY_ivtejWVu8Emx4oA3Nq5AMqtFFzwTdHWqRrIrnLHu4cWiXLOJNubHXpN_sDT75wwMZEiRufI0WGs9ReABb6K0rSq0LtR_SSYnUDKVA1BLlBfqAHWhCUHi5Gm0J3dvwXjjFquTHSZJWkcZwgkI7w8bAim9LEPpsnuhRTctOb3jrUXbfRsSLYKyFhyE12aUTibsCn_kM8-2CdDbtWhPbF_bFO2MgkSVA86SAfCJqJAlGIbYZIXXDa5npu4ZR6s7QLhvWZ8ldkxoMWAEcpUyvf1X5D9KsptiOFcBslSGKuZ6IMOPZ6o6rUua39yz_8_Qpn6ASl5TIgpPP_XOa-jF2TJolvgbVLlb1r_XNw1bg6am2wxu_P6edb2dOvbgSqmcfJFplOcxDFrwoGWyCN2t4SiinmAj6lv5oitp_RN7DldXEHxZRqbhr3gID76kPY8kpL5AtD7ShV_FSm5vicfVhpZhmiHnpwyFYrAOMp4Wnti6paFC5eZCJUWWJuamijqTkDo1fO-KXduImhNjBHXAZi1PFm3SVPLiVqw3f_w7GlLczxQkVxsO7xTRlCNrPlfuou5EwD--22cg0Tz4PmwMAXSljZiBIKavG3jReVnIwyZaweoy2qZ9mnLIotfej7tgEPut99tQPoLD1qZla1hEJckrtNIrfYOrjlxFL-PSpOnKgSb8VRCSpF_9n3IXXBn1DoiitipdyhpKBKfg_yrRUaieaDH7BXezLVhi7Vz-EnjGUcpslbGcnAf-6cf-ob5AEV_-kkOdM2XuPYtkDWKOQzCFEooF9NnLT6kPD3j1onj2rWA4Khj7FR5fQGjuWwsQasc9ByHIJSmtEnCuexbhnHsr3-52O7cATgZPELiSxR8Zp8yw0kW3bsN3xMRP_TvpPE2CAjko-ZWWEaXW__PXDGq5KhR37_fJU0YdV6PLi889hNqOsMp6aL95swSmze_6nNdri-8k2kgMB204GCfCeR1UA\u003ds96-c",
+        "userKey": "agxzfm1haWxmb29nYWVyNAsSDE9yZ2FuaXphdGlvbiIRY2FubmNlc3RyYW5vdy5jb20MCxIEVXNlchiAgKHouIP3CAw"
+      }
+    ],
+    "pipelineKey": "agxzfm1haWxmb29nYWVyOAsSDE9yZ2FuaXphdGlvbiIRY2FubmNlc3RyYW5vdy5jb20MCxIIV29ya2Zsb3cYgIDhgdvFiQoM",
+    "key": "agxzfm1haWxmb29nYWVyOAsSDE9yZ2FuaXphdGlvbiIRY2FubmNlc3RyYW5vdy5jb20MCxIIV29ya2Zsb3cYgIDhgdvFiQoM",
+    "creationSourceType": "HUMAN",
+    "boxCountHint": 20366,
+    "boxCount": 20366,
+    "earliestBoxHint": 1722961132582,
+    "lastSavedTimestamp": 1741640445322
+  },
+  {
+    "teamKey": "agxzfm1haWxmb29nYWVyEQsSBFRlYW0YgIChyI3dswoM",
+    "creatorKey": "agxzfm1haWxmb29nYWVyNAsSDE9yZ2FuaXphdGlvbiIRY2FubmNlc3RyYW5vdy5jb20MCxIEVXNlchiAgKHouIP3CAw",
+    "icon": "label_important",
+    "name": "Email LO",
+    "sharingRestrictedToOrg": false,
+    "sharingRestrictedToTeam": false,
+    "fields": [
+      {
+        "name": "Linkedin",
+        "key": "1001",
+        "type": "TEXT_INPUT",
+        "lastUpdatedTimestamp": 1737567550249
+      },
+      {
+        "name": "Preferred Name",
+        "key": "1002",
+        "type": "TEXT_INPUT",
+        "lastUpdatedTimestamp": 1737567550249
+      },
+      {
+        "name": "Position",
+        "key": "1003",
+        "type": "TEXT_INPUT",
+        "lastUpdatedTimestamp": 1737567550249
+      },
+      {
+        "name": "Phone",
+        "key": "1004",
+        "type": "TEXT_INPUT",
+        "lastUpdatedTimestamp": 1737567550249
+      },
+      {
+        "name": "Email",
+        "key": "1005",
+        "type": "TEXT_INPUT",
+        "lastUpdatedTimestamp": 1737567550249
+      },
+      {
+        "name": "Company",
+        "key": "1006",
+        "type": "TEXT_INPUT",
+        "lastUpdatedTimestamp": 1737567550249
+      },
+      {
+        "name": "Location",
+        "key": "1007",
+        "type": "TEXT_INPUT",
+        "lastUpdatedTimestamp": 1737567550249
+      },
+      {
+        "name": "Facebook",
+        "key": "1008",
+        "type": "TEXT_INPUT",
+        "lastUpdatedTimestamp": 1737567550249
+      },
+      {
+        "name": "Text Date",
+        "key": "1009",
+        "type": "DATE",
+        "lastUpdatedTimestamp": 1737567550249
+      },
+      {
+        "name": "LMail",
+        "key": "1010",
+        "type": "DATE",
+        "lastUpdatedTimestamp": 1737567550249
+      },
+      {
+        "name": "Connected",
+        "key": "1011",
+        "type": "DATE",
+        "lastUpdatedTimestamp": 1737567550249
+      },
+      {
+        "name": "Headline",
+        "key": "1012",
+        "type": "TEXT_INPUT",
+        "lastUpdatedTimestamp": 1737567550249
+      },
+      {
+        "name": "Lmail2",
+        "key": "1013",
+        "type": "DATE",
+        "lastUpdatedTimestamp": 1737567550249
+      }
+    ],
+    "stages": {
+      "5010": {
+        "name": "6th Contacted",
+        "key": "5010",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#5166CC"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      },
+      "5011": {
+        "name": "Called",
+        "key": "5011",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#4455BD"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      },
+      "5001": {
+        "name": "LinkedIn Leads",
+        "key": "5001",
+        "color": {
+          "foregroundColor": "#000000",
+          "backgroundColor": "#FCC200"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      },
+      "5012": {
+        "name": "Monthly Follow-up",
+        "key": "5012",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#2C369F"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      },
+      "5002": {
+        "name": "Interviewing",
+        "key": "5002",
+        "color": {
+          "foregroundColor": "#000000",
+          "backgroundColor": "#FEB200"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      },
+      "5013": {
+        "name": "3 Month Follow-up",
+        "key": "5013",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#191D80"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      },
+      "5003": {
+        "name": "Linkedin Talking",
+        "key": "5003",
+        "color": {
+          "foregroundColor": "#000000",
+          "backgroundColor": "#FFA100"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      },
+      "5014": {
+        "name": "6 Month Follow-up",
+        "key": "5014",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#0D368A"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      },
+      "5004": {
+        "name": "Non-Contacted",
+        "key": "5004",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#252DFC"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      },
+      "5015": {
+        "name": "Other",
+        "key": "5015",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#005B94"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      },
+      "5005": {
+        "name": "1st Contacted",
+        "key": "5005",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#F94A51"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      },
+      "5016": {
+        "name": "Rejected",
+        "key": "5016",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#007CA4"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      },
+      "5006": {
+        "name": "2nd Contacted",
+        "key": "5006",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#E86DF4"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      },
+      "5017": {
+        "name": "Finished",
+        "key": "5017",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#00A2B3"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      },
+      "5007": {
+        "name": "3rd Contacted",
+        "key": "5007",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#8E9BEF"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      },
+      "5018": {
+        "name": "grab",
+        "key": "5018",
+        "color": {
+          "foregroundColor": "#000000",
+          "backgroundColor": "#00BDBE"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      },
+      "5008": {
+        "name": "4th Contacted",
+        "key": "5008",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#7688E5"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      },
+      "5019": {
+        "name": "grab1",
+        "key": "5019",
+        "color": {
+          "foregroundColor": "#000000",
+          "backgroundColor": "#00C8B6"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      },
+      "5009": {
+        "name": "5th Contacted",
+        "key": "5009",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#5F78DA"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      }
+    },
+    "stageOrder": [
+      "5001",
+      "5002",
+      "5003",
+      "5004",
+      "5005",
+      "5006",
+      "5007",
+      "5008",
+      "5009",
+      "5010",
+      "5011",
+      "5012",
+      "5013",
+      "5014",
+      "5015",
+      "5016",
+      "5017",
+      "5018",
+      "5019"
+    ],
+    "stageColorTheme": "RAINBOW_SATURATED",
+    "creationTimestamp": 1737567550249,
+    "lastUpdatedTimestamp": 1737567581839,
+    "customPermissionSets": {},
+    "defaultPermissionSetName": "__emptyPermissionSet__",
+    "aclEntries": [
+      {
+        "permissionSetName": "__adminPermissionSet__",
+        "displayName": "Jerry E",
+        "email": "jerry@canncestranow.com",
+        "fullName": "Jerry Eaton",
+        "givenName": "Jerry",
+        "image": "https://lh3.googleusercontent.com/a-/ALV-UjXhL1iY_ivtejWVu8Emx4oA3Nq5AMqtFFzwTdHWqRrIrnLHu4cWiXLOJNubHXpN_sDT75wwMZEiRufI0WGs9ReABb6K0rSq0LtR_SSYnUDKVA1BLlBfqAHWhCUHi5Gm0J3dvwXjjFquTHSZJWkcZwgkI7w8bAim9LEPpsnuhRTctOb3jrUXbfRsSLYKyFhyE12aUTibsCn_kM8-2CdDbtWhPbF_bFO2MgkSVA86SAfCJqJAlGIbYZIXXDa5npu4ZR6s7QLhvWZ8ldkxoMWAEcpUyvf1X5D9KsptiOFcBslSGKuZ6IMOPZ6o6rUua39yz_8_Qpn6ASl5TIgpPP_XOa-jF2TJolvgbVLlb1r_XNw1bg6am2wxu_P6edb2dOvbgSqmcfJFplOcxDFrwoGWyCN2t4SiinmAj6lv5oitp_RN7DldXEHxZRqbhr3gID76kPY8kpL5AtD7ShV_FSm5vicfVhpZhmiHnpwyFYrAOMp4Wnti6paFC5eZCJUWWJuamijqTkDo1fO-KXduImhNjBHXAZi1PFm3SVPLiVqw3f_w7GlLczxQkVxsO7xTRlCNrPlfuou5EwD--22cg0Tz4PmwMAXSljZiBIKavG3jReVnIwyZaweoy2qZ9mnLIotfej7tgEPut99tQPoLD1qZla1hEJckrtNIrfYOrjlxFL-PSpOnKgSb8VRCSpF_9n3IXXBn1DoiitipdyhpKBKfg_yrRUaieaDH7BXezLVhi7Vz-EnjGUcpslbGcnAf-6cf-ob5AEV_-kkOdM2XuPYtkDWKOQzCFEooF9NnLT6kPD3j1onj2rWA4Khj7FR5fQGjuWwsQasc9ByHIJSmtEnCuexbhnHsr3-52O7cATgZPELiSxR8Zp8yw0kW3bsN3xMRP_TvpPE2CAjko-ZWWEaXW__PXDGq5KhR37_fJU0YdV6PLi889hNqOsMp6aL95swSmze_6nNdri-8k2kgMB204GCfCeR1UA\u003ds96-c",
+        "userKey": "agxzfm1haWxmb29nYWVyNAsSDE9yZ2FuaXphdGlvbiIRY2FubmNlc3RyYW5vdy5jb20MCxIEVXNlchiAgKHouIP3CAw"
+      }
+    ],
+    "pipelineKey": "agxzfm1haWxmb29nYWVyOAsSDE9yZ2FuaXphdGlvbiIRY2FubmNlc3RyYW5vdy5jb20MCxIIV29ya2Zsb3cYgICFjor1ygsM",
+    "key": "agxzfm1haWxmb29nYWVyOAsSDE9yZ2FuaXphdGlvbiIRY2FubmNlc3RyYW5vdy5jb20MCxIIV29ya2Zsb3cYgICFjor1ygsM",
+    "creationSourceType": "HUMAN",
+    "boxCountHint": 0,
+    "boxCount": 0,
+    "lastSavedTimestamp": 1737567581844
+  },
+  {
+    "teamKey": "agxzfm1haWxmb29nYWVyEQsSBFRlYW0YgIChyI3dswoM",
+    "creatorKey": "agxzfm1haWxmb29nYWVyNAsSDE9yZ2FuaXphdGlvbiIRY2FubmNlc3RyYW5vdy5jb20MCxIEVXNlchiAgKHouIP3CAw",
+    "icon": "label_important",
+    "name": "Email La",
+    "sharingRestrictedToOrg": false,
+    "sharingRestrictedToTeam": false,
+    "fields": [
+      {
+        "name": "Linkedin",
+        "key": "1001",
+        "type": "TEXT_INPUT",
+        "lastUpdatedTimestamp": 1722959438800
+      },
+      {
+        "name": "Preferred Name",
+        "key": "1002",
+        "type": "TEXT_INPUT",
+        "lastUpdatedTimestamp": 1722959438800
+      },
+      {
+        "name": "Position",
+        "key": "1003",
+        "type": "TEXT_INPUT",
+        "lastUpdatedTimestamp": 1722959438800
+      },
+      {
+        "name": "Phone",
+        "key": "1004",
+        "type": "TEXT_INPUT",
+        "lastUpdatedTimestamp": 1722959438800
+      },
+      {
+        "name": "Email",
+        "key": "1005",
+        "type": "TEXT_INPUT",
+        "lastUpdatedTimestamp": 1722959438800
+      },
+      {
+        "name": "Company",
+        "key": "1006",
+        "type": "TEXT_INPUT",
+        "lastUpdatedTimestamp": 1722959438800
+      },
+      {
+        "name": "Location",
+        "key": "1007",
+        "type": "TEXT_INPUT",
+        "lastUpdatedTimestamp": 1722959438800
+      },
+      {
+        "name": "Facebook",
+        "key": "1008",
+        "type": "TEXT_INPUT",
+        "lastUpdatedTimestamp": 1722959438800
+      },
+      {
+        "name": "Text Date",
+        "key": "1009",
+        "type": "DATE",
+        "lastUpdatedTimestamp": 1722959438800
+      },
+      {
+        "name": "LMail",
+        "key": "1010",
+        "type": "DATE",
+        "lastUpdatedTimestamp": 1722959438800
+      },
+      {
+        "name": "Connected",
+        "key": "1011",
+        "type": "DATE",
+        "lastUpdatedTimestamp": 1722959438800
+      },
+      {
+        "name": "Headline",
+        "key": "1012",
+        "type": "TEXT_INPUT",
+        "lastUpdatedTimestamp": 1722959438800
+      },
+      {
+        "name": "4th Lmail",
+        "key": "1013",
+        "type": "DATE",
+        "lastUpdatedTimestamp": 1722962690477
+      },
+      {
+        "name": "2nd Lmail",
+        "key": "1014",
+        "type": "DATE",
+        "lastUpdatedTimestamp": 1722962997399
+      },
+      {
+        "name": "3rd Lmail",
+        "key": "1015",
+        "type": "DATE",
+        "lastUpdatedTimestamp": 1722962985793
+      },
+      {
+        "name": "Video date",
+        "key": "1016",
+        "type": "DATE",
+        "lastUpdatedTimestamp": 1725561326099
+      }
+    ],
+    "stages": {
+      "5010": {
+        "name": "6th Contacted",
+        "key": "5010",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#5166CC"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      },
+      "5011": {
+        "name": "Called",
+        "key": "5011",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#4455BD"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      },
+      "5001": {
+        "name": "LinkedIn Leads",
+        "key": "5001",
+        "color": {
+          "foregroundColor": "#000000",
+          "backgroundColor": "#FCC200"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      },
+      "5012": {
+        "name": "Monthly Follow-up",
+        "key": "5012",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#2C369F"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      },
+      "5002": {
+        "name": "Interviewing",
+        "key": "5002",
+        "color": {
+          "foregroundColor": "#000000",
+          "backgroundColor": "#FEB200"
+        },
+        "boxCount": 26,
+        "isColorFromTheme": false
+      },
+      "5013": {
+        "name": "3 Month Follow-up",
+        "key": "5013",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#191D80"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      },
+      "5003": {
+        "name": "Linkedin Talking",
+        "key": "5003",
+        "color": {
+          "foregroundColor": "#000000",
+          "backgroundColor": "#FFA100"
+        },
+        "boxCount": 27,
+        "isColorFromTheme": false
+      },
+      "5014": {
+        "name": "6 Month Follow-up",
+        "key": "5014",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#0D368A"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      },
+      "5004": {
+        "name": "Non-Contacted",
+        "key": "5004",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#252DFC"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      },
+      "5015": {
+        "name": "Other",
+        "key": "5015",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#005B94"
+        },
+        "boxCount": 11,
+        "isColorFromTheme": false
+      },
+      "5005": {
+        "name": "1st Contacted",
+        "key": "5005",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#F94A51"
+        },
+        "boxCount": 106,
+        "isColorFromTheme": false
+      },
+      "5016": {
+        "name": "Rejected",
+        "key": "5016",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#007CA4"
+        },
+        "boxCount": 36,
+        "isColorFromTheme": false
+      },
+      "5006": {
+        "name": "2nd Contacted",
+        "key": "5006",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#E86DF4"
+        },
+        "boxCount": 119,
+        "isColorFromTheme": false
+      },
+      "5017": {
+        "name": "Finished",
+        "key": "5017",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#00A2B3"
+        },
+        "boxCount": 2,
+        "isColorFromTheme": false
+      },
+      "5007": {
+        "name": "3rd Contacted",
+        "key": "5007",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#8E9BEF"
+        },
+        "boxCount": 52,
+        "isColorFromTheme": false
+      },
+      "5018": {
+        "name": "grab",
+        "key": "5018",
+        "color": {
+          "foregroundColor": "#000000",
+          "backgroundColor": "#00BDBE"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      },
+      "5008": {
+        "name": "4th Contacted",
+        "key": "5008",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#7688E5"
+        },
+        "boxCount": 151,
+        "isColorFromTheme": false
+      },
+      "5019": {
+        "name": "grab1",
+        "key": "5019",
+        "color": {
+          "foregroundColor": "#000000",
+          "backgroundColor": "#00C8B6"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      },
+      "5009": {
+        "name": "5th Contacted",
+        "key": "5009",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#5F78DA"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      }
+    },
+    "stageOrder": [
+      "5001",
+      "5002",
+      "5003",
+      "5004",
+      "5005",
+      "5006",
+      "5007",
+      "5008",
+      "5009",
+      "5010",
+      "5011",
+      "5012",
+      "5013",
+      "5014",
+      "5015",
+      "5016",
+      "5017",
+      "5018",
+      "5019"
+    ],
+    "stageColorTheme": "RAINBOW_SATURATED",
+    "creationTimestamp": 1722959438799,
+    "lastUpdatedTimestamp": 1737567537085,
+    "customPermissionSets": {},
+    "defaultPermissionSetName": "__emptyPermissionSet__",
+    "aclEntries": [
+      {
+        "permissionSetName": "__adminPermissionSet__",
+        "displayName": "Jerry E",
+        "email": "jerry@canncestranow.com",
+        "fullName": "Jerry Eaton",
+        "givenName": "Jerry",
+        "image": "https://lh3.googleusercontent.com/a-/ALV-UjXhL1iY_ivtejWVu8Emx4oA3Nq5AMqtFFzwTdHWqRrIrnLHu4cWiXLOJNubHXpN_sDT75wwMZEiRufI0WGs9ReABb6K0rSq0LtR_SSYnUDKVA1BLlBfqAHWhCUHi5Gm0J3dvwXjjFquTHSZJWkcZwgkI7w8bAim9LEPpsnuhRTctOb3jrUXbfRsSLYKyFhyE12aUTibsCn_kM8-2CdDbtWhPbF_bFO2MgkSVA86SAfCJqJAlGIbYZIXXDa5npu4ZR6s7QLhvWZ8ldkxoMWAEcpUyvf1X5D9KsptiOFcBslSGKuZ6IMOPZ6o6rUua39yz_8_Qpn6ASl5TIgpPP_XOa-jF2TJolvgbVLlb1r_XNw1bg6am2wxu_P6edb2dOvbgSqmcfJFplOcxDFrwoGWyCN2t4SiinmAj6lv5oitp_RN7DldXEHxZRqbhr3gID76kPY8kpL5AtD7ShV_FSm5vicfVhpZhmiHnpwyFYrAOMp4Wnti6paFC5eZCJUWWJuamijqTkDo1fO-KXduImhNjBHXAZi1PFm3SVPLiVqw3f_w7GlLczxQkVxsO7xTRlCNrPlfuou5EwD--22cg0Tz4PmwMAXSljZiBIKavG3jReVnIwyZaweoy2qZ9mnLIotfej7tgEPut99tQPoLD1qZla1hEJckrtNIrfYOrjlxFL-PSpOnKgSb8VRCSpF_9n3IXXBn1DoiitipdyhpKBKfg_yrRUaieaDH7BXezLVhi7Vz-EnjGUcpslbGcnAf-6cf-ob5AEV_-kkOdM2XuPYtkDWKOQzCFEooF9NnLT6kPD3j1onj2rWA4Khj7FR5fQGjuWwsQasc9ByHIJSmtEnCuexbhnHsr3-52O7cATgZPELiSxR8Zp8yw0kW3bsN3xMRP_TvpPE2CAjko-ZWWEaXW__PXDGq5KhR37_fJU0YdV6PLi889hNqOsMp6aL95swSmze_6nNdri-8k2kgMB204GCfCeR1UA\u003ds96-c",
+        "userKey": "agxzfm1haWxmb29nYWVyNAsSDE9yZ2FuaXphdGlvbiIRY2FubmNlc3RyYW5vdy5jb20MCxIEVXNlchiAgKHouIP3CAw"
+      }
+    ],
+    "pipelineKey": "agxzfm1haWxmb29nYWVyOAsSDE9yZ2FuaXphdGlvbiIRY2FubmNlc3RyYW5vdy5jb20MCxIIV29ya2Zsb3cYgIDh3v6jhwoM",
+    "key": "agxzfm1haWxmb29nYWVyOAsSDE9yZ2FuaXphdGlvbiIRY2FubmNlc3RyYW5vdy5jb20MCxIIV29ya2Zsb3cYgIDh3v6jhwoM",
+    "creationSourceType": "HUMAN",
+    "boxCountHint": 530,
+    "boxCount": 530,
+    "lastSavedTimestamp": 1737567537093
+  },
+  {
+    "teamKey": "agxzfm1haWxmb29nYWVyEQsSBFRlYW0YgIChyI3dswoM",
+    "creatorKey": "agxzfm1haWxmb29nYWVyNAsSDE9yZ2FuaXphdGlvbiIRY2FubmNlc3RyYW5vdy5jb20MCxIEVXNlchiAgKHouIP3CAw",
+    "icon": "label_important",
+    "name": "Email rc",
+    "sharingRestrictedToOrg": false,
+    "sharingRestrictedToTeam": false,
+    "fields": [
+      {
+        "name": "Linkedin",
+        "key": "1001",
+        "type": "TEXT_INPUT",
+        "lastUpdatedTimestamp": 1736964070605
+      },
+      {
+        "name": "Preferred Name",
+        "key": "1002",
+        "type": "TEXT_INPUT",
+        "lastUpdatedTimestamp": 1736964070605
+      },
+      {
+        "name": "Position",
+        "key": "1003",
+        "type": "TEXT_INPUT",
+        "lastUpdatedTimestamp": 1736964070605
+      },
+      {
+        "name": "Phone",
+        "key": "1004",
+        "type": "TEXT_INPUT",
+        "lastUpdatedTimestamp": 1736964070605
+      },
+      {
+        "name": "Email",
+        "key": "1005",
+        "type": "TEXT_INPUT",
+        "lastUpdatedTimestamp": 1736964070605
+      },
+      {
+        "name": "Company",
+        "key": "1006",
+        "type": "TEXT_INPUT",
+        "lastUpdatedTimestamp": 1736964070605
+      },
+      {
+        "name": "Location",
+        "key": "1007",
+        "type": "TEXT_INPUT",
+        "lastUpdatedTimestamp": 1736964070605
+      },
+      {
+        "name": "Facebook",
+        "key": "1008",
+        "type": "TEXT_INPUT",
+        "lastUpdatedTimestamp": 1736964070605
+      },
+      {
+        "name": "Text Date",
+        "key": "1009",
+        "type": "DATE",
+        "lastUpdatedTimestamp": 1736964070605
+      },
+      {
+        "name": "LMail",
+        "key": "1010",
+        "type": "DATE",
+        "lastUpdatedTimestamp": 1736964070605
+      },
+      {
+        "name": "Connected",
+        "key": "1011",
+        "type": "DATE",
+        "lastUpdatedTimestamp": 1736964070605
+      },
+      {
+        "name": "Headline",
+        "key": "1012",
+        "type": "TEXT_INPUT",
+        "lastUpdatedTimestamp": 1736964070605
+      }
+    ],
+    "stages": {
+      "5010": {
+        "name": "6th Contacted",
+        "key": "5010",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#5166CC"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      },
+      "5011": {
+        "name": "Called",
+        "key": "5011",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#4455BD"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      },
+      "5001": {
+        "name": "LinkedIn Leads",
+        "key": "5001",
+        "color": {
+          "foregroundColor": "#000000",
+          "backgroundColor": "#FCC200"
+        },
+        "boxCount": 3572,
+        "isColorFromTheme": false
+      },
+      "5012": {
+        "name": "Monthly Follow-up",
+        "key": "5012",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#2C369F"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      },
+      "5002": {
+        "name": "Interviewing",
+        "key": "5002",
+        "color": {
+          "foregroundColor": "#000000",
+          "backgroundColor": "#FEB200"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      },
+      "5013": {
+        "name": "3 Month Follow-up",
+        "key": "5013",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#191D80"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      },
+      "5003": {
+        "name": "Linkedin Talking",
+        "key": "5003",
+        "color": {
+          "foregroundColor": "#000000",
+          "backgroundColor": "#FFA100"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      },
+      "5014": {
+        "name": "6 Month Follow-up",
+        "key": "5014",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#0D368A"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      },
+      "5004": {
+        "name": "Non-Contacted",
+        "key": "5004",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#252DFC"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      },
+      "5015": {
+        "name": "Other",
+        "key": "5015",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#005B94"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      },
+      "5005": {
+        "name": "1st Contacted",
+        "key": "5005",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#F94A51"
+        },
+        "boxCount": 33,
+        "isColorFromTheme": false
+      },
+      "5016": {
+        "name": "Rejected",
+        "key": "5016",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#007CA4"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      },
+      "5006": {
+        "name": "2nd Contacted",
+        "key": "5006",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#E86DF4"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      },
+      "5017": {
+        "name": "Finished",
+        "key": "5017",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#00A2B3"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      },
+      "5007": {
+        "name": "3rd Contacted",
+        "key": "5007",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#8E9BEF"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      },
+      "5018": {
+        "name": "grab",
+        "key": "5018",
+        "color": {
+          "foregroundColor": "#000000",
+          "backgroundColor": "#00BDBE"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      },
+      "5008": {
+        "name": "4th Contacted",
+        "key": "5008",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#7688E5"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      },
+      "5019": {
+        "name": "grab1",
+        "key": "5019",
+        "color": {
+          "foregroundColor": "#000000",
+          "backgroundColor": "#00C8B6"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      },
+      "5009": {
+        "name": "5th Contacted",
+        "key": "5009",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#5F78DA"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      }
+    },
+    "stageOrder": [
+      "5001",
+      "5002",
+      "5003",
+      "5004",
+      "5005",
+      "5006",
+      "5007",
+      "5008",
+      "5009",
+      "5010",
+      "5011",
+      "5012",
+      "5013",
+      "5014",
+      "5015",
+      "5016",
+      "5017",
+      "5018",
+      "5019"
+    ],
+    "stageColorTheme": "RAINBOW_SATURATED",
+    "creationTimestamp": 1736964070605,
+    "lastUpdatedTimestamp": 1736964086671,
+    "customPermissionSets": {},
+    "defaultPermissionSetName": "__emptyPermissionSet__",
+    "aclEntries": [
+      {
+        "permissionSetName": "__adminPermissionSet__",
+        "displayName": "Jerry E",
+        "email": "jerry@canncestranow.com",
+        "fullName": "Jerry Eaton",
+        "givenName": "Jerry",
+        "image": "https://lh3.googleusercontent.com/a-/ALV-UjXhL1iY_ivtejWVu8Emx4oA3Nq5AMqtFFzwTdHWqRrIrnLHu4cWiXLOJNubHXpN_sDT75wwMZEiRufI0WGs9ReABb6K0rSq0LtR_SSYnUDKVA1BLlBfqAHWhCUHi5Gm0J3dvwXjjFquTHSZJWkcZwgkI7w8bAim9LEPpsnuhRTctOb3jrUXbfRsSLYKyFhyE12aUTibsCn_kM8-2CdDbtWhPbF_bFO2MgkSVA86SAfCJqJAlGIbYZIXXDa5npu4ZR6s7QLhvWZ8ldkxoMWAEcpUyvf1X5D9KsptiOFcBslSGKuZ6IMOPZ6o6rUua39yz_8_Qpn6ASl5TIgpPP_XOa-jF2TJolvgbVLlb1r_XNw1bg6am2wxu_P6edb2dOvbgSqmcfJFplOcxDFrwoGWyCN2t4SiinmAj6lv5oitp_RN7DldXEHxZRqbhr3gID76kPY8kpL5AtD7ShV_FSm5vicfVhpZhmiHnpwyFYrAOMp4Wnti6paFC5eZCJUWWJuamijqTkDo1fO-KXduImhNjBHXAZi1PFm3SVPLiVqw3f_w7GlLczxQkVxsO7xTRlCNrPlfuou5EwD--22cg0Tz4PmwMAXSljZiBIKavG3jReVnIwyZaweoy2qZ9mnLIotfej7tgEPut99tQPoLD1qZla1hEJckrtNIrfYOrjlxFL-PSpOnKgSb8VRCSpF_9n3IXXBn1DoiitipdyhpKBKfg_yrRUaieaDH7BXezLVhi7Vz-EnjGUcpslbGcnAf-6cf-ob5AEV_-kkOdM2XuPYtkDWKOQzCFEooF9NnLT6kPD3j1onj2rWA4Khj7FR5fQGjuWwsQasc9ByHIJSmtEnCuexbhnHsr3-52O7cATgZPELiSxR8Zp8yw0kW3bsN3xMRP_TvpPE2CAjko-ZWWEaXW__PXDGq5KhR37_fJU0YdV6PLi889hNqOsMp6aL95swSmze_6nNdri-8k2kgMB204GCfCeR1UA\u003ds96-c",
+        "userKey": "agxzfm1haWxmb29nYWVyNAsSDE9yZ2FuaXphdGlvbiIRY2FubmNlc3RyYW5vdy5jb20MCxIEVXNlchiAgKHouIP3CAw"
+      }
+    ],
+    "pipelineKey": "agxzfm1haWxmb29nYWVyOAsSDE9yZ2FuaXphdGlvbiIRY2FubmNlc3RyYW5vdy5jb20MCxIIV29ya2Zsb3cYgICFmsyC7gsM",
+    "key": "agxzfm1haWxmb29nYWVyOAsSDE9yZ2FuaXphdGlvbiIRY2FubmNlc3RyYW5vdy5jb20MCxIIV29ya2Zsb3cYgICFmsyC7gsM",
+    "creationSourceType": "HUMAN",
+    "boxCountHint": 3605,
+    "boxCount": 3605,
+    "lastSavedTimestamp": 1738268376737
+  },
+  {
+    "teamKey": "agxzfm1haWxmb29nYWVyEQsSBFRlYW0YgIChyI3dswoM",
+    "creatorKey": "agxzfm1haWxmb29nYWVyNAsSDE9yZ2FuaXphdGlvbiIRY2FubmNlc3RyYW5vdy5jb20MCxIEVXNlchiAgKHouIP3CAw",
+    "icon": "label_important",
+    "name": "Email g",
+    "sharingRestrictedToOrg": false,
+    "sharingRestrictedToTeam": false,
+    "fields": [
+      {
+        "name": "Linkedin",
+        "key": "1001",
+        "type": "TEXT_INPUT",
+        "lastUpdatedTimestamp": 1736803136279
+      },
+      {
+        "name": "Preferred Name",
+        "key": "1002",
+        "type": "TEXT_INPUT",
+        "lastUpdatedTimestamp": 1736803136279
+      },
+      {
+        "name": "Position",
+        "key": "1003",
+        "type": "TEXT_INPUT",
+        "lastUpdatedTimestamp": 1736803136279
+      },
+      {
+        "name": "Phone",
+        "key": "1004",
+        "type": "TEXT_INPUT",
+        "lastUpdatedTimestamp": 1736803136279
+      },
+      {
+        "name": "Email",
+        "key": "1005",
+        "type": "TEXT_INPUT",
+        "lastUpdatedTimestamp": 1736803136279
+      },
+      {
+        "name": "Company",
+        "key": "1006",
+        "type": "TEXT_INPUT",
+        "lastUpdatedTimestamp": 1736803136279
+      },
+      {
+        "name": "Location",
+        "key": "1007",
+        "type": "TEXT_INPUT",
+        "lastUpdatedTimestamp": 1736803136279
+      },
+      {
+        "name": "Facebook",
+        "key": "1008",
+        "type": "TEXT_INPUT",
+        "lastUpdatedTimestamp": 1736803136279
+      },
+      {
+        "name": "Text Date",
+        "key": "1009",
+        "type": "DATE",
+        "lastUpdatedTimestamp": 1736803136279
+      },
+      {
+        "name": "LMail",
+        "key": "1010",
+        "type": "DATE",
+        "lastUpdatedTimestamp": 1736803136279
+      },
+      {
+        "name": "Connected",
+        "key": "1011",
+        "type": "DATE",
+        "lastUpdatedTimestamp": 1736803136279
+      },
+      {
+        "name": "Headline",
+        "key": "1012",
+        "type": "TEXT_INPUT",
+        "lastUpdatedTimestamp": 1736803136279
+      }
+    ],
+    "stages": {
+      "5010": {
+        "name": "6th Contacted",
+        "key": "5010",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#5166CC"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      },
+      "5011": {
+        "name": "Called",
+        "key": "5011",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#4455BD"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      },
+      "5001": {
+        "name": "LinkedIn Leads",
+        "key": "5001",
+        "color": {
+          "foregroundColor": "#000000",
+          "backgroundColor": "#FCC200"
+        },
+        "boxCount": 32,
+        "isColorFromTheme": false
+      },
+      "5012": {
+        "name": "Monthly Follow-up",
+        "key": "5012",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#2C369F"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      },
+      "5002": {
+        "name": "Interviewing",
+        "key": "5002",
+        "color": {
+          "foregroundColor": "#000000",
+          "backgroundColor": "#FEB200"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      },
+      "5013": {
+        "name": "3 Month Follow-up",
+        "key": "5013",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#191D80"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      },
+      "5003": {
+        "name": "Linkedin Talking",
+        "key": "5003",
+        "color": {
+          "foregroundColor": "#000000",
+          "backgroundColor": "#FFA100"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      },
+      "5014": {
+        "name": "6 Month Follow-up",
+        "key": "5014",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#0D368A"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      },
+      "5004": {
+        "name": "Non-Contacted",
+        "key": "5004",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#252DFC"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      },
+      "5015": {
+        "name": "Other",
+        "key": "5015",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#005B94"
+        },
+        "boxCount": 1294,
+        "isColorFromTheme": false
+      },
+      "5005": {
+        "name": "1st Contacted",
+        "key": "5005",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#F94A51"
+        },
+        "boxCount": 361,
+        "isColorFromTheme": false
+      },
+      "5016": {
+        "name": "Rejected",
+        "key": "5016",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#007CA4"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      },
+      "5006": {
+        "name": "2nd Contacted",
+        "key": "5006",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#E86DF4"
+        },
+        "boxCount": 37,
+        "isColorFromTheme": false
+      },
+      "5017": {
+        "name": "Finished",
+        "key": "5017",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#00A2B3"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      },
+      "5007": {
+        "name": "3rd Contacted",
+        "key": "5007",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#8E9BEF"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      },
+      "5018": {
+        "name": "grab",
+        "key": "5018",
+        "color": {
+          "foregroundColor": "#000000",
+          "backgroundColor": "#00BDBE"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      },
+      "5008": {
+        "name": "4th Contacted",
+        "key": "5008",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#7688E5"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      },
+      "5019": {
+        "name": "grab1",
+        "key": "5019",
+        "color": {
+          "foregroundColor": "#000000",
+          "backgroundColor": "#00C8B6"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      },
+      "5009": {
+        "name": "5th Contacted",
+        "key": "5009",
+        "color": {
+          "foregroundColor": "#FFFFFF",
+          "backgroundColor": "#5F78DA"
+        },
+        "boxCount": 0,
+        "isColorFromTheme": false
+      }
+    },
+    "stageOrder": [
+      "5001",
+      "5002",
+      "5003",
+      "5004",
+      "5005",
+      "5006",
+      "5007",
+      "5008",
+      "5009",
+      "5010",
+      "5011",
+      "5012",
+      "5013",
+      "5014",
+      "5015",
+      "5016",
+      "5017",
+      "5018",
+      "5019"
+    ],
+    "stageColorTheme": "RAINBOW_SATURATED",
+    "creationTimestamp": 1736803136279,
+    "lastUpdatedTimestamp": 1736803147339,
+    "customPermissionSets": {},
+    "defaultPermissionSetName": "__emptyPermissionSet__",
+    "aclEntries": [
+      {
+        "permissionSetName": "__adminPermissionSet__",
+        "displayName": "Jerry E",
+        "email": "jerry@canncestranow.com",
+        "fullName": "Jerry Eaton",
+        "givenName": "Jerry",
+        "image": "https://lh3.googleusercontent.com/a-/ALV-UjXhL1iY_ivtejWVu8Emx4oA3Nq5AMqtFFzwTdHWqRrIrnLHu4cWiXLOJNubHXpN_sDT75wwMZEiRufI0WGs9ReABb6K0rSq0LtR_SSYnUDKVA1BLlBfqAHWhCUHi5Gm0J3dvwXjjFquTHSZJWkcZwgkI7w8bAim9LEPpsnuhRTctOb3jrUXbfRsSLYKyFhyE12aUTibsCn_kM8-2CdDbtWhPbF_bFO2MgkSVA86SAfCJqJAlGIbYZIXXDa5npu4ZR6s7QLhvWZ8ldkxoMWAEcpUyvf1X5D9KsptiOFcBslSGKuZ6IMOPZ6o6rUua39yz_8_Qpn6ASl5TIgpPP_XOa-jF2TJolvgbVLlb1r_XNw1bg6am2wxu_P6edb2dOvbgSqmcfJFplOcxDFrwoGWyCN2t4SiinmAj6lv5oitp_RN7DldXEHxZRqbhr3gID76kPY8kpL5AtD7ShV_FSm5vicfVhpZhmiHnpwyFYrAOMp4Wnti6paFC5eZCJUWWJuamijqTkDo1fO-KXduImhNjBHXAZi1PFm3SVPLiVqw3f_w7GlLczxQkVxsO7xTRlCNrPlfuou5EwD--22cg0Tz4PmwMAXSljZiBIKavG3jReVnIwyZaweoy2qZ9mnLIotfej7tgEPut99tQPoLD1qZla1hEJckrtNIrfYOrjlxFL-PSpOnKgSb8VRCSpF_9n3IXXBn1DoiitipdyhpKBKfg_yrRUaieaDH7BXezLVhi7Vz-EnjGUcpslbGcnAf-6cf-ob5AEV_-kkOdM2XuPYtkDWKOQzCFEooF9NnLT6kPD3j1onj2rWA4Khj7FR5fQGjuWwsQasc9ByHIJSmtEnCuexbhnHsr3-52O7cATgZPELiSxR8Zp8yw0kW3bsN3xMRP_TvpPE2CAjko-ZWWEaXW__PXDGq5KhR37_fJU0YdV6PLi889hNqOsMp6aL95swSmze_6nNdri-8k2kgMB204GCfCeR1UA\u003ds96-c",
+        "userKey": "agxzfm1haWxmb29nYWVyNAsSDE9yZ2FuaXphdGlvbiIRY2FubmNlc3RyYW5vdy5jb20MCxIEVXNlchiAgKHouIP3CAw"
+      }
+    ],
+    "pipelineKey": "agxzfm1haWxmb29nYWVyOAsSDE9yZ2FuaXphdGlvbiIRY2FubmNlc3RyYW5vdy5jb20MCxIIV29ya2Zsb3cYgICF6vOJ8wsM",
+    "key": "agxzfm1haWxmb29nYWVyOAsSDE9yZ2FuaXphdGlvbiIRY2FubmNlc3RyYW5vdy5jb20MCxIIV29ya2Zsb3cYgICF6vOJ8wsM",
+    "creationSourceType": "HUMAN",
+    "boxCountHint": 1724,
+    "boxCount": 1724,
+    "lastSavedTimestamp": 1740522994091
+  }
+]
