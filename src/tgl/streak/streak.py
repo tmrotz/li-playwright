@@ -9,7 +9,8 @@ from tgl.streak.box import Box
 class Streak:
     _pipelines_url = "https://www.streak.com/api/v1/pipelines"
     _pipeline_url = "https://www.streak.com/api/v1/pipelines/{pipeline_key}"
-    _boxes_url = "https://www.streak.com/api/v1/pipelines/{pipeline_key}/boxes?stageKey={stage_key}"
+    _boxes_url = "https://www.streak.com/api/v1/pipelines/{pipeline_key}/boxes"
+    _stage_boxes_url = _boxes_url + "?stageKey={stage_key}"
     _create_box_url = "https://api.streak.com/api/v2/pipelines/{pipelineKey}/boxes"
     _update_box_url = "https://api.streak.com/api/v1/boxes/{boxKey}"
     _fields_to_keys: dict = {}
@@ -41,9 +42,16 @@ class Streak:
             headers=self._headers,
         ).json()
 
+    def get_all_boxes(self) -> list[dict]:
+        response: Response = requests.get(
+            url=self._boxes_url.format_map({"pipeline_key": self._pipeline_key}),
+            headers=self._headers,
+        )
+        return response.json()
+
     def get_boxes_by_stage(self, stage_key: str) -> list:
         response: Response = requests.get(
-            url=self._boxes_url.format_map(
+            url=self._stage_boxes_url.format_map(
                 {"pipeline_key": self._pipeline_key, "stage_key": stage_key}
             ),
             headers=self._headers,
@@ -88,15 +96,17 @@ class Streak:
             self._fields_to_keys["Company"]: box.company,
             self._fields_to_keys["Email"]: box.email,
             self._fields_to_keys["Phone"]: box.phone,
+            self._fields_to_keys["Linkedin"]: box.linkedin,
         }
         if box.connected:
             fields[self._fields_to_keys["Connected"]] = box.connected.__str__()
         return fields
 
-    def create_box_with_data(self, box: Box, stage_key: str = "") -> None:
+    def create_box_with_data(self, box: Box, stage_key: str = "") -> Response:
         new_box: dict = self.create_box(box.name, stage_key)
         fields: dict = self.create_fields_data(box)
-        response: dict = self.update_box(new_box["key"], fields)
+        response: Response = self.update_box(new_box["key"], fields)
+        return response
 
     def get_linkedin_key(self):
         return self._fields_to_keys["Linkedin"]

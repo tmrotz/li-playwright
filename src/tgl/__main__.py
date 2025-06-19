@@ -5,6 +5,7 @@ from enum import Enum
 from pathlib import Path
 
 from tgl.linkedin.message import Message
+from tgl.linkedin.scrape_network import ScrapeNetwork
 from tgl.linkedin.scrape_stage import ScrapeStage
 from tgl.playwright import playwright
 from tgl.streak.streak import Streak
@@ -13,6 +14,7 @@ from tgl.streak.streak import Streak
 class Command(Enum):
     MESSAGE = "message"
     SCRAPE = "scrape"
+    NETWORK = "network"
     PIPELINES = "pipelines"
 
     def __str__(self) -> str:
@@ -38,6 +40,7 @@ def main():
             "Give one of these commands:",
             Command.MESSAGE,
             Command.SCRAPE,
+            Command.NETWORK,
             Command.PIPELINES,
         )
         return
@@ -51,6 +54,7 @@ def main():
             "Invalid command. Use one of these:",
             Command.MESSAGE,
             Command.SCRAPE,
+            Command.NETWORK,
             Command.PIPELINES,
         )
         return None
@@ -73,6 +77,8 @@ def main():
                 config["stages"]["scrape"],
                 config["stages"]["scraped"],
             )
+        case Command.NETWORK:
+            playwright.run(config, ScrapeNetwork(), streak)
         case Command.PIPELINES:
             print(streak.get_pipelines())
 
