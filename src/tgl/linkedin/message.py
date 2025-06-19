@@ -14,26 +14,38 @@ class Message:
         self,
         page: Page,
         streak: Streak,
-        message: str,
+        message_template: str,
         message_stage_key: str,
         messaged_stage_key: str,
     ):
-        print("Message:", message)
+        print("Message Template:", message_template)
 
         streak_boxes: list = streak.get_boxes_by_stage(message_stage_key)
         assert isinstance(streak_boxes, list), f"streak_boxes is a {type(streak_boxes)}"
         print("# of boxes from Streak", len(streak_boxes))
 
-        for streak_box in streak_boxes:
-            assert isinstance(streak_box, dict), f"streak_box is a {type(streak_box)}"
+        self._send_messages(
+            page, streak, message_template, messaged_stage_key, streak_boxes
+        )
+
+    def _send_messages(
+        self,
+        page: Page,
+        streak: Streak,
+        message_template: str,
+        messaged_stage_key: str,
+        boxes: list,
+    ):
+        for box in boxes:
+            assert isinstance(box, dict), f"streak_box is a {type(box)}"
             try:
-                self._send_message(page, streak_box, message)
+                self._send_message(page, box, message_template)
             except TimeoutError as e:
                 print("Timeout reached. Skipping", e)
             else:
-                streak.update_box(streak_box["boxKey"], stage_key=messaged_stage_key)
+                streak.update_box(box["boxKey"], stage_key=messaged_stage_key)
 
-            page.wait_for_timeout(random.randint(15, 22) * 1000)
+            page.wait_for_timeout(random.randint(15, 22) * 1_000)
 
     def _send_message(self, page: Page, streak_box: dict, message: str):
         box: Box = Box(streak_box["name"])
@@ -44,7 +56,7 @@ class Message:
         pyperclip.copy(message.format(name=box.first_name()))
 
         page.get_by_placeholder("Type a name or multiple names").fill(box.name)
-        page.wait_for_timeout(random.randint(5, 10) * 1000)
+        page.wait_for_timeout(random.randint(5, 10) * 1_000)
 
         button = page.locator(
             "button",
@@ -59,9 +71,9 @@ class Message:
         else:
             button.click()
 
-        page.wait_for_timeout(random.randint(5, 10) * 1000)
+        page.wait_for_timeout(random.randint(5, 10) * 1_000)
         page.keyboard.press("Enter")
-        page.wait_for_timeout(random.randint(5, 10) * 1000)
+        page.wait_for_timeout(random.randint(5, 10) * 1_000)
         page.keyboard.press("Control+V")
-        page.wait_for_timeout(random.randint(5, 12) * 1000)
+        page.wait_for_timeout(random.randint(5, 12) * 1_000)
         page.get_by_role("button", name="Send", exact=True).click()
