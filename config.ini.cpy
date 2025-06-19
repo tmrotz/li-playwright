@@ -1,7 +1,8 @@
 [linkedin]
 username = 
 password = 
-message = 
+message = Hello {name}
+    hello {name}!
 
 [streak.keys]
 api = 
