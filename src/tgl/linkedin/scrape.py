@@ -36,15 +36,23 @@ def scrape_page(page: Page, user: str) -> Box:
 
     experience: Locator = page.get_by_text("Experience", exact=True).first
     section: Locator = page.locator("section").filter(has=experience)
-    experiences: list[str] = section.get_by_role("list").first.inner_text().splitlines()
+    divs = section.get_by_role("list").first.locator(
+        ":scope > li:first-child > div > div > div"
+    )
 
-    uniques = []
-    for e in experiences[:10]:
-        if e not in uniques:
-            uniques.append(e)
+    if divs.count() > 1:
+        box.company = divs.nth(0).inner_text().splitlines()[0]
+        box.position = divs.nth(1).inner_text().splitlines()[0]
+    else:
+        experiences: list[str] = divs.inner_text().splitlines()
 
-    box.position = uniques[0]
-    box.company = uniques[1].split(" · ")[0]
+        uniques = []
+        for e in experiences[:10]:
+            if e not in uniques:
+                uniques.append(e)
+
+        box.position = uniques[0]
+        box.company = uniques[1].split(" · ")[0]
 
     # Contact Info Section!
     page.locator("a", has_text="Contact info").first.click()

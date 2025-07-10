@@ -36,7 +36,7 @@ class ScrapeStage:
             try:
                 box: Box = scrape.scrape_page(page, user)
             except Exception as e:
-                print("Something went wrong. Skipping", e)
+                print(f"Failed on user {user}. Skipping", e)
             else:
                 print("Scraped data", box)
                 response: Response = streak.update_box(
