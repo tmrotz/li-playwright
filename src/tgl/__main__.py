@@ -7,6 +7,7 @@ from pathlib import Path
 from tgl.linkedin.message import Message
 from tgl.linkedin.scrape_network import ScrapeNetwork
 from tgl.linkedin.scrape_stage import ScrapeStage
+from tgl.linkedin.withdraw import Withdraw
 from tgl.playwright import playwright
 from tgl.streak.streak import Streak
 
@@ -16,6 +17,7 @@ class Command(Enum):
     SCRAPE = "scrape"
     NETWORK = "network"
     PIPELINES = "pipelines"
+    WITHDRAW = "withdraw"
 
     def __str__(self) -> str:
         return self.value
@@ -42,6 +44,7 @@ def main():
             Command.SCRAPE,
             Command.NETWORK,
             Command.PIPELINES,
+            Command.WITHDRAW,
         )
         return
 
@@ -56,6 +59,7 @@ def main():
             Command.SCRAPE,
             Command.NETWORK,
             Command.PIPELINES,
+            Command.WITHDRAW,
         )
         return None
 
@@ -81,6 +85,8 @@ def main():
             playwright.run(config, ScrapeNetwork(), streak)
         case Command.PIPELINES:
             print(streak.get_pipelines())
+        case Command.WITHDRAW:
+            playwright.run(config, Withdraw())
 
 
 if __name__ == "__main__":
