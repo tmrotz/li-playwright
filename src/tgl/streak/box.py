@@ -6,8 +6,6 @@ class Box:
         self.name = name
         self.headline = ""
         self.location = ""
-        self.position = ""
-        self.company = ""
         self.email = ""
         self.phone = ""
         self._connected = None
@@ -30,7 +28,7 @@ class Box:
     def __str__(self):
         return (
             f"Box: name={self.name}, Headline={self.headline},"
-            f" Location={self.location}, Position={self.position},"
-            f" Company={self.company}, Email={self.email}, Phone={self.phone},"
+            f" Location={self.location},"
+            f" Email={self.email}, Phone={self.phone},"
             f" Connected={self.connected}, Linkedin={self.linkedin}"
         )

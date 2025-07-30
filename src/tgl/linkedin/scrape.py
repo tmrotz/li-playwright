@@ -34,15 +34,15 @@ def scrape_page(page: Page, user: str) -> Box:
         raise Exception("location not available")
     box.location = location.strip()
 
-    experience: Locator = page.get_by_text("Experience", exact=True).first
-    section: Locator = page.locator("section").filter(has=experience)
-    div = section.get_by_role("list").first.locator(":scope > li:first-child > div")
-
-    lines: list[str] = div.inner_text().splitlines()
-    box.position = lines[0]
-    box.company = lines[2]
-    if "·" in box.company:
-        box.company = box.company.split(" · ")[0]
+    # experience: Locator = page.get_by_text("Experience", exact=True).first
+    # section: Locator = page.locator("section").filter(has=experience)
+    # div = section.get_by_role("list").first.locator(":scope > li:first-child > div")
+    #
+    # lines: list[str] = div.inner_text().splitlines()
+    # box.position = lines[0]
+    # box.company = lines[2]
+    # if "·" in box.company:
+    #     box.company = box.company.split(" · ")[0]
 
     # Contact Info Section!
     page.locator("a", has_text="Contact info").first.click()

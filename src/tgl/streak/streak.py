@@ -92,8 +92,6 @@ class Streak:
         fields = {
             self._fields_to_keys["Headline"]: box.headline,
             self._fields_to_keys["Location"]: box.location,
-            self._fields_to_keys["Position"]: box.position,
-            self._fields_to_keys["Company"]: box.company,
             self._fields_to_keys["Email"]: box.email,
             self._fields_to_keys["Phone"]: box.phone,
             self._fields_to_keys["Linkedin"]: box.linkedin,
