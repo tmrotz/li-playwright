@@ -58,10 +58,11 @@ class Message:
         page.get_by_placeholder("Type a name or multiple names").fill(box.name)
         page.wait_for_timeout(random.randint(5, 10) * 1_000)
 
-        button = page.locator(
-            "button",
-            has=page.locator("dt", has_text="• 1st"),
-        ).first
+        # button = page.locator(
+        #     "button",
+        #     has=page.locator("dt", has_text="• 1st"),
+        # ).first
+        button = page.locator("dt", has_text="• 1st").first
         try:
             button.wait_for(timeout=5000)
         except PWTimeoutError:
