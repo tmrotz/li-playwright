@@ -4,6 +4,7 @@ from configparser import ConfigParser
 from enum import Enum
 from pathlib import Path
 
+from tgl.gmail.email import Email
 from tgl.linkedin.message import Message
 from tgl.linkedin.scrape_network import ScrapeNetwork
 from tgl.linkedin.scrape_stage import ScrapeStage
@@ -18,6 +19,7 @@ class Command(Enum):
     NETWORK = "network"
     PIPELINES = "pipelines"
     WITHDRAW = "withdraw"
+    EMAIL = "email"
 
     def __str__(self) -> str:
         return self.value
@@ -57,7 +59,7 @@ def main():
 
     match command:
         case Command.MESSAGE:
-            playwright.run(
+            playwright.runLI(
                 config,
                 Message(),
                 streak,
@@ -66,7 +68,7 @@ def main():
                 config["stages"]["messaged"],
             )
         case Command.SCRAPE:
-            playwright.run(
+            playwright.runLI(
                 config,
                 ScrapeStage(),
                 streak,
@@ -74,11 +76,19 @@ def main():
                 config["stages"]["scraped"],
             )
         case Command.NETWORK:
-            playwright.run(config, ScrapeNetwork(), streak)
+            playwright.runLI(config, ScrapeNetwork(), streak)
         case Command.PIPELINES:
             print(streak.get_pipelines())
         case Command.WITHDRAW:
-            playwright.run(config, Withdraw())
+            playwright.runLI(config, Withdraw())
+        case Command.EMAIL:
+            playwright.runGMail(
+                config,
+                Email(),
+                streak,
+                config["stages"]["email"],
+                config["stages"]["emailed"],
+            )
 
 
 if __name__ == "__main__":

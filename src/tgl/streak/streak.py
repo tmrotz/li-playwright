@@ -108,3 +108,6 @@ class Streak:
 
     def get_linkedin_key(self):
         return self._fields_to_keys["Linkedin"]
+
+    def get_first_name_key(self):
+        return self._fields_to_keys["Preferred Name"]
