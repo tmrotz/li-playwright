@@ -56,6 +56,9 @@ class Message:
         pyperclip.copy(message.format(name=box.first_name()))
 
         page.get_by_placeholder("Type a name or multiple names").fill(box.name)
+        page.wait_for_timeout(500)
+
+        page.keyboard.press(" ")
         page.wait_for_timeout(random.randint(5, 10) * 1_000)
 
         # button = page.locator(
@@ -72,8 +75,6 @@ class Message:
         else:
             button.click()
 
-        page.wait_for_timeout(random.randint(5, 10) * 1_000)
-        page.keyboard.press(" ")
         page.wait_for_timeout(random.randint(5, 10) * 1_000)
         page.keyboard.press("Enter")
         page.wait_for_timeout(random.randint(5, 10) * 1_000)
