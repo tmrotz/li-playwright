@@ -73,6 +73,8 @@ class Message:
             button.click()
 
         page.wait_for_timeout(random.randint(5, 10) * 1_000)
+        page.keyboard.press(" ")
+        page.wait_for_timeout(random.randint(5, 10) * 1_000)
         page.keyboard.press("Enter")
         page.wait_for_timeout(random.randint(5, 10) * 1_000)
         page.keyboard.press("Control+V")

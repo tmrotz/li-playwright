@@ -40,11 +40,7 @@ def main():
     if args.command is None:
         print(
             "Give one of these commands:",
-            Command.MESSAGE,
-            Command.SCRAPE,
-            Command.NETWORK,
-            Command.PIPELINES,
-            Command.WITHDRAW,
+            [c.value for c in Command],
         )
         return
 
@@ -55,11 +51,7 @@ def main():
     except ValueError:
         print(
             "Invalid command. Use one of these:",
-            Command.MESSAGE,
-            Command.SCRAPE,
-            Command.NETWORK,
-            Command.PIPELINES,
-            Command.WITHDRAW,
+            [c.value for c in Command],
         )
         return None
 
