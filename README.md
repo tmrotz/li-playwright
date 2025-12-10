@@ -17,6 +17,7 @@ python -m tgl -c message
 # Wheel
 ## Create
 python -m build
+gh release create 1.2.1 dist/li_playwright-1.2.1-py3-none-any.whl
 
 ## Run
 python -m tgl -c scrape
