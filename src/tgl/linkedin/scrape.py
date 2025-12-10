@@ -13,7 +13,7 @@ def scrape_page(page: Page, user: str) -> Box:
     page.goto("/in/" + user)
     section: Locator = page.locator("section", has_text="Contact info")
 
-    name = section.locator("h1").text_content()
+    name = section.locator("h1").or_(section.locator("h2")).text_content()
     if name is None:
         print("name not available")
         raise Exception("name not available")
