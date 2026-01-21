@@ -111,3 +111,6 @@ class Streak:
 
     def get_first_name_key(self):
         return self._fields_to_keys["Preferred Name"]
+
+    def get_email_key(self):
+        return self._fields_to_keys["Email"]

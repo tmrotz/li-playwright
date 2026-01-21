@@ -7,7 +7,6 @@ message = Hello {name}
 [gmail]
 username = 
 password = 
-to = 
 subject = 
 message = Hello {name}!
     hello {name}!
