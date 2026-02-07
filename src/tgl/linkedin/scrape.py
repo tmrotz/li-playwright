@@ -62,11 +62,6 @@ def scrape_page(page: Page, user: str) -> Box:
     # Contact Info Section!
     page.goto("/in/" + user + "/overlay/contact-info/")
 
-    section: Locator = page.locator("section").filter(
-        has=page.locator("h2", has_text="Contact Info")
-    )
-    section.wait_for()
-
     # connected = section.locator("section", has_text="Connected").locator("span")
     # try:
     #     connected.wait_for(timeout=1_000)
