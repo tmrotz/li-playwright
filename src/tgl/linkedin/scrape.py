@@ -62,6 +62,8 @@ def scrape_page(page: Page, user: str) -> Box:
     # Contact Info Section!
     page.goto("/in/" + user + "/overlay/contact-info/")
 
+    page.wait_for_timeout(5_000)
+
     # connected = section.locator("section", has_text="Connected").locator("span")
     # try:
     #     connected.wait_for(timeout=1_000)
@@ -73,18 +75,27 @@ def scrape_page(page: Page, user: str) -> Box:
     #     )
 
     email = section.locator("div", has_text="Email").locator("a")
-    try:
-        email.wait_for(timeout=1_000)
-    except PWTimeoutError:
-        print("No email, skipping")
+    if email.count() == 0:
+        email = page.locator("p", has_text="Email").locator("xpath=..").locator("a")
+        if email.count() == 0:
+            print("No email, skipping")
+        else:
+            box.email = email.inner_text().strip()
     else:
         box.email = email.inner_text().strip()
 
     phone = section.locator("div", has_text="Phone").locator("span").first
-    try:
-        phone.wait_for(timeout=1_000)
-    except PWTimeoutError:
-        print("No phone, skipping")
+    if phone.count() == 0:
+        phone = (
+            page.locator("p", has_text="Phone")
+            .locator("xpath=..")
+            .locator("span")
+            .first
+        )
+        if phone.count() == 0:
+            print("No phone, skipping")
+        else:
+            box.phone = phone.inner_text().strip()
     else:
         box.phone = phone.inner_text().strip()
 
