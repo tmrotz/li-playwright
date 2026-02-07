@@ -6,6 +6,7 @@ from tgl.streak.box import Box
 headline_selector = (
     "div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2)"
 )
+headline_selector_2 = "div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) > div > div > div > p"
 location_selector = "div > div.relative > div > span.break-words"
 
 
@@ -22,17 +23,27 @@ def scrape_page(page: Page, user: str) -> Box:
 
     box.linkedin = f"linkedin.com/in/{user}"
 
-    headline = section.locator(headline_selector).text_content()
-    if headline is None:
-        print("headline not available", headline_selector)
-        raise Exception("headline not available")
-    box.headline = headline.strip()
+    headline = section.locator(headline_selector)
+    if headline.count() == 0:
+        headline = section.locator(headline_selector_2)
+        if headline.count() == 0:
+            print("headline not available")
+            raise Exception("headline not available")
+    text = headline.text_content()
+    if text is None:
+        print("headline is empty")
+        raise Exception("headline is empty")
+    box.headline = text.strip()
 
-    location = section.locator(location_selector).text_content()
-    if location is None:
+    location = section.locator(location_selector)
+    if location.count() == 0:
         print("location not available", location_selector)
         raise Exception("location not available")
-    box.location = location.strip()
+    text = location.text_content()
+    if text is None:
+        print("location is empty")
+        raise Exception("location is empty")
+    box.location = text.strip()
 
     # experience: Locator = page.get_by_text("Experience", exact=True).first
     # section: Locator = page.locator("section").filter(has=experience)
