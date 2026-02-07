@@ -6,9 +6,7 @@ from tgl.streak.box import Box
 headline_selector = (
     "div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2)"
 )
-headline_selector_2 = (
-    "div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div > div > div > p"
-)
+headline_selector_2 = "div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div > div > div > p:nth-of-type(1)"
 location_selector = "div > div.relative > div > span.break-words"
 
 
