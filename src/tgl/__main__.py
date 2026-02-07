@@ -5,6 +5,7 @@ from enum import Enum
 from pathlib import Path
 
 from tgl.gmail.email import Email
+from tgl.linkedin.connect import Connect
 from tgl.linkedin.message import Message
 from tgl.linkedin.scrape_network import ScrapeNetwork
 from tgl.linkedin.scrape_stage import ScrapeStage
@@ -20,6 +21,7 @@ class Command(Enum):
     PIPELINES = "pipelines"
     WITHDRAW = "withdraw"
     EMAIL = "email"
+    CONNECT = "connect"
 
     def __str__(self) -> str:
         return self.value
@@ -88,6 +90,13 @@ def main():
                 streak,
                 config["stages"]["email"],
                 config["stages"]["emailed"],
+            )
+        case Command.CONNECT:
+            playwright.runLI(
+                config,
+                Connect(),
+                config["connect"]["keywords"],
+                config["connect"]["limit"],
             )
 
 
