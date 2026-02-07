@@ -7,7 +7,9 @@ headline_selector = (
     "div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2)"
 )
 headline_selector_2 = "div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div > div > div > p:nth-of-type(1)"
+
 location_selector = "div > div.relative > div > span.break-words"
+location_selector_2 = "div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div > div > div > p:nth-of-type(2)"
 
 
 def scrape_page(page: Page, user: str) -> Box:
@@ -37,8 +39,10 @@ def scrape_page(page: Page, user: str) -> Box:
 
     location = section.locator(location_selector)
     if location.count() == 0:
-        print("location not available", location_selector)
-        raise Exception("location not available")
+        location = section.locator(location_selector_2)
+        if location.count() == 0:
+            print("location not available")
+            raise Exception("location not available")
     text = location.text_content()
     if text is None:
         print("location is empty")
