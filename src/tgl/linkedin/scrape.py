@@ -72,7 +72,7 @@ def scrape_page(page: Page, user: str) -> Box:
     #         connected.inner_text().strip(), "%b %d, %Y"
     #     )
 
-    email = section.locator("section", has_text="Email").locator("a")
+    email = section.locator("div", has_text="Email").locator("a")
     try:
         email.wait_for(timeout=1_000)
     except PWTimeoutError:
@@ -80,7 +80,7 @@ def scrape_page(page: Page, user: str) -> Box:
     else:
         box.email = email.inner_text().strip()
 
-    phone = section.locator("section", has_text="Phone").locator("span").first
+    phone = section.locator("div", has_text="Phone").locator("span").first
     try:
         phone.wait_for(timeout=1_000)
     except PWTimeoutError:
