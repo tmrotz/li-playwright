@@ -60,7 +60,10 @@ def scrape_page(page: Page, user: str) -> Box:
     #     box.company = box.company.split(" · ")[0]
 
     # Contact Info Section!
-    page.locator("a", has_text="Contact info").first.click()
+    moo = page.locator("a", has_text="Contact info")
+    print("Count", moo.count())
+    for m in moo.all():
+        m.click()
 
     section: Locator = page.locator("section").filter(
         has=page.locator("h2", has_text="Contact Info")
