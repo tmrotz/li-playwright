@@ -33,7 +33,7 @@ class Withdraw:
 
         for person in people:
             person.scroll_into_view_if_needed()
-            person.get_by_role("button").click()
+            person.get_by_role("link", name="Withdraw").click()
             page.wait_for_timeout(3 * 1_000)
             if TEST:
                 page.locator("#root > dialog").get_by_role("button").filter(
