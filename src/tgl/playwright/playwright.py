@@ -67,9 +67,11 @@ def runLI(config: ConfigParser, klass, *args, **kwargs):
         page.goto("/feed/")
 
         if not page.url.endswith("/feed/"):
-            page.get_by_label("Email or phone").fill(linkedin.get("username") or "")
-            page.get_by_label("Password").fill(linkedin.get("password") or "")
-            page.get_by_label("Sign in", exact=True).click()
+            page.get_by_label("Email or phone").nth(1).fill(
+                linkedin.get("username") or ""
+            )
+            page.get_by_label("Password").nth(2).fill(linkedin.get("password") or "")
+            page.get_by_role("button", name="Sign in", exact=True).click()
             page.wait_for_url("/feed/")
             context.storage_state(path=file)
 
