@@ -3,14 +3,6 @@ from playwright.sync_api import TimeoutError as PWTimeoutError
 
 from tgl.streak.box import Box
 
-headline_selector = (
-    "div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2)"
-)
-headline_selector_2 = "div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div > div > div > p:nth-of-type(1)"
-
-location_selector = "div > div.relative > div > span.break-words"
-location_selector_2 = "div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div > div > div > p:nth-of-type(2)"
-
 
 def scrape_page(page: Page, user: str) -> Box:
     page.goto("/in/" + user)
@@ -25,24 +17,22 @@ def scrape_page(page: Page, user: str) -> Box:
 
     box.linkedin = f"linkedin.com/in/{user}"
 
-    headline = section.locator(headline_selector)
+    headline = section.locator("div:has(> p > a:text-is('Contact info'))").locator(
+        "xpath=../p[1]"
+    )
     if headline.count() == 0:
-        headline = section.locator(headline_selector_2)
-        if headline.count() == 0:
-            print("headline not available")
-            raise Exception("headline not available")
+        print("headline not available")
+        raise Exception("headline not available")
     text = headline.text_content()
     if text is None:
         print("headline is empty")
         raise Exception("headline is empty")
     box.headline = text.strip()
 
-    location = section.locator(location_selector)
+    location = section.locator("div:has(> p > a:text-is('Contact info')) > p").first
     if location.count() == 0:
-        location = section.locator(location_selector_2)
-        if location.count() == 0:
-            print("location not available")
-            raise Exception("location not available")
+        print("location not available")
+        raise Exception("location not available")
     text = location.text_content()
     if text is None:
         print("location is empty")
